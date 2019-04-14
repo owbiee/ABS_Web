@@ -1948,6 +1948,7 @@
     </Content>
     <Content Include="Connected Services\Office365\ConnectedService.json" />
     <None Include="packages.config" />
+    <None Include="Properties\PublishProfiles\ABSWebCustodian - Web Deploy.pubxml" />
     <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -4368,7 +4369,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>50398</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>https://localhost:44302/</IISUrl>
+          <IISUrl>http://localhost:44302/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

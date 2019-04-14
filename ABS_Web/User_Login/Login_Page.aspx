@@ -152,7 +152,7 @@
                         <tr>
                 <td><asp:Label ID="Label5" runat="server" Text="Password:"></asp:Label></td>
                 <%--<asp:TextBox ID="TextBox2" runat="server" TextMode="Password" required="required" style="font-family: Calibri;"></asp:TextBox><span style="color: red;">*</span>--%>
-                   <td><dx:BootstrapTextBox ID="BootstrapTextBox4" runat="server" TextMode="Password"></dx:BootstrapTextBox></td>
+                   <td><dx:BootstrapTextBox ID="BootstrapTextBox4" runat="server" PasswordChar="*" Password="true"></dx:BootstrapTextBox></td>
                             </tr>
                             <%--<dx:BootstrapCheckBox ID="BootstrapCheckBox1" runat="server" Text="Sign in with Office365 Account"></dx:BootstrapCheckBox>--%>                              
                     </table>
