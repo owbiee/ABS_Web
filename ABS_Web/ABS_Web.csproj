@@ -1897,6 +1897,7 @@
     <Content Include="User_Login\014-play.png" />
     <Content Include="User_Login\015-banknote.png" />
     <Content Include="User_Login\015-web.png" />
+    <Content Include="User_Login\Office365.jpg" />
     <Content Include="User_Login\UND_Menu.aspx" />
     <Content Include="User_Login\ABS_Img.jpg" />
     <Content Include="ABS_Menu.aspx" />

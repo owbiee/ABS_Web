@@ -71,7 +71,7 @@
             </ul>
             <ul class="nav navbar-nav float-xs-right">
                 <!--Logout Button Here-->
-              <li class="dropdown dropdown-language nav-item" style="padding-top: 10px;"><a id="dropdown-flag" href="#" class="btn btn-danger" >Logout</a>
+              <li class="dropdown dropdown-language nav-item" style="padding-top: 10px;"><a id="dropdown-flag" href="#" class="btn btn-danger icon-switch" >Logout</a>
                 <!--<div aria-labelledby="dropdown-flag" class="dropdown-menu"><a href="#" class="btn btn-blue">English</a></div>-->
               </li>
               <!--<li class="dropdown dropdown-notification nav-item"><a href="#" data-toggle="dropdown" class="nav-link nav-link-label"><i class="ficon icon-bell4"></i><span class="tag tag-pill tag-default tag-danger tag-default tag-up">5</span></a>-->
@@ -199,9 +199,9 @@
           </li>-->
           <li class=" nav-item"><a href="#"><i class="icon-stack-2"></i><span data-i18n="nav.page_layouts.main" class="menu-title">Setup</span></a>
             <ul class="menu-content">
-                <li><a href="../../../UI_Templates/html/ltr/WebForm2.aspx" data-i18n="nav.page_layouts.1_column" class="menu-item">User Setup</a>
+                <li><a href="../../../UI_Templates/html/ltr/WebForm2.aspx" data-i18n="nav.page_layouts.1_column" class="menu-item"><i class="icon-users2"></i>User Setup</a>
               </li>
-                <li><a href="#" data-i18n="nav.menu_levels.second_level_child.third_level_child.main" class="menu-item">Code Entry</a>
+                <li><a href="#" data-i18n="nav.menu_levels.second_level_child.third_level_child.main" class="menu-item">Underwriting Code Entry</a>
                     <ul class="menu-content">
                       <li><a href="#" data-i18n="nav.menu_levels.second_level_child.third_level_child.fourth_level1" class="menu-item">Business Sector Setup</a>
                       </li>
@@ -224,7 +224,7 @@
                         
                     </ul>
                   </li>
-                <li><a href="#" data-i18n="nav.menu_levels.second_level_child.third_level_child.main" class="menu-item">Code Print</a>
+                <li><a href="#" data-i18n="nav.menu_levels.second_level_child.third_level_child.main" class="menu-item">Underwriting Code Print</a>
                     <ul class="menu-content">
                       <li><a href="#" data-i18n="nav.menu_levels.second_level_child.third_level_child.fourth_level1" class="menu-item">Business Sector List</a>
                       </li>
@@ -252,24 +252,24 @@
                     </ul>
                   </li>
               
-              <li><a href="layout-2-columns.html" data-i18n="nav.page_layouts.2_columns" class="menu-item">Underwriting Budget</a>
+              <li><a href="#" data-i18n="nav.page_layouts.2_columns" class="menu-item">Underwriting Budget</a>
               </li>
-              <li><a href="layout-boxed.html" data-i18n="nav.page_layouts.boxed_layout" class="menu-item">Treaty Proportions Rate</a>
+              <li><a href="#" data-i18n="nav.page_layouts.boxed_layout" class="menu-item">Treaty Proportions Rate</a>
               </li>
-              <li><a href="layout-static.html" data-i18n="nav.page_layouts.static_layout" class="menu-item">Treaty Commision Rates</a>
+              <li><a href="#" data-i18n="nav.page_layouts.static_layout" class="menu-item">Treaty Commision Rates</a>
               </li>
               <li class="navigation-divider"></li>
-              <li><a href="layout-light.html" data-i18n="nav.page_layouts.light_layout" class="menu-item">Legal Cession Premium</a>
+              <li><a href="#" data-i18n="nav.page_layouts.light_layout" class="menu-item">Legal Cession Premium</a>
               </li>
-              <li><a href="layout-dark.html" data-i18n="nav.page_layouts.dark_layout" class="menu-item">Reinsurance Treaty</a>
+              <li><a href="#" data-i18n="nav.page_layouts.dark_layout" class="menu-item">Reinsurance Treaty</a>
               </li>
-              <li><a href="layout-semi-dark.html" data-i18n="nav.page_layouts.semi_dark_layout" class="menu-item">Earthquake & Fire Rates</a>
+              <li><a href="#" data-i18n="nav.page_layouts.semi_dark_layout" class="menu-item">Earthquake & Fire Rates</a>
               </li>
-                <li><a href="layout-dark.html" data-i18n="nav.page_layouts.dark_layout" class="menu-item">ABS Memo Setup</a>
+                <li><a href="#" data-i18n="nav.page_layouts.dark_layout" class="menu-item">ABS Memo Setup</a>
               </li>
                 <li><a href="../../../UI_Templates/html/ltr/Risk_Profile_Setup.aspx" data-i18n="nav.page_layouts.dark_layout" class="menu-item">Policy Risk Factor</a>
               </li>
-                <li><a href="layout-dark.html" data-i18n="nav.page_layouts.dark_layout" class="menu-item">KYC & Other Dox</a>
+                <li><a href="#" data-i18n="nav.page_layouts.dark_layout" class="menu-item">KYC & Other Dox</a>
               </li>
             </ul>
           </li>
@@ -277,7 +277,7 @@
           <li class=" nav-item"><a href="#"><i class="icon-briefcase4"></i><span data-i18n="nav.project.main" class="menu-title">Policy</span></a>
             <ul class="menu-content">
                 <%--Sub--%>
-                <li><a href="#" data-i18n="nav.menu_levels.second_level_child.third_level_child.main" class="menu-item">Motor Policy</a>
+                <li><a href="#" data-i18n="nav.menu_levels.second_level_child.third_level_child.main" class="menu-item"><i class="icon-car"></i> Motor Policy</a>
                     <ul class="menu-content">
                       <li><a href="#" data-i18n="nav.menu_levels.second_level_child.third_level_child.fourth_level1" class="menu-item">Master Setup</a>
                       </li>
@@ -293,9 +293,9 @@
                       </li>
                         <li><a href="#" data-i18n="nav.menu_levels.second_level_child.third_level_child.fourth_level2" class="menu-item">Duplicate Vehicle with Reg No</a>
                       </li>
-                        <li><a href="#" data-i18n="nav.menu_levels.second_level_child.third_level_child.fourth_level2" class="menu-item">Motor Vehicle above Certain Value</a>
+                        <li><a href="#" data-i18n="nav.menu_levels.second_level_child.third_level_child.fourth_level2" class="menu-item">Vehicle above Certain Value</a>
                       </li>
-                        <li><a href="#" data-i18n="nav.menu_levels.second_level_child.third_level_child.fourth_level2" class="menu-item">Motor Vehicle Details - NAICOM</a>
+                        <li><a href="#" data-i18n="nav.menu_levels.second_level_child.third_level_child.fourth_level2" class="menu-item">Vehicle Details - NAICOM</a>
                       </li>
                         </ul>
                     <%--Sub--%>
@@ -398,9 +398,9 @@
                         <li><a href="#" data-i18n="nav.menu_levels.second_level_child.third_level_child.fourth_level2" class="menu-item">Premium Calc Sheet</a>
                       </li>
                         </ul>
-              <li><a href="invoice-template.html" data-i18n="nav.invoice.invoice_template" class="menu-item">Package Policy</a>
+              <li><a href="#" data-i18n="nav.invoice.invoice_template" class="menu-item">Package Policy</a>
               </li>
-              <li><a href="gallery-grid.html" data-i18n="nav.gallery_pages.gallery_grid" class="menu-item">Risk Profile Report</a>
+              <li><a href="#" data-i18n="nav.gallery_pages.gallery_grid" class="menu-item">Risk Profile Report</a>
               </li>
               <%--<li><a href="search-page.html" data-i18n="nav.search_pages.search_page" class="menu-item">Search Page</a>
               </li>
@@ -434,51 +434,51 @@
               </li>--%>
             </ul>
           </li>
-          <li class=" nav-item"><a href="#"><i class="icon-ios-albums-outline"></i><span data-i18n="nav.cards.main" class="menu-title">Transaction</span></a>
+          <li class=" nav-item"><a href="#"><i class="icon-coin-dollar"></i><span data-i18n="nav.cards.main" class="menu-title">Transaction</span></a>
             <ul class="menu-content">
-              <li><a href="card-bootstrap.html" data-i18n="nav.cards.card_bootstrap" class="menu-item">Debit/Credit Note</a>
+              <li><a href="#" data-i18n="nav.cards.card_bootstrap" class="menu-item">Debit/Credit Note</a>
               </li>
-              <li><a href="card-actions.html" data-i18n="nav.cards.card_actions" class="menu-item">ORC Debit/Credit Note</a>
+              <li><a href="#" data-i18n="nav.cards.card_actions" class="menu-item">ORC Debit/Credit Note</a>
               </li>
-                <li><a href="card-bootstrap.html" data-i18n="nav.cards.card_bootstrap" class="menu-item">Normal Fac. Outward DN/CN Note</a>
+                <li><a href="#" data-i18n="nav.cards.card_bootstrap" class="menu-item">Normal Fac. Outward DN/CN Note</a>
               </li>
-              <li><a href="card-actions.html" data-i18n="nav.cards.card_actions" class="menu-item">Special Commision DN/CN</a>
+              <li><a href="#" data-i18n="nav.cards.card_actions" class="menu-item">Special Commision DN/CN</a>
               </li>
-                <li><a href="card-bootstrap.html" data-i18n="nav.cards.card_bootstrap" class="menu-item">Convert Dummy DN/CN to Normal</a>
+                <li><a href="#" data-i18n="nav.cards.card_bootstrap" class="menu-item">Convert Dummy DN/CN to Normal</a>
               </li>
-              <li><a href="card-actions.html" data-i18n="nav.cards.card_actions" class="menu-item">Approve Debit/Credit Note</a>
+              <li><a href="#" data-i18n="nav.cards.card_actions" class="menu-item">Approve Debit/Credit Note</a>
               </li>
-                <li><a href="card-bootstrap.html" data-i18n="nav.cards.card_bootstrap" class="menu-item">DN/CN by Ref Date</a>
+                <li><a href="#" data-i18n="nav.cards.card_bootstrap" class="menu-item">DN/CN by Ref Date</a>
               </li>
-              <li><a href="card-actions.html" data-i18n="nav.cards.card_actions" class="menu-item">DN/CN by Policy No.</a>
+              <li><a href="#" data-i18n="nav.cards.card_actions" class="menu-item">DN/CN by Policy No.</a>
               </li>
-                <li><a href="card-bootstrap.html" data-i18n="nav.cards.card_bootstrap" class="menu-item">DN/CN by Dox No.</a>
+                <li><a href="#" data-i18n="nav.cards.card_bootstrap" class="menu-item">DN/CN by Dox No.</a>
               </li>
-              <li><a href="card-actions.html" data-i18n="nav.cards.card_actions" class="menu-item">DN/CN for any Closed Month</a>
+              <li><a href="#" data-i18n="nav.cards.card_actions" class="menu-item">DN/CN for any Closed Month</a>
               </li>
-                <li><a href="card-bootstrap.html" data-i18n="nav.cards.card_bootstrap" class="menu-item">Reinsurance/Treaty Update</a>
+                <li><a href="#" data-i18n="nav.cards.card_bootstrap" class="menu-item">Reinsurance/Treaty Update</a>
               </li>
-              <li><a href="card-actions.html" data-i18n="nav.cards.card_actions" class="menu-item">Reinsurance/Treaty List</a>
+              <li><a href="#" data-i18n="nav.cards.card_actions" class="menu-item">Reinsurance/Treaty List</a>
               </li>
-                <li><a href="card-bootstrap.html" data-i18n="nav.cards.card_bootstrap" class="menu-item">Upload Policy & DN Data</a>
+                <li><a href="#" data-i18n="nav.cards.card_bootstrap" class="menu-item">Upload Policy & DN Data</a>
               </li>
-              <li><a href="card-actions.html" data-i18n="nav.cards.card_actions" class="menu-item">Upload New Policy</a>
+              <li><a href="#" data-i18n="nav.cards.card_actions" class="menu-item">Upload New Policy</a>
               </li>
-                <li><a href="card-bootstrap.html" data-i18n="nav.cards.card_bootstrap" class="menu-item">Insured Name Search</a>
+                <li><a href="#" data-i18n="nav.cards.card_bootstrap" class="menu-item">Insured Name Search</a>
               </li>
-              <li><a href="card-actions.html" data-i18n="nav.cards.card_actions" class="menu-item">Insured Name Print</a>
+              <li><a href="#" data-i18n="nav.cards.card_actions" class="menu-item">Insured Name Print</a>
               </li>
             </ul>
           </li>
-          <li class=" nav-item"><a href="#"><i class="icon-whatshot"></i><span data-i18n="nav.advance_cards.main" class="menu-title">Operational Report</span></a>
+          <li class=" nav-item"><a href="#"><i class="icon-file-excel"></i><span data-i18n="nav.advance_cards.main" class="menu-title">Operational Report</span></a>
             <ul class="menu-content">
               <li><a href="#" data-i18n="nav.cards.card_statistics" class="menu-item">Debit Note Print</a>
               </li>
               <li><a href="#" data-i18n="nav.cards.card_charts" class="menu-item">Credit Note Print</a>
               </li>
-                <li><a href="card-bootstrap.html" data-i18n="nav.cards.card_bootstrap" class="menu-item">Worksheet Data Print</a>
+                <li><a href="#" data-i18n="nav.cards.card_bootstrap" class="menu-item">Worksheet Data Print</a>
               </li>
-              <li><a href="card-actions.html" data-i18n="nav.cards.card_actions" class="menu-item">Premium Analysis Worksheet</a>
+              <li><a href="#" data-i18n="nav.cards.card_actions" class="menu-item">Premium Analysis Worksheet</a>
               </li>
                 <li><a href="#" data-i18n="nav.cards.card_charts" class="menu-item">Summary Production Report</a>
               </li>
@@ -513,31 +513,118 @@
                         </ul>
                 <li><a href="#" data-i18n="nav.cards.card_charts" class="menu-item">Detailed Premium By Insured</a>
               </li>
-                <li><a href="#" data-i18n="nav.cards.card_charts" class="menu-item">Production Report </a>
+                <li><a href="#" data-i18n="nav.cards.card_charts" class="menu-item">Production Report</a>
               </li>
                 <li><a href="#" data-i18n="nav.cards.card_charts" class="menu-item">NAICOM Third Party Report</a>
               </li>
                 <li><a href="#" data-i18n="nav.cards.card_charts" class="menu-item">List of Receipts</a>
               </li>
-            </ul>
-          </li>
-          <li class=" nav-item"><a href="#"><i class="icon-compass3"></i><span data-i18n="nav.content.main" class="menu-title">Underwriting Report</span></a>
+                <li><a href="#" data-i18n="nav.menu_levels.second_level_child.third_level_child.main" class="menu-item">Reinsurance Production Report</a>
+                    <ul class="menu-content">
+                      <li><a href="#" data-i18n="nav.menu_levels.second_level_child.third_level_child.fourth_level1" class="menu-item">Loc Fac-Inwards Premium</a>
+                      </li>
+                      <li><a href="#" data-i18n="nav.menu_levels.second_level_child.third_level_child.fourth_level2" class="menu-item">Loc Fac-Outward Premium</a>
+                      </li>                      
+                        </ul>
+                    <li><a href="#" data-i18n="nav.menu_levels.second_level_child.third_level_child.main" class="menu-item">Daily Premium List</a>
+                    <ul class="menu-content">
+                      <li><a href="#" data-i18n="nav.menu_levels.second_level_child.third_level_child.fourth_level1" class="menu-item">DN/CN Premium List</a>
+                      </li>
+                      <li><a href="#" data-i18n="nav.menu_levels.second_level_child.third_level_child.fourth_level2" class="menu-item">Premium List By Invoice No</a>
+                      </li> 
+                        <li><a href="#" data-i18n="nav.menu_levels.second_level_child.third_level_child.fourth_level2" class="menu-item">By Invoice Date</a>
+                      </li> 
+                        <li><a href="#" data-i18n="nav.menu_levels.second_level_child.third_level_child.fourth_level2" class="menu-item">By Invoice Date with Payment</a>
+                      </li> 
+                        <li><a href="#" data-i18n="nav.menu_levels.second_level_child.third_level_child.fourth_level2" class="menu-item">Analyze into Business Type</a>
+                      </li> 
+                        <li><a href="#" data-i18n="nav.menu_levels.second_level_child.third_level_child.fourth_level2" class="menu-item">Analyze into Business Unit</a>
+                      </li> 
+                        <li><a href="#" data-i18n="nav.menu_levels.second_level_child.third_level_child.fourth_level2" class="menu-item">Business from Internet</a>
+                      </li> 
+                        <li><a href="#" data-i18n="nav.menu_levels.second_level_child.third_level_child.fourth_level2" class="menu-item">Percentage of New Business</a>
+                      </li> 
+                        </ul>
+                        <li><a href="#" data-i18n="nav.menu_levels.second_level_child.third_level_child.main" class="menu-item">Miscellaneous Report</a>
+                    <ul class="menu-content">
+                      <li><a href="#" data-i18n="nav.menu_levels.second_level_child.third_level_child.fourth_level1" class="menu-item">Premium Exceeding X Value </a>
+                      </li>
+                      <li><a href="#" data-i18n="nav.menu_levels.second_level_child.third_level_child.fourth_level2" class="menu-item">Reversal Premium List</a>
+                      </li>
+                        <li><a href="#" data-i18n="nav.menu_levels.second_level_child.third_level_child.fourth_level2" class="menu-item">Premium List for Policy</a>
+                      </li>
+                        <li><a href="#" data-i18n="nav.menu_levels.second_level_child.third_level_child.fourth_level2" class="menu-item">Premium List for Broker</a>
+                      </li>
+                        <li><a href="#" data-i18n="nav.menu_levels.second_level_child.third_level_child.fourth_level2" class="menu-item">Websoft Data Request</a>
+                      </li>
+                        <li><a href="#" data-i18n="nav.menu_levels.second_level_child.third_level_child.fourth_level2" class="menu-item">Motor Insurance Statistics</a>
+                      </li>
+                        <li><a href="#" data-i18n="nav.menu_levels.second_level_child.third_level_child.fourth_level2" class="menu-item">WC Premium List</a>
+                      </li>
+                        <%--Sub Dropdown--%>
+                        <li><a href="#" data-i18n="nav.menu_levels.second_level_child.third_level_child.main" class="menu-item">Alexander Forbes Report</a>
+                    <ul class="menu-content">
+                      <li><a href="#" data-i18n="nav.menu_levels.second_level_child.third_level_child.fourth_level1" class="menu-item">Report on Premium (UND)</a>
+                      </li>
+                      <li><a href="#" data-i18n="nav.menu_levels.second_level_child.third_level_child.fourth_level2" class="menu-item">Report on Premium (ACC)</a>
+                      </li>   
+                        <li><a href="#" data-i18n="nav.menu_levels.second_level_child.third_level_child.fourth_level2" class="menu-item">Report on Claims Paid</a>
+                      </li>
+                        <li><a href="#" data-i18n="nav.menu_levels.second_level_child.third_level_child.fourth_level2" class="menu-item">Report on Claims Outstanding</a>
+                      </li>
+                        <li><a href="#" data-i18n="nav.menu_levels.second_level_child.third_level_child.fourth_level2" class="menu-item">Report on Claims Paid (ACC)</a>
+                      </li>
+                        <li><a href="#" data-i18n="nav.menu_levels.second_level_child.third_level_child.fourth_level2" class="menu-item">Report on Claims Paid ('07 Above)</a>
+                      </li>
+                        </ul>
+                        <li><a href="#" data-i18n="nav.menu_levels.second_level_child.third_level_child.fourth_level2" class="menu-item">Quarterly Returns</a>
+                      </li>
+                        <li><a href="#" data-i18n="nav.menu_levels.second_level_child.third_level_child.fourth_level2" class="menu-item">Premium List (CAI Lead)</a>
+                      </li>
+                        </ul>
+                        <li><a href="#" data-i18n="nav.menu_levels.second_level_child.third_level_child.fourth_level1" class="menu-item">Debtors Bal from Accounts</a>
+                      </li>
+                     <li><a href="#" data-i18n="nav.menu_levels.second_level_child.third_level_child.fourth_level1" class="menu-item">Bal from Acc - Crusader</a>
+                      </li>
+                    </ul>
+                </li>
+
+          <li class=" nav-item"><a href="#"><i class="icon-file-pdf"></i><span data-i18n="nav.content.main" class="menu-title">Underwriting Report</span></a>
             <ul class="menu-content">
-              <li><a href="#" data-i18n="nav.content.content_grid" class="menu-item">Grid</a>
+              <li><a href="#" data-i18n="nav.content.content_grid" class="menu-item">Policy Data Print</a>
               </li>
-              <li><a href="content-typography.html" data-i18n="nav.content.content_typography" class="menu-item">Typography</a>
+              <li><a href="#" data-i18n="nav.content.content_typography" class="menu-item">List Of Clients (Agents)</a>
               </li>
-              <li><a href="content-text-utilities.html" data-i18n="nav.content.content_text_utilities" class="menu-item">Text utilities</a>
+              <li><a href="#" data-i18n="nav.content.content_text_utilities" class="menu-item">Policy Database Statistics</a>
               </li>
-              <li><a href="content-helper-classes.html" data-i18n="nav.content.content_helper_classes" class="menu-item">Helper classes</a>
+              <li><a href="#" data-i18n="nav.content.content_helper_classes" class="menu-item">List Of Client Names</a>
               </li>
+                <li><a href="#" data-i18n="nav.content.content_helper_classes" class="menu-item">List of Active Policies</a>
+              </li>
+                <li><a href="#" data-i18n="nav.content.content_helper_classes" class="menu-item">Search Policies with Inception Date</a>
+              </li>
+                <li><a href="#" data-i18n="nav.content.content_helper_classes" class="menu-item">Renewal Notices Routine</a>
+              </li>
+                <li><a href="#" data-i18n="nav.content.content_helper_classes" class="menu-item">Statistics of Active Policies</a>
+              </li>
+                <li><a href="#" data-i18n="nav.content.content_helper_classes" class="menu-item">Statistics of New Businesses</a>
+              </li>
+                <li><a href="#" data-i18n="nav.content.content_helper_classes" class="menu-item">Statistics of Premium by Business Source</a>
+              </li>
+                <li><a href="#" data-i18n="nav.content.content_helper_classes" class="menu-item">Risk Evaluation Report</a>
+              </li>
+                <li><a href="#" data-i18n="nav.content.content_helper_classes" class="menu-item">NAICOM Report</a>
+              </li>
+                <li><a href="#" data-i18n="nav.content.content_helper_classes" class="menu-item">Custodian Premium Report</a>
+              </li>
+                
             </ul>
           </li>
           <li class=" nav-item"><a href="#"><i class="icon-grid2"></i><span data-i18n="nav.components.main" class="menu-title">Reinsurance</span></a>
             <ul class="menu-content">
-              <li><a href="component-alerts.html" data-i18n="nav.components.component_alerts" class="menu-item">Alerts</a>
+              <li><a href="#" data-i18n="nav.components.component_alerts" class="menu-item">Reinsurance</a>
               </li>
-              <li><a href="component-buttons-basic.html" data-i18n="nav.components.components_buttons.component_buttons_basic" class="menu-item">Basic Buttons</a>
+              <%--<li><a href="component-buttons-basic.html" data-i18n="nav.components.components_buttons.component_buttons_basic" class="menu-item">Basic Buttons</a>
               </li>
               <li><a href="component-carousel.html" data-i18n="nav.components.component_carousel" class="menu-item">Carousel</a>
               </li>
@@ -568,14 +655,14 @@
               <li><a href="component-progress.html" data-i18n="nav.components.component_progress" class="menu-item">Progress</a>
               </li>
               <li><a href="component-media-objects.html" data-i18n="nav.components.component_media_objects" class="menu-item">Media Objects</a>
-              </li>
+              </li>--%>
             </ul>
           </li>
-          <li class=" nav-item"><a href="#"><i class="icon-eye6"></i><span data-i18n="nav.icons.main" class="menu-title">Security</span></a>
+          <li class=" nav-item"><a href="#"><i class="icon-security"></i><span data-i18n="nav.icons.main" class="menu-title">Security</span></a>
             <ul class="menu-content">
-              <li><a href="icons-feather.html" data-i18n="nav.icons.icons_feather" class="menu-item">Feather</a>
+              <li><a href="#" data-i18n="nav.icons.icons_feather" class="menu-item">Security</a>
               </li>
-              <li><a href="icons-ionicons.html" data-i18n="nav.icons.icons_ionicons" class="menu-item">Ionicons</a>
+              <%--<li><a href="icons-ionicons.html" data-i18n="nav.icons.icons_ionicons" class="menu-item">Ionicons</a>
               </li>
               <li><a href="icons-fps-line.html" data-i18n="nav.icons.icons_fps_line" class="menu-item">FPS Line Icons</a>
               </li>
@@ -588,21 +675,21 @@
               <li><a href="icons-evil.html" data-i18n="nav.icons.icons_evil" class="menu-item">Evil Icons</a>
               </li>
               <li><a href="icons-linecons.html" data-i18n="nav.icons.icons_linecons" class="menu-item">Linecons</a>
-              </li>
+              </li>--%>
             </ul>
           </li>
           <!--<li class=" nav-item"><a href="form-layout-basic.html"><i class="icon-paper"></i><span data-i18n="nav.form_layouts.form_layout_basic" class="menu-title">Basic Forms</span></a>
           </li>
           <li class=" nav-item"><a href="table-basic.html"><i class="icon-table2"></i><span data-i18n="nav.bootstrap_tables.table_basic" class="menu-title">Basic Tables</span></a>
           </li>-->
-          <li class=" nav-item"><a href="#"><i class="icon-bar-graph-2"></i><span data-i18n="nav.google_charts.main" class="menu-title">Help</span></a>
+          <li class=" nav-item"><a href="#"><i class="icon-hand-paper-o"></i><span data-i18n="nav.google_charts.main" class="menu-title">Help</span></a>
             <ul class="menu-content">
-              <li><a href="google-bar-charts.html" data-i18n="nav.google_charts.google_bar_charts" class="menu-item">Bar charts</a>
+              <li><a href="#" data-i18n="nav.google_charts.google_bar_charts" class="menu-item">Help</a>
               </li>
-              <li><a href="google-line-charts.html" data-i18n="nav.google_charts.google_line_charts" class="menu-item">Line charts</a>
+              <%--<li><a href="google-line-charts.html" data-i18n="nav.google_charts.google_line_charts" class="menu-item">Line charts</a>
               </li>
               <li><a href="google-pie-charts.html" data-i18n="nav.google_charts.google_pie_charts" class="menu-item">Pie charts</a>
-              </li>
+              </li>--%>
             </ul>
           </li>
           <!--<li class=" nav-item"><a href="#"><i class="icon-stats-dots"></i><span data-i18n="nav.chartjs.main" class="menu-title">Chartjs</span></a>
