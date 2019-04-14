@@ -1,0 +1,369 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="Ipolicy_DBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="ABSPASSTAB">
+          <Key>
+            <PropertyRef Name="PWD_REC_NO" />
+            <PropertyRef Name="PWD_GROUP_ID" />
+            <PropertyRef Name="PWD_ID" />
+          </Key>
+          <Property Name="PWD_REC_NO" Type="numeric" Precision="18" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="PWD_GROUP_ID" Type="char" MaxLength="3" Nullable="false" />
+          <Property Name="PWD_ID" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="PWD_USER_NAME" Type="char" MaxLength="50" />
+          <Property Name="PWD_CODE" Type="varchar" MaxLength="50" />
+          <Property Name="PWD_CODE_RE" Type="varchar" MaxLength="50" />
+          <Property Name="PWD_CODE_CHG" Type="char" MaxLength="10" />
+          <Property Name="PWD_CODE_DEL" Type="char" MaxLength="10" />
+          <Property Name="PWD_LOGIN_COUNT" Type="char" MaxLength="2" />
+          <Property Name="PWD_USER_LEVEL" Type="char" MaxLength="1" />
+          <Property Name="PWD_APPROVED_SW" Type="char" MaxLength="1" />
+          <Property Name="PWD_LOG_USER" Type="char" MaxLength="1" />
+          <Property Name="PWD_CTRL_SW" Type="char" MaxLength="1" />
+          <Property Name="PWD_ALERT_DATE" Type="datetime" />
+          <Property Name="PWD_EFFECTIVE_DATE" Type="datetime" />
+          <Property Name="PWD_EXPIRY_DATE" Type="datetime" />
+          <Property Name="PWD_USER_TYPE" Type="char" MaxLength="1" />
+          <Property Name="PWD_USER_DEPT" Type="char" MaxLength="3" />
+          <Property Name="PWD_USER_GRP" Type="numeric" Precision="5" Scale="0" />
+          <Property Name="PWD_ENABLE_SW" Type="char" MaxLength="1" />
+          <Property Name="PWD_SETUP_SW" Type="char" MaxLength="1" />
+          <Property Name="PWD_SECURITY_SW" Type="char" MaxLength="1" />
+          <Property Name="PWD_GENERAL_SW" Type="char" MaxLength="1" />
+          <Property Name="PWD_MARKETING_SW" Type="char" MaxLength="1" />
+          <Property Name="PWD_POLICY_SW" Type="char" MaxLength="1" />
+          <Property Name="PWD_UNDERWRITING_SW" Type="char" MaxLength="1" />
+          <Property Name="PWD_CLAIMS_SW" Type="char" MaxLength="1" />
+          <Property Name="PWD_REINSURANCE_SW" Type="char" MaxLength="1" />
+          <Property Name="PWD_CREDITCONTROL_SW" Type="char" MaxLength="1" />
+          <Property Name="PWD_ACCOUNTS_SW" Type="char" MaxLength="1" />
+          <Property Name="PWD_FIXEDASSET_SW" Type="char" MaxLength="1" />
+          <Property Name="PWD_PAYROLL_SW" Type="char" MaxLength="1" />
+          <Property Name="PWD_PERSONNEL_SW" Type="char" MaxLength="1" />
+          <Property Name="PWD_ACCOUNTS_SW_GL" Type="char" MaxLength="1" />
+          <Property Name="PWD_INVESTMENT_SW" Type="char" MaxLength="1" />
+          <Property Name="PWD_PURCHASES_SW" Type="char" MaxLength="1" />
+          <Property Name="PWD_INSERT_SW" Type="char" MaxLength="1" />
+          <Property Name="PWD_UPDATE_SW" Type="char" MaxLength="1" />
+          <Property Name="PWD_DELETE_SW" Type="char" MaxLength="1" />
+          <Property Name="PWD_PRINT_SW" Type="char" MaxLength="1" />
+          <Property Name="PWD_VIEW_SW" Type="char" MaxLength="1" />
+          <Property Name="PWD_PROCESS_SW" Type="char" MaxLength="1" />
+          <Property Name="PWD_MGT_CAT_SW" Type="char" MaxLength="1" />
+          <Property Name="PWD_MGT_CAT_NUM" Type="char" MaxLength="4" />
+          <Property Name="PWD_USER_AUTH" Type="char" MaxLength="1" />
+          <Property Name="PWD_STORE_AUTH" Type="char" MaxLength="1" />
+          <Property Name="PWD_TEL_NUM" Type="char" MaxLength="20" />
+          <Property Name="PWD_TELEXT_NUM" Type="char" MaxLength="20" />
+          <Property Name="PWD_FAX_NUM" Type="char" MaxLength="20" />
+          <Property Name="PWD_EMAIL_NUM" Type="char" MaxLength="35" />
+          <Property Name="PWD_MOBILE_NUM" Type="char" MaxLength="20" />
+          <Property Name="PWD_UND_SPC" Type="char" MaxLength="1" />
+          <Property Name="PWD_LOG_DATE" Type="datetime" />
+          <Property Name="PWD_LOG_TIME" Type="datetime" />
+          <Property Name="PWD_EXIT_DATE" Type="datetime" />
+          <Property Name="PWD_FLAG" Type="char" MaxLength="1" />
+          <Property Name="PWD_KEYDTE" Type="datetime" />
+          <Property Name="PWD_OPERID" Type="char" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="ABSROLEDTLS">
+          <Key>
+            <PropertyRef Name="ROLE_DTL_USER_ID" />
+            <PropertyRef Name="ROLE_DTL_ID" />
+            <PropertyRef Name="ROLE_DTL_NUM" />
+            <PropertyRef Name="ROLE_DTL_NO" />
+          </Key>
+          <Property Name="ROLE_DTL_USER_ID" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="ROLE_DTL_ID" Type="varchar" MaxLength="3" Nullable="false" />
+          <Property Name="ROLE_DTL_NUM" Type="varchar" MaxLength="5" Nullable="false" />
+          <Property Name="ROLE_DTL_NO" Type="numeric" Precision="18" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ROLE_DTL_ROLE_NUM" Type="varchar" MaxLength="5" />
+          <Property Name="ROLE_DTL_MODULE_NAME" Type="varchar" MaxLength="50" />
+          <Property Name="ROLE_DTL_MODULE_TYPE" Type="varchar" MaxLength="1" />
+          <Property Name="ROLE_DTL_PERMISSION_YN" Type="varchar" MaxLength="1" />
+          <Property Name="ROLE_DTL_INSERT_YN" Type="varchar" MaxLength="1" />
+          <Property Name="ROLE_DTL_UPDATE_YN" Type="varchar" MaxLength="1" />
+          <Property Name="ROLE_DTL_DELETE_YN" Type="varchar" MaxLength="1" />
+          <Property Name="ROLE_DTL_VIEW_YN" Type="varchar" MaxLength="1" />
+          <Property Name="ROLE_DTL_PRINT_YN" Type="varchar" MaxLength="1" />
+          <Property Name="ROLE_DTL_APPROVE_YN" Type="varchar" MaxLength="1" />
+          <Property Name="ROLE_DTL_APPROVE_MIN_VALUE" Type="numeric" Precision="18" Scale="2" />
+          <Property Name="ROLE_DTL_APPROVE_MAX_VALUE" Type="numeric" Precision="18" Scale="2" />
+          <Property Name="ROLE_DTL_FLAG" Type="char" MaxLength="1" />
+          <Property Name="ROLE_DTL_KEYDTE" Type="datetime" />
+          <Property Name="ROLE_DTL_OPERID" Type="char" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="ABSROLEMST">
+          <Key>
+            <PropertyRef Name="ROLE_ID" />
+            <PropertyRef Name="ROLE_NUM" />
+            <PropertyRef Name="ROLE_NO" />
+          </Key>
+          <Property Name="ROLE_ID" Type="varchar" MaxLength="3" Nullable="false" />
+          <Property Name="ROLE_NUM" Type="varchar" MaxLength="3" Nullable="false" />
+          <Property Name="ROLE_NO" Type="numeric" Precision="18" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ROLE_NAME" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="ROLE_TYPE" Type="varchar" MaxLength="1" />
+          <Property Name="ROLE_FLAG" Type="char" MaxLength="1" />
+          <Property Name="ROLE_KEYDTE" Type="datetime" Nullable="false" />
+          <Property Name="ROLE_OPERID" Type="char" MaxLength="10" />
+        </EntityType>
+        <EntityContainer Name="Ipolicy_DBModelStoreContainer">
+          <EntitySet Name="ABSPASSTAB" EntityType="Self.ABSPASSTAB" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ABSROLEDTLS" EntityType="Self.ABSROLEDTLS" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ABSROLEMST" EntityType="Self.ABSROLEMST" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Ipolicy_DBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="ABSPASSTAB">
+          <Key>
+            <PropertyRef Name="PWD_REC_NO" />
+            <PropertyRef Name="PWD_GROUP_ID" />
+            <PropertyRef Name="PWD_ID" />
+          </Key>
+          <Property Name="PWD_REC_NO" Type="Decimal" Precision="18" Scale="0" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="PWD_GROUP_ID" Type="String" MaxLength="3" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="PWD_ID" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="PWD_USER_NAME" Type="String" MaxLength="50" FixedLength="true" Unicode="false" />
+          <Property Name="PWD_CODE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="PWD_CODE_RE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="PWD_CODE_CHG" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="PWD_CODE_DEL" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="PWD_LOGIN_COUNT" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Name="PWD_USER_LEVEL" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="PWD_APPROVED_SW" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="PWD_LOG_USER" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="PWD_CTRL_SW" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="PWD_ALERT_DATE" Type="DateTime" Precision="3" />
+          <Property Name="PWD_EFFECTIVE_DATE" Type="DateTime" Precision="3" />
+          <Property Name="PWD_EXPIRY_DATE" Type="DateTime" Precision="3" />
+          <Property Name="PWD_USER_TYPE" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="PWD_USER_DEPT" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+          <Property Name="PWD_USER_GRP" Type="Decimal" Precision="5" Scale="0" />
+          <Property Name="PWD_ENABLE_SW" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="PWD_SETUP_SW" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="PWD_SECURITY_SW" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="PWD_GENERAL_SW" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="PWD_MARKETING_SW" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="PWD_POLICY_SW" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="PWD_UNDERWRITING_SW" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="PWD_CLAIMS_SW" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="PWD_REINSURANCE_SW" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="PWD_CREDITCONTROL_SW" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="PWD_ACCOUNTS_SW" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="PWD_FIXEDASSET_SW" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="PWD_PAYROLL_SW" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="PWD_PERSONNEL_SW" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="PWD_ACCOUNTS_SW_GL" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="PWD_INVESTMENT_SW" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="PWD_PURCHASES_SW" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="PWD_INSERT_SW" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="PWD_UPDATE_SW" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="PWD_DELETE_SW" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="PWD_PRINT_SW" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="PWD_VIEW_SW" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="PWD_PROCESS_SW" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="PWD_MGT_CAT_SW" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="PWD_MGT_CAT_NUM" Type="String" MaxLength="4" FixedLength="true" Unicode="false" />
+          <Property Name="PWD_USER_AUTH" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="PWD_STORE_AUTH" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="PWD_TEL_NUM" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+          <Property Name="PWD_TELEXT_NUM" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+          <Property Name="PWD_FAX_NUM" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+          <Property Name="PWD_EMAIL_NUM" Type="String" MaxLength="35" FixedLength="true" Unicode="false" />
+          <Property Name="PWD_MOBILE_NUM" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+          <Property Name="PWD_UND_SPC" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="PWD_LOG_DATE" Type="DateTime" Precision="3" />
+          <Property Name="PWD_LOG_TIME" Type="DateTime" Precision="3" />
+          <Property Name="PWD_EXIT_DATE" Type="DateTime" Precision="3" />
+          <Property Name="PWD_FLAG" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="PWD_KEYDTE" Type="DateTime" Precision="3" />
+          <Property Name="PWD_OPERID" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+        </EntityType>
+        <EntityType Name="ABSROLEDTL">
+          <Key>
+            <PropertyRef Name="ROLE_DTL_USER_ID" />
+            <PropertyRef Name="ROLE_DTL_ID" />
+            <PropertyRef Name="ROLE_DTL_NUM" />
+            <PropertyRef Name="ROLE_DTL_NO" />
+          </Key>
+          <Property Name="ROLE_DTL_USER_ID" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="ROLE_DTL_ID" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ROLE_DTL_NUM" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ROLE_DTL_NO" Type="Decimal" Precision="18" Scale="0" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ROLE_DTL_ROLE_NUM" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="ROLE_DTL_MODULE_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ROLE_DTL_MODULE_TYPE" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="ROLE_DTL_PERMISSION_YN" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="ROLE_DTL_INSERT_YN" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="ROLE_DTL_UPDATE_YN" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="ROLE_DTL_DELETE_YN" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="ROLE_DTL_VIEW_YN" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="ROLE_DTL_PRINT_YN" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="ROLE_DTL_APPROVE_YN" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="ROLE_DTL_APPROVE_MIN_VALUE" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="ROLE_DTL_APPROVE_MAX_VALUE" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="ROLE_DTL_FLAG" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="ROLE_DTL_KEYDTE" Type="DateTime" Precision="3" />
+          <Property Name="ROLE_DTL_OPERID" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+        </EntityType>
+        <EntityType Name="ABSROLEMST">
+          <Key>
+            <PropertyRef Name="ROLE_ID" />
+            <PropertyRef Name="ROLE_NUM" />
+            <PropertyRef Name="ROLE_NO" />
+          </Key>
+          <Property Name="ROLE_ID" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ROLE_NUM" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ROLE_NO" Type="Decimal" Precision="18" Scale="0" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ROLE_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ROLE_TYPE" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="ROLE_FLAG" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="ROLE_KEYDTE" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ROLE_OPERID" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+        </EntityType>
+        <EntityContainer Name="Ipolicy_DBEntities1" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="ABSPASSTABs" EntityType="Self.ABSPASSTAB" />
+          <EntitySet Name="ABSROLEDTLS" EntityType="Self.ABSROLEDTL" />
+          <EntitySet Name="ABSROLEMSTs" EntityType="Self.ABSROLEMST" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Ipolicy_DBModelStoreContainer" CdmEntityContainer="Ipolicy_DBEntities1">
+          <EntitySetMapping Name="ABSPASSTABs">
+            <EntityTypeMapping TypeName="Ipolicy_DBModel.ABSPASSTAB">
+              <MappingFragment StoreEntitySet="ABSPASSTAB">
+                <ScalarProperty Name="PWD_REC_NO" ColumnName="PWD_REC_NO" />
+                <ScalarProperty Name="PWD_GROUP_ID" ColumnName="PWD_GROUP_ID" />
+                <ScalarProperty Name="PWD_ID" ColumnName="PWD_ID" />
+                <ScalarProperty Name="PWD_USER_NAME" ColumnName="PWD_USER_NAME" />
+                <ScalarProperty Name="PWD_CODE" ColumnName="PWD_CODE" />
+                <ScalarProperty Name="PWD_CODE_RE" ColumnName="PWD_CODE_RE" />
+                <ScalarProperty Name="PWD_CODE_CHG" ColumnName="PWD_CODE_CHG" />
+                <ScalarProperty Name="PWD_CODE_DEL" ColumnName="PWD_CODE_DEL" />
+                <ScalarProperty Name="PWD_LOGIN_COUNT" ColumnName="PWD_LOGIN_COUNT" />
+                <ScalarProperty Name="PWD_USER_LEVEL" ColumnName="PWD_USER_LEVEL" />
+                <ScalarProperty Name="PWD_APPROVED_SW" ColumnName="PWD_APPROVED_SW" />
+                <ScalarProperty Name="PWD_LOG_USER" ColumnName="PWD_LOG_USER" />
+                <ScalarProperty Name="PWD_CTRL_SW" ColumnName="PWD_CTRL_SW" />
+                <ScalarProperty Name="PWD_ALERT_DATE" ColumnName="PWD_ALERT_DATE" />
+                <ScalarProperty Name="PWD_EFFECTIVE_DATE" ColumnName="PWD_EFFECTIVE_DATE" />
+                <ScalarProperty Name="PWD_EXPIRY_DATE" ColumnName="PWD_EXPIRY_DATE" />
+                <ScalarProperty Name="PWD_USER_TYPE" ColumnName="PWD_USER_TYPE" />
+                <ScalarProperty Name="PWD_USER_DEPT" ColumnName="PWD_USER_DEPT" />
+                <ScalarProperty Name="PWD_USER_GRP" ColumnName="PWD_USER_GRP" />
+                <ScalarProperty Name="PWD_ENABLE_SW" ColumnName="PWD_ENABLE_SW" />
+                <ScalarProperty Name="PWD_SETUP_SW" ColumnName="PWD_SETUP_SW" />
+                <ScalarProperty Name="PWD_SECURITY_SW" ColumnName="PWD_SECURITY_SW" />
+                <ScalarProperty Name="PWD_GENERAL_SW" ColumnName="PWD_GENERAL_SW" />
+                <ScalarProperty Name="PWD_MARKETING_SW" ColumnName="PWD_MARKETING_SW" />
+                <ScalarProperty Name="PWD_POLICY_SW" ColumnName="PWD_POLICY_SW" />
+                <ScalarProperty Name="PWD_UNDERWRITING_SW" ColumnName="PWD_UNDERWRITING_SW" />
+                <ScalarProperty Name="PWD_CLAIMS_SW" ColumnName="PWD_CLAIMS_SW" />
+                <ScalarProperty Name="PWD_REINSURANCE_SW" ColumnName="PWD_REINSURANCE_SW" />
+                <ScalarProperty Name="PWD_CREDITCONTROL_SW" ColumnName="PWD_CREDITCONTROL_SW" />
+                <ScalarProperty Name="PWD_ACCOUNTS_SW" ColumnName="PWD_ACCOUNTS_SW" />
+                <ScalarProperty Name="PWD_FIXEDASSET_SW" ColumnName="PWD_FIXEDASSET_SW" />
+                <ScalarProperty Name="PWD_PAYROLL_SW" ColumnName="PWD_PAYROLL_SW" />
+                <ScalarProperty Name="PWD_PERSONNEL_SW" ColumnName="PWD_PERSONNEL_SW" />
+                <ScalarProperty Name="PWD_ACCOUNTS_SW_GL" ColumnName="PWD_ACCOUNTS_SW_GL" />
+                <ScalarProperty Name="PWD_INVESTMENT_SW" ColumnName="PWD_INVESTMENT_SW" />
+                <ScalarProperty Name="PWD_PURCHASES_SW" ColumnName="PWD_PURCHASES_SW" />
+                <ScalarProperty Name="PWD_INSERT_SW" ColumnName="PWD_INSERT_SW" />
+                <ScalarProperty Name="PWD_UPDATE_SW" ColumnName="PWD_UPDATE_SW" />
+                <ScalarProperty Name="PWD_DELETE_SW" ColumnName="PWD_DELETE_SW" />
+                <ScalarProperty Name="PWD_PRINT_SW" ColumnName="PWD_PRINT_SW" />
+                <ScalarProperty Name="PWD_VIEW_SW" ColumnName="PWD_VIEW_SW" />
+                <ScalarProperty Name="PWD_PROCESS_SW" ColumnName="PWD_PROCESS_SW" />
+                <ScalarProperty Name="PWD_MGT_CAT_SW" ColumnName="PWD_MGT_CAT_SW" />
+                <ScalarProperty Name="PWD_MGT_CAT_NUM" ColumnName="PWD_MGT_CAT_NUM" />
+                <ScalarProperty Name="PWD_USER_AUTH" ColumnName="PWD_USER_AUTH" />
+                <ScalarProperty Name="PWD_STORE_AUTH" ColumnName="PWD_STORE_AUTH" />
+                <ScalarProperty Name="PWD_TEL_NUM" ColumnName="PWD_TEL_NUM" />
+                <ScalarProperty Name="PWD_TELEXT_NUM" ColumnName="PWD_TELEXT_NUM" />
+                <ScalarProperty Name="PWD_FAX_NUM" ColumnName="PWD_FAX_NUM" />
+                <ScalarProperty Name="PWD_EMAIL_NUM" ColumnName="PWD_EMAIL_NUM" />
+                <ScalarProperty Name="PWD_MOBILE_NUM" ColumnName="PWD_MOBILE_NUM" />
+                <ScalarProperty Name="PWD_UND_SPC" ColumnName="PWD_UND_SPC" />
+                <ScalarProperty Name="PWD_LOG_DATE" ColumnName="PWD_LOG_DATE" />
+                <ScalarProperty Name="PWD_LOG_TIME" ColumnName="PWD_LOG_TIME" />
+                <ScalarProperty Name="PWD_EXIT_DATE" ColumnName="PWD_EXIT_DATE" />
+                <ScalarProperty Name="PWD_FLAG" ColumnName="PWD_FLAG" />
+                <ScalarProperty Name="PWD_KEYDTE" ColumnName="PWD_KEYDTE" />
+                <ScalarProperty Name="PWD_OPERID" ColumnName="PWD_OPERID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ABSROLEDTLS">
+            <EntityTypeMapping TypeName="Ipolicy_DBModel.ABSROLEDTL">
+              <MappingFragment StoreEntitySet="ABSROLEDTLS">
+                <ScalarProperty Name="ROLE_DTL_USER_ID" ColumnName="ROLE_DTL_USER_ID" />
+                <ScalarProperty Name="ROLE_DTL_ID" ColumnName="ROLE_DTL_ID" />
+                <ScalarProperty Name="ROLE_DTL_NUM" ColumnName="ROLE_DTL_NUM" />
+                <ScalarProperty Name="ROLE_DTL_NO" ColumnName="ROLE_DTL_NO" />
+                <ScalarProperty Name="ROLE_DTL_ROLE_NUM" ColumnName="ROLE_DTL_ROLE_NUM" />
+                <ScalarProperty Name="ROLE_DTL_MODULE_NAME" ColumnName="ROLE_DTL_MODULE_NAME" />
+                <ScalarProperty Name="ROLE_DTL_MODULE_TYPE" ColumnName="ROLE_DTL_MODULE_TYPE" />
+                <ScalarProperty Name="ROLE_DTL_PERMISSION_YN" ColumnName="ROLE_DTL_PERMISSION_YN" />
+                <ScalarProperty Name="ROLE_DTL_INSERT_YN" ColumnName="ROLE_DTL_INSERT_YN" />
+                <ScalarProperty Name="ROLE_DTL_UPDATE_YN" ColumnName="ROLE_DTL_UPDATE_YN" />
+                <ScalarProperty Name="ROLE_DTL_DELETE_YN" ColumnName="ROLE_DTL_DELETE_YN" />
+                <ScalarProperty Name="ROLE_DTL_VIEW_YN" ColumnName="ROLE_DTL_VIEW_YN" />
+                <ScalarProperty Name="ROLE_DTL_PRINT_YN" ColumnName="ROLE_DTL_PRINT_YN" />
+                <ScalarProperty Name="ROLE_DTL_APPROVE_YN" ColumnName="ROLE_DTL_APPROVE_YN" />
+                <ScalarProperty Name="ROLE_DTL_APPROVE_MIN_VALUE" ColumnName="ROLE_DTL_APPROVE_MIN_VALUE" />
+                <ScalarProperty Name="ROLE_DTL_APPROVE_MAX_VALUE" ColumnName="ROLE_DTL_APPROVE_MAX_VALUE" />
+                <ScalarProperty Name="ROLE_DTL_FLAG" ColumnName="ROLE_DTL_FLAG" />
+                <ScalarProperty Name="ROLE_DTL_KEYDTE" ColumnName="ROLE_DTL_KEYDTE" />
+                <ScalarProperty Name="ROLE_DTL_OPERID" ColumnName="ROLE_DTL_OPERID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ABSROLEMSTs">
+            <EntityTypeMapping TypeName="Ipolicy_DBModel.ABSROLEMST">
+              <MappingFragment StoreEntitySet="ABSROLEMST">
+                <ScalarProperty Name="ROLE_ID" ColumnName="ROLE_ID" />
+                <ScalarProperty Name="ROLE_NUM" ColumnName="ROLE_NUM" />
+                <ScalarProperty Name="ROLE_NO" ColumnName="ROLE_NO" />
+                <ScalarProperty Name="ROLE_NAME" ColumnName="ROLE_NAME" />
+                <ScalarProperty Name="ROLE_TYPE" ColumnName="ROLE_TYPE" />
+                <ScalarProperty Name="ROLE_FLAG" ColumnName="ROLE_FLAG" />
+                <ScalarProperty Name="ROLE_KEYDTE" ColumnName="ROLE_KEYDTE" />
+                <ScalarProperty Name="ROLE_OPERID" ColumnName="ROLE_OPERID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
