@@ -1927,7 +1927,6 @@
     <Content Include="customs-broker.jpg" />
     <Content Include="Default.aspx" />
     <Content Include="delivery-truck.png" />
-    <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -1938,7 +1937,6 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
-    <Content Include="ABS_Master.Master" />
     <Content Include="WebForm1.aspx" />
     <EntityDeploy Include="Model\User_Login.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
@@ -3700,14 +3698,6 @@
     </Compile>
     <Compile Include="WebForm1.aspx.designer.cs">
       <DependentUpon>WebForm1.aspx</DependentUpon>
-    </Compile>
-    <Content Include="ABSROLE_CLASS.cs" />
-    <Compile Include="ABS_Master.Master.cs">
-      <DependentUpon>ABS_Master.Master</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="ABS_Master.Master.designer.cs">
-      <DependentUpon>ABS_Master.Master</DependentUpon>
     </Compile>
     <Compile Include="ABS_Menu.aspx.cs">
       <DependentUpon>ABS_Menu.aspx</DependentUpon>
