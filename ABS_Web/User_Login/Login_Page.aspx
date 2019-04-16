@@ -71,7 +71,8 @@
             height: 150px;
         }
 
-        #Label3, #Label6{
+        #Label3
+        {
             color: red;
             font-size: 20px;
         }
@@ -117,7 +118,7 @@
                         <tr>
                 <td><asp:Label ID="Label2" runat="server" Text="Password:"></asp:Label></td>
                 <%--<asp:TextBox ID="TextBox2" runat="server" TextMode="Password" required="required" style="font-family: Calibri;"></asp:TextBox><span style="color: red;">*</span>--%>
-                   <td><dx:BootstrapTextBox ID="BootstrapTextBox2" runat="server" TextMode="Password"></dx:BootstrapTextBox></td>
+                   <td><dx:BootstrapTextBox ID="BootstrapTextBox2" runat="server" PasswordChar="*" Password="true"></dx:BootstrapTextBox></td>
                             </tr>
                             <%--<dx:BootstrapCheckBox ID="BootstrapCheckBox1" runat="server" Text="Sign in with Office365 Account"></dx:BootstrapCheckBox>--%>                              
                     </table>
@@ -127,7 +128,7 @@
                     <asp:Button ID="Button1" runat="server" Text="Sign In" OnClick="Button1_Click1" class="btn btn-primary"/>
                     <br />
                    <br />
-                    <asp:Label ID="Label3" runat="server" Text=""></asp:Label>
+                    <asp:Label ID="Label3" runat="server" Text="" style="color: red;"></asp:Label>
                 </dx:ContentControl>
             </ContentCollection>
          </dx:BootstrapTabPage>

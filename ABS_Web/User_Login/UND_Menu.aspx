@@ -16,6 +16,7 @@
         
     </style>
 
+    <%--Javascript--%>
     <script type="text/javascript">
         function preventBack() {
             window.history.forward();
@@ -57,7 +58,7 @@
                     <td><asp:LinkButton runat="server"><img src="012-lightbulb.png" style="height: 150px; width: 150px; padding-right: 200px;padding-top: 30px; "/><br />PayRoll</asp:LinkButton></td>
                     <td><asp:LinkButton runat="server"><img src="015-banknote.png" style="height: 150px; width: 150px; padding-right: 200px; padding-top: 30px;"/><br />Personel</asp:LinkButton></td>
                     <td><asp:LinkButton runat="server"><img src="013-target.png" style="height: 150px; width: 150px; padding-right: 200px; padding-top: 30px;"/><br />Finance</asp:LinkButton></td>
-                    <td><asp:LinkButton runat="server"><img src="008-gears.png" style="height: 150px; width: 150px; padding-top: 30px;"/><br />User Setup</asp:LinkButton></td>
+                    <td><asp:LinkButton ID="link_Setup" runat="server" OnClick="link_Setup_Click"><img src="008-gears.png" style="height: 150px; width: 150px; padding-top: 30px;"/><br />User Setup</asp:LinkButton></td>
 
 
                 </tr>

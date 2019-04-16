@@ -1,0 +1,181 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="Ipolicy_DBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="ABSROLEMGR">
+          <Key>
+            <PropertyRef Name="Mgr_ID" />
+          </Key>
+          <Property Name="Mgr_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UserName" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Role_Name" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Func_Name" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="C_Action" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="E_Action" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="D_Action" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="A_Action" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Created_By" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Date_Created" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ABSUSERFUNC">
+          <Key>
+            <PropertyRef Name="Func_ID" />
+          </Key>
+          <Property Name="Func_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Func_Name" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ABSUSERROLES">
+          <Key>
+            <PropertyRef Name="Role_ID" />
+          </Key>
+          <Property Name="Role_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Role_Name" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ABSUSERS">
+          <Key>
+            <PropertyRef Name="UserID" />
+          </Key>
+          <Property Name="UserID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UserName" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="User_Pass" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Login_Count" Type="int" />
+          <Property Name="Email" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Created_By" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Date_Created" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="Ipolicy_DBModelStoreContainer">
+          <EntitySet Name="ABSROLEMGR" EntityType="Self.ABSROLEMGR" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ABSUSERFUNC" EntityType="Self.ABSUSERFUNC" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ABSUSERROLES" EntityType="Self.ABSUSERROLES" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ABSUSERS" EntityType="Self.ABSUSERS" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Ipolicy_DBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="ABSROLEMGR">
+          <Key>
+            <PropertyRef Name="Mgr_ID" />
+          </Key>
+          <Property Name="Mgr_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Role_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Func_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="C_Action" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="E_Action" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="D_Action" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="A_Action" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Created_By" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Date_Created" Type="DateTime" Nullable="false" Precision="3" />
+        </EntityType>
+        <EntityType Name="ABSUSERFUNC">
+          <Key>
+            <PropertyRef Name="Func_ID" />
+          </Key>
+          <Property Name="Func_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Func_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ABSUSERROLE">
+          <Key>
+            <PropertyRef Name="Role_ID" />
+          </Key>
+          <Property Name="Role_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Role_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ABSUSER">
+          <Key>
+            <PropertyRef Name="UserID" />
+          </Key>
+          <Property Name="UserID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="User_Pass" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Login_Count" Type="Int32" />
+          <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Created_By" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Date_Created" Type="DateTime" Nullable="false" Precision="3" />
+        </EntityType>
+        <EntityContainer Name="Ipolicy_DBEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="ABSROLEMGRs" EntityType="Self.ABSROLEMGR" />
+          <EntitySet Name="ABSUSERFUNCs" EntityType="Self.ABSUSERFUNC" />
+          <EntitySet Name="ABSUSERROLES" EntityType="Self.ABSUSERROLE" />
+          <EntitySet Name="ABSUSERS" EntityType="Self.ABSUSER" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Ipolicy_DBModelStoreContainer" CdmEntityContainer="Ipolicy_DBEntities">
+          <EntitySetMapping Name="ABSROLEMGRs">
+            <EntityTypeMapping TypeName="Ipolicy_DBModel.ABSROLEMGR">
+              <MappingFragment StoreEntitySet="ABSROLEMGR">
+                <ScalarProperty Name="Mgr_ID" ColumnName="Mgr_ID" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="Role_Name" ColumnName="Role_Name" />
+                <ScalarProperty Name="Func_Name" ColumnName="Func_Name" />
+                <ScalarProperty Name="C_Action" ColumnName="C_Action" />
+                <ScalarProperty Name="E_Action" ColumnName="E_Action" />
+                <ScalarProperty Name="D_Action" ColumnName="D_Action" />
+                <ScalarProperty Name="A_Action" ColumnName="A_Action" />
+                <ScalarProperty Name="Created_By" ColumnName="Created_By" />
+                <ScalarProperty Name="Date_Created" ColumnName="Date_Created" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ABSUSERFUNCs">
+            <EntityTypeMapping TypeName="Ipolicy_DBModel.ABSUSERFUNC">
+              <MappingFragment StoreEntitySet="ABSUSERFUNC">
+                <ScalarProperty Name="Func_ID" ColumnName="Func_ID" />
+                <ScalarProperty Name="Func_Name" ColumnName="Func_Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ABSUSERROLES">
+            <EntityTypeMapping TypeName="Ipolicy_DBModel.ABSUSERROLE">
+              <MappingFragment StoreEntitySet="ABSUSERROLES">
+                <ScalarProperty Name="Role_ID" ColumnName="Role_ID" />
+                <ScalarProperty Name="Role_Name" ColumnName="Role_Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ABSUSERS">
+            <EntityTypeMapping TypeName="Ipolicy_DBModel.ABSUSER">
+              <MappingFragment StoreEntitySet="ABSUSERS">
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="User_Pass" ColumnName="User_Pass" />
+                <ScalarProperty Name="Login_Count" ColumnName="Login_Count" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Created_By" ColumnName="Created_By" />
+                <ScalarProperty Name="Date_Created" ColumnName="Date_Created" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
