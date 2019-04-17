@@ -38,6 +38,10 @@ namespace ABS_Web.User_Login
 
                 if (result != null)
                 {
+                    string myuid = "";
+                    //myuid = BootstrapTextBox1.Text;
+                    myuid = result.PWD_ID;
+                    Session["loginname"] = myuid;
                     Response.Redirect("UND_Menu.aspx");
 
                 }

@@ -23,7 +23,7 @@ namespace ABS_Web.User_Login
         //User Setup:
         protected void link_Setup_Click(object sender, EventArgs e)
         {
-            Response.Redirect("~/UI_Templates/html/ltr/User_Setup.aspx");
+            Response.Redirect("~/UI_Templates/html/ltr/General_Settings.aspx");
         }
     }
 }

@@ -77,7 +77,7 @@
             </ul>
             <ul class="nav navbar-nav float-xs-right">
                 <!--Logout Button Here-->
-              <li class="dropdown dropdown-language nav-item" style="padding-top: 10px;"><a id="dropdown-flag" href="#" class="btn btn-danger icon-switch" >Logout</a>
+              <li class="dropdown dropdown-language nav-item" style="padding-top: 10px;"><a id="dropdown-flag" href="../../../User_Login/Login_Page.aspx" class="btn btn-danger icon-switch" >Logout</a>
                 <!--<div aria-labelledby="dropdown-flag" class="dropdown-menu"><a href="#" class="btn btn-blue">English</a></div>-->
               </li>
               <!--<li class="dropdown dropdown-notification nav-item"><a href="#" data-toggle="dropdown" class="nav-link nav-link-label"><i class="ficon icon-bell4"></i><span class="tag tag-pill tag-default tag-danger tag-default tag-up">5</span></a>-->
@@ -205,7 +205,11 @@
           </li>-->
           <li class=" nav-item"><a href="#"><i class="icon-cogs"></i><span data-i18n="nav.page_layouts.main" class="menu-title">Setup</span></a>
             <ul class="menu-content">
-                <li><a href="../../../UI_Templates/html/ltr/WebForm2.aspx" data-i18n="nav.page_layouts.1_column" class="menu-item"><i class="icon-users2"></i>User Setup</a>
+                <li><a href="../../../UI_Templates/html/ltr/User_Setup.aspx" data-i18n="nav.page_layouts.1_column" class="menu-item"><i class="icon-users2"></i>User Setup</a>
+              </li>
+                <li><a href="../../../UI_Templates/html/ltr/Role_Setup.aspx" data-i18n="nav.page_layouts.1_column" class="menu-item"><i class="icon-users2"></i>Role Setup</a>
+              </li>
+                <li><a href="../../../UI_Templates/html/ltr/WebForm2.aspx" data-i18n="nav.page_layouts.1_column" class="menu-item"><i class="icon-users2"></i>Functions Setup</a>
               </li>
                 <%--<li><a href="#" data-i18n="nav.menu_levels.second_level_child.third_level_child.main" class="menu-item">Code Entry</a>
                     <ul class="menu-content">--%>

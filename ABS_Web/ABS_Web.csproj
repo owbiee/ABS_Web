@@ -1869,11 +1869,15 @@
     <Content Include="UI_Templates\Custodian_Logo.jpg" />
     <Content Include="UI_Templates\html\ltr\Branch_Codes_Setup.aspx" />
     <Content Include="UI_Templates\html\ltr\Debtors_Master_Setup.aspx" />
+    <Content Include="UI_Templates\html\ltr\Forms_Template.aspx" />
+    <Content Include="UI_Templates\html\ltr\General_Settings.aspx" />
     <Content Include="UI_Templates\html\ltr\Graphics.jpg" />
     <Content Include="UI_Templates\html\ltr\index New.html" />
     <Content Include="UI_Templates\html\ltr\Insured_Codes_Setup.aspx" />
+    <Content Include="UI_Templates\html\ltr\menu2.jpg" />
     <Content Include="UI_Templates\html\ltr\Risk_Codes_Setup.aspx" />
     <Content Include="UI_Templates\html\ltr\Risk_Profile_Setup.aspx" />
+    <Content Include="UI_Templates\html\ltr\Role_Setup.aspx" />
     <Content Include="UI_Templates\html\ltr\settings.jpg" />
     <Content Include="UI_Templates\html\ltr\User_Setup.aspx" />
     <Content Include="UI_Templates\html\WebForm1.aspx.designer.vb" />
@@ -3681,12 +3685,33 @@
     <Compile Include="UI_Templates\html\ltr\Branch_Codes_Setup.aspx.designer.cs">
       <DependentUpon>Branch_Codes_Setup.aspx</DependentUpon>
     </Compile>
+    <Compile Include="UI_Templates\html\ltr\Forms_Template.aspx.cs">
+      <DependentUpon>Forms_Template.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI_Templates\html\ltr\Forms_Template.aspx.designer.cs">
+      <DependentUpon>Forms_Template.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI_Templates\html\ltr\General_Settings.aspx.cs">
+      <DependentUpon>General_Settings.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI_Templates\html\ltr\General_Settings.aspx.designer.cs">
+      <DependentUpon>General_Settings.aspx</DependentUpon>
+    </Compile>
     <Compile Include="UI_Templates\html\ltr\Risk_Profile_Setup.aspx.cs">
       <DependentUpon>Risk_Profile_Setup.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="UI_Templates\html\ltr\Risk_Profile_Setup.aspx.designer.cs">
       <DependentUpon>Risk_Profile_Setup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI_Templates\html\ltr\Role_Setup.aspx.cs">
+      <DependentUpon>Role_Setup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI_Templates\html\ltr\Role_Setup.aspx.designer.cs">
+      <DependentUpon>Role_Setup.aspx</DependentUpon>
     </Compile>
     <Compile Include="UI_Templates\html\ltr\User_Setup.aspx.cs">
       <DependentUpon>User_Setup.aspx</DependentUpon>

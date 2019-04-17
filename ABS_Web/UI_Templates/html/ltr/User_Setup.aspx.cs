@@ -17,7 +17,12 @@ namespace ABS_Web.UI_Templates.html.ltr
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            txtDate.Value = DateTime.Now;
+            if (!IsPostBack)
+            {
+                txtDate.Value = DateTime.Now;
+                txtCreatedBy.Text = Convert.ToString(Session["loginname"]);
+            }
+
         }
 
         //Register User:
@@ -31,7 +36,9 @@ namespace ABS_Web.UI_Templates.html.ltr
                     SqlCommand cmd = new SqlCommand("spRegisterUser", conn);
                     cmd.CommandType = CommandType.StoredProcedure;
 
+                    //Hash Password:
                     string Password = FormsAuthentication.HashPasswordForStoringInConfigFile(txtPassword.Text, "SHA1");
+                    //var pwd = Membership.CreateUser(txtUserName.Text, txtPassword.Text);
 
                     SqlParameter username = new SqlParameter("@UserName", txtUserName.Text);
                     SqlParameter password = new SqlParameter("@User_Pass", Password);
@@ -55,20 +62,32 @@ namespace ABS_Web.UI_Templates.html.ltr
                         lblError.Text = "User already exist!";
                     }
                     else
+                     if (ReturnCode == 2)
+                    {
+                        lblError.Text = "User Profile Updated Sucessfully!";
+                        
+                    }
+                    else
                     {
                         lblError.Text = "Registration Sucessful!";
-
-                        txtUserName.Text = "";
-                        txtPassword.Text = "";
-                        txtCreatedBy.Text = "";
-                        txtEmail.Text = "";
                     }
+                    txtRefID.Text = "";
+                    txtUserName.Text = "";
+                    txtPassword.Text = "";
+                    //txtCreatedBy.Text = "";
+                    txtDate.Value = DateTime.Now;
+                    txtEmail.Text = "";
+                    txtEmail.Enabled = true;
+
+                    Grid_Register.DataBind();
                 }
             }
             catch (Exception ex)
             {
                 lblError.Text = ex.Message;
             }
+
+            Button1.Text = "Register";
         }
 
         //On Select Row:
@@ -82,6 +101,29 @@ namespace ABS_Web.UI_Templates.html.ltr
             
         }
 
+        //Select User From GridView:
+        protected void GridUser_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            GridViewRow view = GridUser.SelectedRow;
+            
+            txt_Username.Text = view.Cells[1].Text;
+            txt_Email.Text = view.Cells[2].Text;
+            
+        }
+
        
+
+        protected void Grid_Register_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            GridViewRow view = Grid_Register.SelectedRow;
+            
+            txtUserName.Text = view.Cells[1].Text;
+            txtEmail.Text = view.Cells[2].Text;
+            txtCreatedBy.Text = view.Cells[3].Text;
+            txtRefID.Text = view.Cells[5].Text;
+            Button1.Text = "Update";
+            txtEmail.Enabled = false;
+            lblError.Text = "";
+        }
     }
 }
