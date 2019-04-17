@@ -68,7 +68,7 @@
             <div class="body">
                 <br />
                 <h4><i class="icon-user-tie"></i>User Setup</h4>
-                <dx:BootstrapPageControl ID="BootstrapPageControl1" runat="server" ActiveTabIndex="1">
+                <dx:BootstrapPageControl ID="BootstrapPageControl1" runat="server" ActiveTabIndex="3">
                     <TabPages>
                         <%--Tab1--%>
                         <dx:BootstrapTabPage Text="Register User">
@@ -137,7 +137,9 @@
                                         </Columns>
                                         <SettingsBehavior AllowSelectByRowClick="true" />
                                         <SettingsPager EnableAdaptivity="true" />
-                                        <Styles Header-Wrap="True"/>
+                                        <Styles Header-Wrap="True">
+<Header Wrap="True"></Header>
+                                        </Styles>
                                     </dx:ASPxGridView>
                                     <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:Ipolicy_DBConnectionString2 %>" SelectCommand="SELECT [UserName], [Email], [Created_By], [Date_Created] FROM [ABSUSERS]"></asp:SqlDataSource>
                                     <br />
@@ -224,6 +226,13 @@
                                         </Columns>
                                     </dx:ASPxGridView>
                                     <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:Ipolicy_DBConnectionString2 %>" SelectCommand="SELECT [UserName], [Role_Name], [Func_Name], [C_Action], [E_Action], [D_Action], [A_Action] FROM [ABSROLEMGR]"></asp:SqlDataSource>
+                                </dx:ContentControl>
+                            </ContentCollection>
+                        </dx:BootstrapTabPage>
+                        <dx:BootstrapTabPage>
+                            <ContentCollection>
+                                <dx:ContentControl>
+                                    
                                 </dx:ContentControl>
                             </ContentCollection>
                         </dx:BootstrapTabPage>

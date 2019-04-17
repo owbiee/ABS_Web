@@ -8,6 +8,8 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Configuration;
 using System.Web.Security;
+using DevExpress.XtraGrid.Views.Base;
+using DevExpress.Web;
 
 namespace ABS_Web.UI_Templates.html.ltr
 {
@@ -48,7 +50,7 @@ namespace ABS_Web.UI_Templates.html.ltr
                     conn.Open();
                     int ReturnCode = (int)cmd.ExecuteScalar();
 
-                    if(ReturnCode == -1)
+                    if (ReturnCode == -1)
                     {
                         lblError.Text = "User already exist!";
                     }
@@ -63,15 +65,23 @@ namespace ABS_Web.UI_Templates.html.ltr
                     }
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 lblError.Text = ex.Message;
             }
         }
 
+        //On Select Row:
         protected void ASPxGridView1_SelectionChanged(object sender, EventArgs e)
         {
-              ASPxGridView1.Selection.SelectRow(0);
+            //GridView gridView = new GridView()
+
+            //List<object> list = ASPxGridView1.GetSelectedFieldValues(ASPxGridView1.KeyFieldName);
+           
+           
+            
         }
+
+       
     }
 }
