@@ -213,7 +213,7 @@
               </li>
                 <li><a href="../../../UI_Templates/html/ltr/Role_Setup.aspx" data-i18n="nav.page_layouts.1_column" class="menu-item"><i class="icon-users2"></i>Role Setup</a>
               </li>
-                <li><a href="../../../UI_Templates/html/ltr/WebForm2.aspx" data-i18n="nav.page_layouts.1_column" class="menu-item"><i class="icon-users2"></i>Functions Setup</a>
+                <li><a href="../../../UI_Templates/html/ltr/Function_Setup.aspx" data-i18n="nav.page_layouts.1_column" class="menu-item"><i class="icon-users2"></i>Functions Setup</a>
               </li>
                 <%--<li><a href="#" data-i18n="nav.menu_levels.second_level_child.third_level_child.main" class="menu-item">Code Entry</a>
                     <ul class="menu-content">--%>

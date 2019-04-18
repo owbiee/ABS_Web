@@ -1870,6 +1870,7 @@
     <Content Include="UI_Templates\html\ltr\Branch_Codes_Setup.aspx" />
     <Content Include="UI_Templates\html\ltr\Debtors_Master_Setup.aspx" />
     <Content Include="UI_Templates\html\ltr\Forms_Template.aspx" />
+    <Content Include="UI_Templates\html\ltr\Function_Setup.aspx" />
     <Content Include="UI_Templates\html\ltr\General_Settings.aspx" />
     <Content Include="UI_Templates\html\ltr\Graphics.jpg" />
     <Content Include="UI_Templates\html\ltr\index New.html" />
@@ -3691,6 +3692,13 @@
     </Compile>
     <Compile Include="UI_Templates\html\ltr\Forms_Template.aspx.designer.cs">
       <DependentUpon>Forms_Template.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI_Templates\html\ltr\Function_Setup.aspx.cs">
+      <DependentUpon>Function_Setup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI_Templates\html\ltr\Function_Setup.aspx.designer.cs">
+      <DependentUpon>Function_Setup.aspx</DependentUpon>
     </Compile>
     <Compile Include="UI_Templates\html\ltr\General_Settings.aspx.cs">
       <DependentUpon>General_Settings.aspx</DependentUpon>
