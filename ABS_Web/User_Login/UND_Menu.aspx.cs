@@ -11,7 +11,10 @@ namespace ABS_Web.User_Login
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            //Label label = new Label();
+            //label.Text = "ABS";
+            //ASPxPanel1.Controls.Equals(label.Text);
+            lblUser.Text = Convert.ToString(Session["loginname"]);
         }
 
         //Underwriting Module:

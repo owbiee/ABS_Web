@@ -76,6 +76,10 @@
               <li class="nav-item hidden-sm-down"><h4 style="padding-top: 17px; color: white;">General Settings</h4></li>
             </ul>
             <ul class="nav navbar-nav float-xs-right">
+                <!--User Login Name-->
+                <li class="dropdown dropdown-language nav-item" style="padding-top: 25px; padding-right: 40px; color: white; font-weight: bold; font-family: 'Comic Sans MS';">
+                    <asp:Label ID="lblUser" runat="server" Text=""></asp:Label>               
+              </li>
                 <!--Logout Button Here-->
               <li class="dropdown dropdown-language nav-item" style="padding-top: 10px;"><a id="dropdown-flag" href="../../../User_Login/Login_Page.aspx" class="btn btn-danger icon-switch" >Logout</a>
                 <!--<div aria-labelledby="dropdown-flag" class="dropdown-menu"><a href="#" class="btn btn-blue">English</a></div>-->

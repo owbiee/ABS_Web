@@ -11,7 +11,7 @@ namespace ABS_Web.UI_Templates.html.ltr
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            
         }
     }
 }

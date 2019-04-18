@@ -11,7 +11,7 @@ namespace ABS_Web.UI.html.ltr
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            lblUser.Text = Convert.ToString(Session["loginname"]);
         }
     }
 }
