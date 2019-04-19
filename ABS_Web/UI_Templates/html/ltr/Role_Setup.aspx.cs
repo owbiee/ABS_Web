@@ -59,7 +59,7 @@ namespace ABS_Web.UI_Templates.html.ltr
 
                     if (ReturnCode == 0)
                     {
-                        lblError.Text = "Role not save!";
+                        lblError.Text = "Role not saved!";
                     }
                     else
                     
@@ -71,8 +71,9 @@ namespace ABS_Web.UI_Templates.html.ltr
                    
                     txtRoleCode.Text = "";
                     txtRoleName.Text = "";
-                    
-                    Grid_Role.DataBind();
+
+                    //Grid_Role.DataBind();
+                    ASPxGridView1.DataBind();
                 }
             }
             catch (Exception ex)

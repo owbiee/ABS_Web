@@ -58,13 +58,13 @@ namespace ABS_Web.UI_Templates.html.ltr {
         protected global::System.Web.UI.WebControls.Label lblError;
         
         /// <summary>
-        /// Grid_Role control.
+        /// ASPxGridView1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DevExpress.Web.ASPxGridView Grid_Role;
+        protected global::DevExpress.Web.ASPxGridView ASPxGridView1;
         
         /// <summary>
         /// SqlDataSource1 control.

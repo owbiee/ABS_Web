@@ -10,11 +10,16 @@ using System.Configuration;
 using System.Web.Security;
 using DevExpress.XtraGrid.Views.Base;
 using DevExpress.Web;
+using System.Text;
+
 
 namespace ABS_Web.UI_Templates.html.ltr
 {
     public partial class User_Setup : System.Web.UI.Page
     {
+        //DB Connection Strings:
+        string CS = ConfigurationManager.ConnectionStrings["Ipolicy_DBConnectionString"].ConnectionString;
+
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -30,7 +35,7 @@ namespace ABS_Web.UI_Templates.html.ltr
         {
             try
             {
-                string CS = ConfigurationManager.ConnectionStrings["Ipolicy_DBConnectionString"].ConnectionString;
+                
                 using (SqlConnection conn = new SqlConnection(CS))
                 {
                     SqlCommand cmd = new SqlCommand("spRegisterUser", conn);
@@ -124,6 +129,105 @@ namespace ABS_Web.UI_Templates.html.ltr
             Button1.Text = "Update";
             txtEmail.Enabled = false;
             lblError.Text = "";
+        }
+
+        //Assign Roles:
+        protected void Button3_Click(object sender, EventArgs e)
+        {
+            if(ListBox2.SelectedIndex == -1)
+            {
+                lblErrRole.Text = "Select a Role!";
+            }
+            else
+            {
+                ListBox1.Items.Add(ListBox2.SelectedItem);
+            }
+            
+        }
+
+        //Remove Roles:
+        protected void Button4_Click(object sender, EventArgs e)
+        {
+            if (ListBox1.SelectedIndex == -1)
+            {
+                lblErrRole.Text = "Select a User Role!";
+            }
+            else
+            {
+                ListBox2.Items.Add(ListBox1.SelectedItem);
+            }
+            
+        }
+
+        protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            GridViewRow view = GridView1.SelectedRow;
+            BootstrapTextBox2.Text = view.Cells[1].Text;
+            BootstrapTextBox3.Text = view.Cells[2].Text;
+        }
+
+        //Function ListBox Select: Assign Function
+        protected void Button5_Click(object sender, EventArgs e)
+        {
+            Func_ListBox.Items.Add(BootstrapListBox1.SelectedItem);
+        }
+
+        //Remove Function:
+        protected void Button6_Click(object sender, EventArgs e)
+        {
+            BootstrapListBox1.Items.Add(Func_ListBox.SelectedItem);
+        }
+
+        //Register selected User Roles to ABSROLECHK:
+        protected void Button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        //Save Functions to ABSROLEDTLS:
+        protected void Save_Func_Click(object sender, EventArgs e)
+        {
+            List<string> li = new List<string>();
+            foreach(ListEditItem item in Func_ListBox.Items)
+            {
+                if(item.Selected)
+                {
+                    li.Add(item.Text);
+                }
+            }
+            //Call Insert Method Here:
+            Add_Function(li);
+        }
+
+        protected void Add_Function(List<string> li)
+        {
+            try
+            {
+                StringBuilder str = new StringBuilder(string.Empty);
+
+                foreach(string item in li)
+                {
+                    const string query = "INSERT INTO [ABSROLEDTLS](ROLE_DTL_MODULE_NAME) VALUES";
+                    str.AppendFormat("{0}{'{1}'};", query, item);
+                }
+                using (SqlConnection conn = new SqlConnection(CS))
+                {
+                    conn.Open();
+                    SqlCommand command = new SqlCommand();
+                    command.CommandType = CommandType.Text;
+                    command.CommandText = str.ToString();
+                    command.Connection = conn;
+                    int a = command.ExecuteNonQuery();
+                    if (a > 0)
+                    {
+                        lblErrFunc.Text = "Functions Saved";
+                    }
+                }
+            }
+            catch(Exception ex)
+            {
+                lblErrFunc.Text = ex.Message;
+            }
         }
     }
 }

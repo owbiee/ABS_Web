@@ -184,58 +184,58 @@ namespace ABS_Web.UI_Templates.html.ltr {
         protected global::DevExpress.Web.Bootstrap.BootstrapTextBox txt_Email;
         
         /// <summary>
-        /// BootstrapComboBox1 control.
+        /// ListBox2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DevExpress.Web.Bootstrap.BootstrapComboBox BootstrapComboBox1;
+        protected global::DevExpress.Web.Bootstrap.BootstrapListBox ListBox2;
         
         /// <summary>
-        /// BootstrapComboBox2 control.
+        /// SqlDataSource4 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DevExpress.Web.Bootstrap.BootstrapComboBox BootstrapComboBox2;
+        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource4;
         
         /// <summary>
-        /// BootstrapCheckBox1 control.
+        /// Button3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DevExpress.Web.Bootstrap.BootstrapCheckBox BootstrapCheckBox1;
+        protected global::System.Web.UI.WebControls.Button Button3;
         
         /// <summary>
-        /// BootstrapCheckBox2 control.
+        /// Button4 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DevExpress.Web.Bootstrap.BootstrapCheckBox BootstrapCheckBox2;
+        protected global::System.Web.UI.WebControls.Button Button4;
         
         /// <summary>
-        /// BootstrapCheckBox3 control.
+        /// ListBox1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DevExpress.Web.Bootstrap.BootstrapCheckBox BootstrapCheckBox3;
+        protected global::DevExpress.Web.Bootstrap.BootstrapListBox ListBox1;
         
         /// <summary>
-        /// BootstrapCheckBox4 control.
+        /// lblErrRole control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DevExpress.Web.Bootstrap.BootstrapCheckBox BootstrapCheckBox4;
+        protected global::System.Web.UI.WebControls.Label lblErrRole;
         
         /// <summary>
         /// Button2 control.
@@ -247,13 +247,22 @@ namespace ABS_Web.UI_Templates.html.ltr {
         protected global::System.Web.UI.WebControls.Button Button2;
         
         /// <summary>
-        /// ASPxGridView2 control.
+        /// BootstrapTextBox1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DevExpress.Web.ASPxGridView ASPxGridView2;
+        protected global::DevExpress.Web.Bootstrap.BootstrapTextBox BootstrapTextBox1;
+        
+        /// <summary>
+        /// GridView1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView GridView1;
         
         /// <summary>
         /// SqlDataSource2 control.
@@ -263,5 +272,131 @@ namespace ABS_Web.UI_Templates.html.ltr {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource2;
+        
+        /// <summary>
+        /// BootstrapTextBox2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::DevExpress.Web.Bootstrap.BootstrapTextBox BootstrapTextBox2;
+        
+        /// <summary>
+        /// BootstrapTextBox3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::DevExpress.Web.Bootstrap.BootstrapTextBox BootstrapTextBox3;
+        
+        /// <summary>
+        /// BootstrapComboBox2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::DevExpress.Web.Bootstrap.BootstrapComboBox BootstrapComboBox2;
+        
+        /// <summary>
+        /// BootstrapListBox1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::DevExpress.Web.Bootstrap.BootstrapListBox BootstrapListBox1;
+        
+        /// <summary>
+        /// SqlDataSource5 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource5;
+        
+        /// <summary>
+        /// Button5 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Button5;
+        
+        /// <summary>
+        /// Button6 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Button6;
+        
+        /// <summary>
+        /// Func_ListBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::DevExpress.Web.Bootstrap.BootstrapListBox Func_ListBox;
+        
+        /// <summary>
+        /// lblErrFunc control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblErrFunc;
+        
+        /// <summary>
+        /// chkCreate control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::DevExpress.Web.Bootstrap.BootstrapCheckBox chkCreate;
+        
+        /// <summary>
+        /// chkEdit control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::DevExpress.Web.Bootstrap.BootstrapCheckBox chkEdit;
+        
+        /// <summary>
+        /// chkDelete control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::DevExpress.Web.Bootstrap.BootstrapCheckBox chkDelete;
+        
+        /// <summary>
+        /// chkApprove control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::DevExpress.Web.Bootstrap.BootstrapCheckBox chkApprove;
+        
+        /// <summary>
+        /// Save_Func control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Save_Func;
     }
 }

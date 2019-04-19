@@ -25,6 +25,10 @@
             /*padding-top: 30px;*/
             padding-bottom: 20px;
         }
+        .tab-right{
+            float: right;
+            padding-right: 10px;
+        }
 
         td{
             padding-bottom: 10px;
@@ -55,6 +59,10 @@
             text-decoration: none;
         }
        
+        .auto-style1 {
+            width: 1px;
+        }
+       
     </style>
 </asp:Content>
 
@@ -72,7 +80,7 @@
             <div class="body">
                 <br />
                 <h4><i class="icon-user-tie"></i>User Setup</h4>
-                <dx:BootstrapPageControl ID="BootstrapPageControl1" runat="server" ActiveTabIndex="0">
+                <dx:BootstrapPageControl ID="BootstrapPageControl1" runat="server" ActiveTabIndex="2">
                     <TabPages>
                         <%--Tab1--%>
                         <dx:BootstrapTabPage Text="Register User">
@@ -169,7 +177,7 @@
                                     </table>
                                     <br />
                                     
-                                    <asp:GridView ID="GridUser" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" CellPadding="4" DataSourceID="SqlDataSource1" ForeColor="#333333" GridLines="None" OnSelectedIndexChanged="GridUser_SelectedIndexChanged" CssClass="center">
+                                    <asp:GridView ID="GridUser" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" CellPadding="4" Width="90%" DataSourceID="SqlDataSource1" ForeColor="#333333" GridLines="None" OnSelectedIndexChanged="GridUser_SelectedIndexChanged" CssClass="center">
                                         <AlternatingRowStyle BackColor="White" />
                                         <Columns>
                                             <asp:CommandField ShowSelectButton="True" />
@@ -204,74 +212,141 @@
                                 <br />
                                     <h3>System Roles</h3>
                                     <hr />
-                                    <table class="tab-center">
+                                    <%--<table class="tab-center">
                                         <tr>
                                             <td><h5>Roles:</h5></td>
-                                            <td><dx:BootstrapComboBox ID="BootstrapComboBox1" runat="server">
-                                        <Items>
-                                            <dx:BootstrapListEditItem Value="Underwriting"/>
-                                            <dx:BootstrapListEditItem Value="Reinsurance"/>
-                                            <dx:BootstrapListEditItem Value="Investment"/>
-                                            <dx:BootstrapListEditItem Value="Accounts"/>
-                                            <dx:BootstrapListEditItem Value="Administration"/>
-                                            <dx:BootstrapListEditItem Value="Human Resources"/>
-                                        </Items>
+                                            <td><dx:BootstrapComboBox ID="BootstrapComboBox1" runat="server" style="padding-bottom: 15px;" TextField="ROLE_NAME" DataSourceID="SqlDataSource4">                              
                                     </dx:BootstrapComboBox></td>                                                                                      
-                                        </tr>
-                                        <tr>
-                                            <td><h5>Functions:</h5></td>
-                                            <td><dx:BootstrapComboBox ID="BootstrapComboBox2" runat="server">
-                                        <Items>
-                                            <dx:BootstrapListEditItem Value="Policy Master Setup"/>
-                                            <dx:BootstrapListEditItem Value="Master Fleet Entry"/>
-                                            <dx:BootstrapListEditItem Value="Setup WAX Codes"/>
-                                            <dx:BootstrapListEditItem Value="Print Vehicle Certificates"/>
-                                            <dx:BootstrapListEditItem Value="FSP Policy Details"/>
-                                            <dx:BootstrapListEditItem Value="Marine Hull Details"/>
-                                        </Items>
-                                    </dx:BootstrapComboBox></td>                                                                                      
-                                        </tr>
-                                        
-                                    </table>
-                                    <table class="tab-center">
+                                        </tr>                                                       
+                                    </table>--%>
+
+                                    <%--ListBox Container--%>
+                                    <div class="row p-2" >
+                                        <div class="col-md-5">
+                                            <h4>Available Roles</h4>
+                                            <dx:BootstrapListBox ID="ListBox2" runat="server" TextField="ROLE_NAME" DataSourceID="SqlDataSource4" SelectionMode="Multiple"></dx:BootstrapListBox>
+                                            <asp:SqlDataSource ID="SqlDataSource4" runat="server" ConnectionString="<%$ ConnectionStrings:Ipolicy_DBConnectionString %>" SelectCommand="SELECT [ROLE_NAME] FROM [ABSROLEMST]"></asp:SqlDataSource>
+                                        </div>
+                                        <div class="col-md-2" style="padding-top: 60px;">
+                                      <asp:Button ID="Button3" runat="server" Text="Assign Roles >>" class="btn btn-blue-grey" OnClick="Button3_Click"/><br /><br />
+                                      <asp:Button ID="Button4" runat="server" Text="<< Remove Roles" class="btn btn-danger" OnClick="Button4_Click"/>
+                                        </div>
+                                        <div class="col-md-5">
+                                            <h4>User Roles</h4>
+                                            <dx:BootstrapListBox ID="ListBox1" runat="server" SelectionMode="Multiple"></dx:BootstrapListBox>
+                                            <asp:Label ID="lblErrRole" runat="server" Text=""></asp:Label>
+
+                                        </div>
+
+                                    </div>
+                                                                                                                   
+                                    <%--<table class="tab-center">
                                         <tr>
                                     <td><dx:BootstrapCheckBox ID="BootstrapCheckBox1" runat="server" Text="Create" style="padding-right: 10px;"></dx:BootstrapCheckBox></td>
                                     <td><dx:BootstrapCheckBox ID="BootstrapCheckBox2" runat="server" Text="Edit" style="padding-right: 10px;"></dx:BootstrapCheckBox></td>
                                     <td><dx:BootstrapCheckBox ID="BootstrapCheckBox3" runat="server" Text="Delete" style="padding-right: 10px;"></dx:BootstrapCheckBox></td>
                                     <td><dx:BootstrapCheckBox ID="BootstrapCheckBox4" runat="server" Text="Approve" style="padding-right: 10px;"></dx:BootstrapCheckBox></td>
                                         </tr>
-                                    </table>
+                                    </table>--%>
                                     <br />
-                                    <asp:Button ID="Button2" runat="server" Text="Assign" class="btn btn-primary"/>
+                                    <asp:Button ID="Button2" runat="server" Text="SAVE" class="btn btn-primary" OnClick="Button2_Click"/>
                                     
                                 </dx:ContentControl>
                             </ContentCollection>
                         </dx:BootstrapTabPage>
+
                         <%--Tab3--%>
-                        <dx:BootstrapTabPage Text="Manage Roles">
+                        <dx:BootstrapTabPage Text="Assign Function">
                             <ContentCollection>
                                 <dx:ContentControl>
-                                    <dx:ASPxGridView ID="ASPxGridView2" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource2" Theme="Glass" CssClass="center" KeyFieldName="UserID">
-                                        <SettingsDataSecurity AllowInsert="False" />
-                                        <SettingsSearchPanel Visible="True" />
+                                    <%--Content Here!--%>
+                                    <br />
+                                    <table class="tab-center">
+                                        <tr>
+                                            <td><h6>Search:</h6></td>
+                                            <td><dx:BootstrapTextBox ID="BootstrapTextBox1" runat="server"></dx:BootstrapTextBox></td>
+                                        </tr>
+                                    </table>
+                                    <br />
+                                    
+                                    <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" CellPadding="4" Width="90%" DataSourceID="SqlDataSource1" ForeColor="#333333" GridLines="None" OnSelectedIndexChanged="GridView1_SelectedIndexChanged" CssClass="center">
+                                        <AlternatingRowStyle BackColor="White" />
                                         <Columns>
-                                            <dx:GridViewDataTextColumn FieldName="UserID" ShowInCustomizationForm="True" VisibleIndex="0" ReadOnly="True">
-                                                <EditFormSettings Visible="False" />
-                                            </dx:GridViewDataTextColumn>
-                                            <dx:GridViewDataTextColumn FieldName="UserName" ShowInCustomizationForm="True" VisibleIndex="1">
-                                            </dx:GridViewDataTextColumn>
-                                            <dx:GridViewDataTextColumn FieldName="Email" ShowInCustomizationForm="True" VisibleIndex="2">
-                                            </dx:GridViewDataTextColumn>
-                                            <dx:GridViewDataTextColumn FieldName="Created_By" ShowInCustomizationForm="True" VisibleIndex="3">
-                                            </dx:GridViewDataTextColumn>
-                                            <dx:GridViewDataDateColumn FieldName="Date_Created" ShowInCustomizationForm="True" VisibleIndex="4">
-                                            </dx:GridViewDataDateColumn>
+                                            <asp:CommandField ShowSelectButton="True" />
+                                            <asp:BoundField DataField="UserName" HeaderText="UserName" SortExpression="UserName" />
+                                            <asp:BoundField DataField="Email" HeaderText="Email" SortExpression="Email" />
+                                            <asp:BoundField DataField="Created_By" HeaderText="Created_By" SortExpression="Created_By" />
+                                            <asp:BoundField DataField="Date_Created" HeaderText="Date_Created" SortExpression="Date_Created" />
                                         </Columns>
-                                    </dx:ASPxGridView>
-                                    <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:Ipolicy_DBConnectionString2 %>" SelectCommand="SELECT  [UserName], [Email], [Created_By], [Date_Created], [UserID] FROM [ABSUSERS] ORDER BY [Date_Created] DESC"></asp:SqlDataSource>
-                                </dx:ContentControl>
+                                        <EditRowStyle BackColor="#2461BF" />
+                                        <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+                                        <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+                                        <PagerStyle BackColor="#2461BF" ForeColor="White" HorizontalAlign="Center" />
+                                        <RowStyle BackColor="#EFF3FB" />
+                                        <SelectedRowStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
+                                        <SortedAscendingCellStyle BackColor="#F5F7FB" />
+                                        <SortedAscendingHeaderStyle BackColor="#6D95E1" />
+                                        <SortedDescendingCellStyle BackColor="#E9EBEF" />
+                                        <SortedDescendingHeaderStyle BackColor="#4870BE" />
+                                    </asp:GridView>
+                                     <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:Ipolicy_DBConnectionString %>" SelectCommand="SELECT [UserName], [Email], [Created_By], [Date_Created] FROM [ABSUSERS]"></asp:SqlDataSource>
+                                     <br />
+                                    <table class="tab-center">
+                                    <tr>
+                                        <td><h6>Username:</h6></td>
+                                        <td><dx:BootstrapTextBox ID="BootstrapTextBox2" runat="server" Enabled="false" style="padding-right: 15px;"></dx:BootstrapTextBox></td>
+                                        <td><h6>Email:</h6></td>
+                                        <td><dx:BootstrapTextBox ID="BootstrapTextBox3" runat="server" Enabled="false" style="padding-right: 10px;"></dx:BootstrapTextBox></td>
+                                        
+                                
+                                    </tr>
+                                </table>
+                                <br />
+                                    <h3>System Functions</h3>
+                                    <hr />
+                                    <table class="tab-center">
+                                        <tr>
+                                            <td><h5>Roles:</h5></td>
+                                            <td><dx:BootstrapComboBox ID="BootstrapComboBox2" runat="server" style="padding-bottom: 15px;" TextField="ROLE_NAME" DataSourceID="SqlDataSource4">                              
+                                    </dx:BootstrapComboBox></td>                                                                                      
+                                        </tr>                                                       
+                                    </table>
+
+                                    <%--ListBox Container--%>
+                                    <div class="row p-2" >
+                                        <div class="col-md-5">
+                                            <h4>Available Functions</h4>
+                                            <dx:BootstrapListBox ID="BootstrapListBox1" runat="server" TextField="ROLE_NAME" DataSourceID="SqlDataSource4"></dx:BootstrapListBox>
+                                            <asp:SqlDataSource ID="SqlDataSource5" runat="server" ConnectionString="<%$ ConnectionStrings:Ipolicy_DBConnectionString %>" SelectCommand="SELECT [ROLE_NAME] FROM [ABSROLEMST]"></asp:SqlDataSource>
+                                        </div>
+                                        <div class="col-md-2" style="padding-top: 60px;">
+                                      <asp:Button ID="Button5" runat="server" Text="Assign Function >>" class="btn btn-blue-grey" OnClick="Button5_Click"/><br /><br />
+                                      <asp:Button ID="Button6" runat="server" Text="<< Remove Function" class="btn btn-danger" OnClick="Button6_Click"/>
+                                        </div>
+                                        <div class="col-md-5">
+                                            <h4>User Functions</h4>
+                                            <dx:BootstrapListBox ID="Func_ListBox" runat="server"></dx:BootstrapListBox>   
+                                            <asp:Label ID="lblErrFunc" runat="server" Text=""></asp:Label>
+                                        </div>
+                                    </div>
+                                                                                                                   
+                                    <table class="tab-right">
+                                        <tr>
+                                     <td><dx:BootstrapCheckBox ID="chkCreate" runat="server" Text="Create" style="padding-right: 10px;"></dx:BootstrapCheckBox></td>
+                                    <td><dx:BootstrapCheckBox ID="chkEdit" runat="server" Text="Edit" style="padding-right: 10px;"></dx:BootstrapCheckBox></td>
+                                    <td><dx:BootstrapCheckBox ID="chkDelete" runat="server" Text="Delete" style="padding-right: 10px;"></dx:BootstrapCheckBox></td>
+                                    <td><dx:BootstrapCheckBox ID="chkApprove" runat="server" Text="Approve" style="padding-right: 10px;"></dx:BootstrapCheckBox></td>
+                                      </tr>
+                                    </table>
+                                    <br />
+                                    <asp:Button ID="Save_Func" runat="server" Text="SAVE" class="btn btn-primary" OnClick="Save_Func_Click"/>
+                                    
+                                    </dx:ContentControl>
                             </ContentCollection>
                         </dx:BootstrapTabPage>
+                        <%--Tab3 End--%>
+
+                        <%--Tab4--%>
                         <dx:BootstrapTabPage Text="Other Setup">
                             <ContentCollection>
                                 <dx:ContentControl>
@@ -281,6 +356,7 @@
                         </dx:BootstrapTabPage>
                     </TabPages>
                 </dx:BootstrapPageControl>
+                <%--Tab4 End--%>
             </div>
         
     </form>

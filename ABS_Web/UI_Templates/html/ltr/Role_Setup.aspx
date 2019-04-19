@@ -76,44 +76,36 @@
                         <asp:Label ID="lblError" runat="server" Text="" style="color: red;"></asp:Label>
                         <hr />
 
-                        <dx:ASPxGridView ID="Grid_Role" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" KeyFieldName="ROLE_ID" Theme="MaterialCompact" CssClass="center">
-                            <SettingsDataSecurity AllowInsert="False" />
+                        <dx:ASPxGridView ID="ASPxGridView1" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" EnableTheming="True" KeyFieldName="ID" Theme="iOS" CssClass="center">
                             <SettingsSearchPanel Visible="True" />
                             <Columns>
-                                
                                 <dx:GridViewCommandColumn ShowDeleteButton="True" ShowEditButton="True" ShowInCustomizationForm="True" VisibleIndex="0">
                                 </dx:GridViewCommandColumn>
-                                
-                                                              
-                                <dx:GridViewDataTextColumn FieldName="ROLE_ID" ShowInCustomizationForm="True" VisibleIndex="1" ReadOnly="True">
+                                <dx:GridViewDataTextColumn FieldName="ROLE_ID" ShowInCustomizationForm="True" VisibleIndex="1">
                                 </dx:GridViewDataTextColumn>
-                                <dx:GridViewDataTextColumn FieldName="ROLE_NUM" ShowInCustomizationForm="True" VisibleIndex="2" ReadOnly="True">
+                                <dx:GridViewDataTextColumn FieldName="ROLE_NUM" ShowInCustomizationForm="True" VisibleIndex="2">
                                 </dx:GridViewDataTextColumn>
-                                
-                                <dx:GridViewDataTextColumn FieldName="ROLE_NAME" ShowInCustomizationForm="True" VisibleIndex="3">
+                                <dx:GridViewDataTextColumn FieldName="ROLE_NO" ShowInCustomizationForm="True" VisibleIndex="3">
                                 </dx:GridViewDataTextColumn>
-                                
-                                <dx:GridViewDataTextColumn FieldName="ROLE_TYPE" ShowInCustomizationForm="True" VisibleIndex="4">
+                                <dx:GridViewDataTextColumn FieldName="ROLE_NAME" ShowInCustomizationForm="True" VisibleIndex="4">
                                 </dx:GridViewDataTextColumn>
-                                <dx:GridViewDataTextColumn FieldName="ROLE_FLAG" ShowInCustomizationForm="True" VisibleIndex="5">
+                                <dx:GridViewDataTextColumn FieldName="ROLE_TYPE" ShowInCustomizationForm="True" VisibleIndex="5">
                                 </dx:GridViewDataTextColumn>
-                                
-                                <dx:GridViewDataDateColumn FieldName="ROLE_KEYDTE" ShowInCustomizationForm="True" VisibleIndex="6">
+                                <dx:GridViewDataTextColumn FieldName="ROLE_FLAG" ShowInCustomizationForm="True" VisibleIndex="6">
+                                </dx:GridViewDataTextColumn>
+                                <dx:GridViewDataDateColumn FieldName="ROLE_KEYDTE" ShowInCustomizationForm="True" VisibleIndex="7">
                                 </dx:GridViewDataDateColumn>
-                                <dx:GridViewDataTextColumn FieldName="ROLE_OPERID" ShowInCustomizationForm="True" VisibleIndex="7">
+                                <dx:GridViewDataTextColumn FieldName="ROLE_OPERID" ShowInCustomizationForm="True" VisibleIndex="8">
                                 </dx:GridViewDataTextColumn>
-                                <dx:GridViewDataTextColumn FieldName="ROLE_NO" ReadOnly="True" ShowInCustomizationForm="True" VisibleIndex="8">
+                                <dx:GridViewDataTextColumn FieldName="ID" ReadOnly="True" ShowInCustomizationForm="True" VisibleIndex="9">
                                     <EditFormSettings Visible="False" />
                                 </dx:GridViewDataTextColumn>
                             </Columns>
                         </dx:ASPxGridView>
-                        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:Ipolicy_DBConnectionString %>" 
-                            SelectCommand="SELECT [ROLE_ID], [ROLE_NUM], [ROLE_NAME], [ROLE_TYPE], [ROLE_FLAG], [ROLE_KEYDTE], [ROLE_OPERID], [ROLE_NO] FROM [ABSROLEMST]" 
-                            ConflictDetection="CompareAllValues" 
-                            DeleteCommand="DELETE FROM [ABSROLEMST] WHERE [ROLE_ID] = @original_ROLE_ID AND [ROLE_NUM] = @original_ROLE_NUM AND [ROLE_NO] = @original_ROLE_NO AND [ROLE_NAME] = @original_ROLE_NAME AND (([ROLE_TYPE] = @original_ROLE_TYPE) OR ([ROLE_TYPE] IS NULL AND @original_ROLE_TYPE IS NULL)) AND (([ROLE_FLAG] = @original_ROLE_FLAG) OR ([ROLE_FLAG] IS NULL AND @original_ROLE_FLAG IS NULL)) AND [ROLE_KEYDTE] = @original_ROLE_KEYDTE AND (([ROLE_OPERID] = @original_ROLE_OPERID) OR ([ROLE_OPERID] IS NULL AND @original_ROLE_OPERID IS NULL))" 
-                            InsertCommand="INSERT INTO [ABSROLEMST] ([ROLE_ID], [ROLE_NUM], [ROLE_NAME], [ROLE_TYPE], [ROLE_FLAG], [ROLE_KEYDTE], [ROLE_OPERID]) VALUES (@ROLE_ID, @ROLE_NUM, @ROLE_NAME, @ROLE_TYPE, @ROLE_FLAG, @ROLE_KEYDTE, @ROLE_OPERID)" 
-                            OldValuesParameterFormatString="original_{0}" 
-                            UpdateCommand="UPDATE [ABSROLEMST] SET [ROLE_NAME] = @ROLE_NAME, [ROLE_TYPE] = @ROLE_TYPE, [ROLE_FLAG] = @ROLE_FLAG, [ROLE_KEYDTE] = @ROLE_KEYDTE, [ROLE_OPERID] = @ROLE_OPERID WHERE [ROLE_ID] = @original_ROLE_ID AND [ROLE_NUM] = @original_ROLE_NUM AND [ROLE_NO] = @original_ROLE_NO AND [ROLE_NAME] = @original_ROLE_NAME AND (([ROLE_TYPE] = @original_ROLE_TYPE) OR ([ROLE_TYPE] IS NULL AND @original_ROLE_TYPE IS NULL)) AND (([ROLE_FLAG] = @original_ROLE_FLAG) OR ([ROLE_FLAG] IS NULL AND @original_ROLE_FLAG IS NULL)) AND [ROLE_KEYDTE] = @original_ROLE_KEYDTE AND (([ROLE_OPERID] = @original_ROLE_OPERID) OR ([ROLE_OPERID] IS NULL AND @original_ROLE_OPERID IS NULL))">
+                        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConflictDetection="CompareAllValues" ConnectionString="<%$ ConnectionStrings:Ipolicy_DBConnectionString %>" DeleteCommand="DELETE FROM [ABSROLEMST] WHERE [ROLE_ID] = @original_ROLE_ID AND [ROLE_NUM] = @original_ROLE_NUM AND (([ROLE_NO] = @original_ROLE_NO) OR ([ROLE_NO] IS NULL AND @original_ROLE_NO IS NULL)) AND [ROLE_NAME] = @original_ROLE_NAME AND (([ROLE_TYPE] = @original_ROLE_TYPE) OR ([ROLE_TYPE] IS NULL AND @original_ROLE_TYPE IS NULL)) AND (([ROLE_FLAG] = @original_ROLE_FLAG) OR ([ROLE_FLAG] IS NULL AND @original_ROLE_FLAG IS NULL)) AND [ROLE_KEYDTE] = @original_ROLE_KEYDTE AND (([ROLE_OPERID] = @original_ROLE_OPERID) OR ([ROLE_OPERID] IS NULL AND @original_ROLE_OPERID IS NULL)) AND [ID] = @original_ID"
+                            InsertCommand="INSERT INTO [ABSROLEMST] ([ROLE_ID], [ROLE_NUM], [ROLE_NO], [ROLE_NAME], [ROLE_TYPE], [ROLE_FLAG], [ROLE_KEYDTE], [ROLE_OPERID]) VALUES (@ROLE_ID, @ROLE_NUM, @ROLE_NO, @ROLE_NAME, @ROLE_TYPE, @ROLE_FLAG, @ROLE_KEYDTE, @ROLE_OPERID)" OldValuesParameterFormatString="original_{0}" 
+                            SelectCommand="SELECT [ROLE_ID], [ROLE_NUM], [ROLE_NO], [ROLE_NAME], [ROLE_TYPE], [ROLE_FLAG], [ROLE_KEYDTE], [ROLE_OPERID], [ID] FROM [ABSROLEMST]"
+                            UpdateCommand="UPDATE [ABSROLEMST] SET [ROLE_NAME] = @ROLE_NAME, [ROLE_TYPE] = @ROLE_TYPE, [ROLE_FLAG] = @ROLE_FLAG, [ROLE_KEYDTE] = @ROLE_KEYDTE, [ROLE_OPERID] = @ROLE_OPERID WHERE  [ID] = @original_ID">
                             <DeleteParameters>
                                 <asp:Parameter Name="original_ROLE_ID" Type="String" />
                                 <asp:Parameter Name="original_ROLE_NUM" Type="String" />
@@ -123,10 +115,12 @@
                                 <asp:Parameter Name="original_ROLE_FLAG" Type="String" />
                                 <asp:Parameter Name="original_ROLE_KEYDTE" Type="DateTime" />
                                 <asp:Parameter Name="original_ROLE_OPERID" Type="String" />
+                                <asp:Parameter Name="original_ID" Type="Int64" />
                             </DeleteParameters>
                             <InsertParameters>
                                 <asp:Parameter Name="ROLE_ID" Type="String" />
                                 <asp:Parameter Name="ROLE_NUM" Type="String" />
+                                <asp:Parameter Name="ROLE_NO" Type="Decimal" />
                                 <asp:Parameter Name="ROLE_NAME" Type="String" />
                                 <asp:Parameter Name="ROLE_TYPE" Type="String" />
                                 <asp:Parameter Name="ROLE_FLAG" Type="String" />
@@ -139,6 +133,7 @@
                                 <asp:Parameter Name="ROLE_FLAG" Type="String" />
                                 <asp:Parameter Name="ROLE_KEYDTE" Type="DateTime" />
                                 <asp:Parameter Name="ROLE_OPERID" Type="String" />
+                           <%--     <asp:Parameter Name="ID" Type="Int64" />--%>
                                 <asp:Parameter Name="original_ROLE_ID" Type="String" />
                                 <asp:Parameter Name="original_ROLE_NUM" Type="String" />
                                 <asp:Parameter Name="original_ROLE_NO" Type="Decimal" />
@@ -147,6 +142,7 @@
                                 <asp:Parameter Name="original_ROLE_FLAG" Type="String" />
                                 <asp:Parameter Name="original_ROLE_KEYDTE" Type="DateTime" />
                                 <asp:Parameter Name="original_ROLE_OPERID" Type="String" />
+                                <asp:Parameter Name="original_ID" Type="Int64" />
                             </UpdateParameters>
                         </asp:SqlDataSource>
                     </dx:ContentControl>

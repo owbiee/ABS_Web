@@ -169,7 +169,7 @@
                         </dx:BootstrapTabPage>
                     </TabPages>
                 </dx:BootstrapPageControl>
-             
+                <%--<dx:BootstrapButton ID="BootstrapButton1" runat="server" AutoPostBack="false" Text="Button"></dx:BootstrapButton>--%>
                 <footer style="padding-top: 100px;">Custodian & Allied Insurance Plc&reg;</footer>
             </div>
         </div>

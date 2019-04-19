@@ -67,7 +67,9 @@
                              <tr>
                                 <td><h6>Select Role Name:</h6></td>
                                 <td>
-                                    <dx:BootstrapComboBox ID="Role_Drop" runat="server" DataSourceID="SqlDataSource1" ValueType="System.Int32"></dx:BootstrapComboBox>
+                                    <dx:BootstrapComboBox ID="Role_Drop" runat="server" TextField="ROLE_NAME" DataSourceID="SqlDataSource1"></dx:BootstrapComboBox>
+                                    
+                                    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:Ipolicy_DBConnectionString %>" SelectCommand="SELECT [ROLE_NAME] FROM [ABSROLEMST]"></asp:SqlDataSource>
                                     
                                 </td>
                                 <td>
@@ -78,8 +80,55 @@
                         <br /><br />
                         <asp:Label ID="lblError" runat="server" Text="" style="color: red;"></asp:Label>
                         <hr />
-
-                        
+                        <%--GridView--%>
+                        <dx:ASPxGridView ID="ASPxGridView1" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource2" KeyFieldName="TASK_ID" Theme="iOS" CssClass="center">
+                            <SettingsSearchPanel Visible="True" />
+                            <Columns>
+                                <dx:GridViewCommandColumn ShowDeleteButton="True" ShowEditButton="True" ShowInCustomizationForm="True" ShowNewButtonInHeader="True" VisibleIndex="0">
+                                </dx:GridViewCommandColumn>
+                                <dx:GridViewDataTextColumn FieldName="TASK_ID" ReadOnly="True" ShowInCustomizationForm="True" VisibleIndex="1">
+                                </dx:GridViewDataTextColumn>
+                                <dx:GridViewDataTextColumn FieldName="TASK_NO" ReadOnly="True" ShowInCustomizationForm="True" VisibleIndex="2">
+                                    <EditFormSettings Visible="False" />
+                                </dx:GridViewDataTextColumn>
+                                <dx:GridViewDataTextColumn FieldName="TASK_NUM" ReadOnly="True" ShowInCustomizationForm="True" VisibleIndex="3">
+                                </dx:GridViewDataTextColumn>
+                                <dx:GridViewDataTextColumn FieldName="TASK_ROLE_NUM" ShowInCustomizationForm="True" VisibleIndex="4">
+                                </dx:GridViewDataTextColumn>
+                                <dx:GridViewDataTextColumn FieldName="TASK_NAME" ShowInCustomizationForm="True" VisibleIndex="5">
+                                </dx:GridViewDataTextColumn>
+                                <dx:GridViewDataDateColumn FieldName="TASK_KEYDTE" ShowInCustomizationForm="True" VisibleIndex="6">
+                                </dx:GridViewDataDateColumn>
+                            </Columns>
+                        </dx:ASPxGridView>
+                        <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConflictDetection="CompareAllValues" ConnectionString="<%$ ConnectionStrings:Ipolicy_DBConnectionString %>" DeleteCommand="DELETE FROM [ABSROLETASK] WHERE [TASK_ID] = @original_TASK_ID AND [TASK_NO] = @original_TASK_NO AND [TASK_NUM] = @original_TASK_NUM AND (([TASK_ROLE_NUM] = @original_TASK_ROLE_NUM) OR ([TASK_ROLE_NUM] IS NULL AND @original_TASK_ROLE_NUM IS NULL)) AND (([TASK_NAME] = @original_TASK_NAME) OR ([TASK_NAME] IS NULL AND @original_TASK_NAME IS NULL)) AND (([TASK_KEYDTE] = @original_TASK_KEYDTE) OR ([TASK_KEYDTE] IS NULL AND @original_TASK_KEYDTE IS NULL))" InsertCommand="INSERT INTO [ABSROLETASK] ([TASK_ID], [TASK_NUM], [TASK_ROLE_NUM], [TASK_NAME], [TASK_KEYDTE]) VALUES (@TASK_ID, @TASK_NUM, @TASK_ROLE_NUM, @TASK_NAME, @TASK_KEYDTE)" OldValuesParameterFormatString="original_{0}" SelectCommand="SELECT [TASK_ID], [TASK_NO], [TASK_NUM], [TASK_ROLE_NUM], [TASK_NAME], [TASK_KEYDTE] FROM [ABSROLETASK]" UpdateCommand="UPDATE [ABSROLETASK] SET [TASK_ROLE_NUM] = @TASK_ROLE_NUM, [TASK_NAME] = @TASK_NAME, [TASK_KEYDTE] = @TASK_KEYDTE WHERE [TASK_ID] = @original_TASK_ID AND [TASK_NO] = @original_TASK_NO AND [TASK_NUM] = @original_TASK_NUM AND (([TASK_ROLE_NUM] = @original_TASK_ROLE_NUM) OR ([TASK_ROLE_NUM] IS NULL AND @original_TASK_ROLE_NUM IS NULL)) AND (([TASK_NAME] = @original_TASK_NAME) OR ([TASK_NAME] IS NULL AND @original_TASK_NAME IS NULL)) AND (([TASK_KEYDTE] = @original_TASK_KEYDTE) OR ([TASK_KEYDTE] IS NULL AND @original_TASK_KEYDTE IS NULL))">
+                            <DeleteParameters>
+                                <asp:Parameter Name="original_TASK_ID" Type="String" />
+                                <asp:Parameter Name="original_TASK_NO" Type="Decimal" />
+                                <asp:Parameter Name="original_TASK_NUM" Type="String" />
+                                <asp:Parameter Name="original_TASK_ROLE_NUM" Type="String" />
+                                <asp:Parameter Name="original_TASK_NAME" Type="String" />
+                                <asp:Parameter Name="original_TASK_KEYDTE" Type="DateTime" />
+                            </DeleteParameters>
+                            <InsertParameters>
+                                <asp:Parameter Name="TASK_ID" Type="String" />
+                                <asp:Parameter Name="TASK_NUM" Type="String" />
+                                <asp:Parameter Name="TASK_ROLE_NUM" Type="String" />
+                                <asp:Parameter Name="TASK_NAME" Type="String" />
+                                <asp:Parameter Name="TASK_KEYDTE" Type="DateTime" />
+                            </InsertParameters>
+                            <UpdateParameters>
+                                <asp:Parameter Name="TASK_ROLE_NUM" Type="String" />
+                                <asp:Parameter Name="TASK_NAME" Type="String" />
+                                <asp:Parameter Name="TASK_KEYDTE" Type="DateTime" />
+                                <asp:Parameter Name="original_TASK_ID" Type="String" />
+                                <asp:Parameter Name="original_TASK_NO" Type="Decimal" />
+                                <asp:Parameter Name="original_TASK_NUM" Type="String" />
+                                <asp:Parameter Name="original_TASK_ROLE_NUM" Type="String" />
+                                <asp:Parameter Name="original_TASK_NAME" Type="String" />
+                                <asp:Parameter Name="original_TASK_KEYDTE" Type="DateTime" />
+                            </UpdateParameters>
+                        </asp:SqlDataSource>
                     </dx:ContentControl>
                 </ContentCollection>
             </dx:BootstrapTabPage>
