@@ -200,7 +200,7 @@ namespace ABS_Web.UI_Templates.html.ltr
                     {
                         cmd.CommandText = "INSERT INTO [dbo].[ABSROLEDETAILS] (STAFF_NAME, STAFF_EMAIL, USER_ROLE, USER_FUNC, ROLE_FLAG, CREATED_BY, KEYED_DATE) VALUES('" + Staff_Name.Text + "','" + Staff_Email.Text + "','" + BootstrapComboBox2.Text + "','" + item + "', '"+"A"+"', '"+ Convert.ToString(Session["loginname"]) + "', '"+DateTime.Now.ToString()+"')";
                         cmd.ExecuteNonQuery();
-                    }            
+                    }
                     conn.Close();
                     ListBoxFunc.Items.Clear();
                     Func_ListBox.Items.Clear();
