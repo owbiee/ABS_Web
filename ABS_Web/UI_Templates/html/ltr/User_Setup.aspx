@@ -20,7 +20,7 @@
             background-color: white;
             margin: 0 auto;
             height: 100%;
-            width:70%;
+            width:75%;
             border-radius: 10px;
             /*padding-top: 30px;*/
             padding-bottom: 20px;
@@ -44,6 +44,21 @@
             margin: 0 auto;
             /*padding-left: 10px;*/
             border-radius: 10px;
+            
+        }
+
+        .center tr:nth-child(even)
+        {
+            background-color: #125876;
+            color: white;
+            padding: 20px;
+        }
+
+        .center tr:nth-child(even)
+        {
+            background-color:#b9e0d9;
+            color: black;
+            padding: 20px;
         }
 
         .tab-center{
@@ -61,6 +76,43 @@
        
         .auto-style1 {
             width: 1px;
+        }
+
+        .paging a
+        {
+            background-color: #00C157;
+            padding: 5px 7px;
+            text-decoration: none;
+            border: 1px solid #00C157;
+        }
+         
+        .paging a:hover
+        {
+            background-color: #E1FFEF;
+            color: #00C157;
+            border: 1px solid #00C157;
+        }
+         
+        .paging span
+        {
+            background-color: #E1FFEF;
+            padding: 5px 7px;
+            color: #00C157;
+            border: 1px solid #00C157;
+        }
+         
+        tr.paging
+        {
+            background: none !important;
+        }
+         
+        tr.paging tr
+        {
+            background: none !important;
+        }
+        tr.paging td
+        {
+            border: none;
         }
        
     </style>
@@ -345,7 +397,7 @@
                                 <dx:ContentControl>
                                     <%--<h3>Nothing Here!</h3>--%><br />
                                     <h4>Setup User Actions</h4>
-                                    <asp:GridView ID="GridView2" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" CellPadding="4" DataSourceID="SqlDataSource5" ForeColor="#333333" GridLines="None">
+                                    <asp:GridView ID="GridView2" runat="server" AllowPaging="True" PageSize="8" PagerStyle-CssClass="paging" BorderWidth="1px" AllowSorting="True" AutoGenerateColumns="False" CellSpacing="2" CellPadding="7" DataSourceID="SqlDataSource5" Width="100%" ForeColor="#333333" GridLines="None" CssClass="center">
                                         <AlternatingRowStyle BackColor="White" />
                                         <Columns>
                                             <asp:CommandField ShowSelectButton="True" />
@@ -357,7 +409,6 @@
                                             <asp:BoundField DataField="ROLE_UPDATE" HeaderText="ROLE_UPDATE" SortExpression="ROLE_UPDATE" />
                                             <asp:BoundField DataField="ROLE_DELETE" HeaderText="ROLE_DELETE" SortExpression="ROLE_DELETE" />
                                             <asp:BoundField DataField="ROLE_APPROVE" HeaderText="ROLE_APPROVE" SortExpression="ROLE_APPROVE" />
-                                            <asp:BoundField DataField="ROLE_FLAG" HeaderText="ROLE_FLAG" SortExpression="ROLE_FLAG" />
                                             <asp:BoundField DataField="CREATED_BY" HeaderText="CREATED_BY" SortExpression="CREATED_BY" />
                                             <asp:BoundField DataField="KEYED_DATE" HeaderText="KEYED_DATE" SortExpression="KEYED_DATE" />
                                         </Columns>
@@ -372,7 +423,7 @@
                                         <SortedDescendingCellStyle BackColor="#E9EBEF" />
                                         <SortedDescendingHeaderStyle BackColor="#4870BE" />
                                     </asp:GridView>
-                                    <asp:SqlDataSource ID="SqlDataSource5" runat="server" ConnectionString="<%$ ConnectionStrings:Ipolicy_DBConnectionString %>" SelectCommand="SELECT [STAFF_NAME], [STAFF_EMAIL], [USER_ROLE], [USER_FUNC], [ROLE_INSERT], [ROLE_UPDATE], [ROLE_DELETE], [ROLE_APPROVE], [ROLE_FLAG], [CREATED_BY], [KEYED_DATE] FROM [ABSROLEDETAILS]"></asp:SqlDataSource>
+                                    <asp:SqlDataSource ID="SqlDataSource5" runat="server" ConnectionString="<%$ ConnectionStrings:Ipolicy_DBConnectionString %>" SelectCommand="SELECT [STAFF_NAME], [STAFF_EMAIL], [USER_ROLE], [USER_FUNC], [ROLE_INSERT], [ROLE_UPDATE], [ROLE_DELETE], [ROLE_APPROVE], [CREATED_BY], [KEYED_DATE] FROM [ABSROLEDETAILS]"></asp:SqlDataSource>
                                 </dx:ContentControl>
                             </ContentCollection>
                         </dx:BootstrapTabPage>
