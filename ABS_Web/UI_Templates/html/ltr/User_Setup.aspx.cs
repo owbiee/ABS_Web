@@ -162,8 +162,8 @@ namespace ABS_Web.UI_Templates.html.ltr
         protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
         {
             GridViewRow view = GridView1.SelectedRow;
-            BootstrapTextBox2.Text = view.Cells[1].Text;
-            BootstrapTextBox3.Text = view.Cells[2].Text;
+            Staff_Name.Text = view.Cells[1].Text;
+            Staff_Email.Text = view.Cells[2].Text;
         }
 
         //Function ListBox Select: Assign Function
@@ -184,10 +184,33 @@ namespace ABS_Web.UI_Templates.html.ltr
 
         }
 
-        //Save Functions to ABSROLEDTLS:
+        //Save Functions to ABSROLEDETAILS:
         protected void Save_Func_Click(object sender, EventArgs e)
         {
-           
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(CS))
+                {
+                    conn.Open();
+                    SqlCommand cmd = conn.CreateCommand();
+                    cmd.CommandType = CommandType.Text;
+
+                    //Loop through Selected User Functions ListBox:
+                    foreach(ListEditItem item in Func_ListBox.Items)
+                    {
+                        cmd.CommandText = "INSERT INTO [dbo].[ABSROLEDETAILS] (STAFF_NAME, STAFF_EMAIL, USER_ROLE, USER_FUNC, ROLE_FLAG, CREATED_BY, KEYED_DATE) VALUES('" + Staff_Name.Text + "','" + Staff_Email.Text + "','" + BootstrapComboBox2.Text + "','" + item + "', '"+"A"+"', '"+ Convert.ToString(Session["loginname"]) + "', '"+DateTime.Now.ToString()+"')";
+                        cmd.ExecuteNonQuery();
+                    }            
+                    conn.Close();
+                    ListBoxFunc.Items.Clear();
+                    Func_ListBox.Items.Clear();
+                }
+            }
+            catch(Exception ex)
+
+            {
+                lblErrFunc.Text = ex.Message;
+            }
         }
 
         protected void BootstrapComboBox2_SelectedIndexChanged(object sender, EventArgs e)

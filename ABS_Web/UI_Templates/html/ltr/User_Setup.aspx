@@ -294,9 +294,9 @@
                                     <table class="tab-center">
                                     <tr>
                                         <td><h6>Username:</h6></td>
-                                        <td><dx:BootstrapTextBox ID="BootstrapTextBox2" runat="server" Enabled="false" style="padding-right: 15px;"></dx:BootstrapTextBox></td>
+                                        <td><dx:BootstrapTextBox ID="Staff_Name" runat="server" Enabled="false" style="padding-right: 15px;"></dx:BootstrapTextBox></td>
                                         <td><h6>Email:</h6></td>
-                                        <td><dx:BootstrapTextBox ID="BootstrapTextBox3" runat="server" Enabled="false" style="padding-right: 10px;"></dx:BootstrapTextBox></td>
+                                        <td><dx:BootstrapTextBox ID="Staff_Email" runat="server" Enabled="false" style="padding-right: 10px;"></dx:BootstrapTextBox></td>
                                         
                                 
                                     </tr>

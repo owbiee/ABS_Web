@@ -274,22 +274,22 @@ namespace ABS_Web.UI_Templates.html.ltr {
         protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource2;
         
         /// <summary>
-        /// BootstrapTextBox2 control.
+        /// Staff_Name control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DevExpress.Web.Bootstrap.BootstrapTextBox BootstrapTextBox2;
+        protected global::DevExpress.Web.Bootstrap.BootstrapTextBox Staff_Name;
         
         /// <summary>
-        /// BootstrapTextBox3 control.
+        /// Staff_Email control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DevExpress.Web.Bootstrap.BootstrapTextBox BootstrapTextBox3;
+        protected global::DevExpress.Web.Bootstrap.BootstrapTextBox Staff_Email;
         
         /// <summary>
         /// BootstrapComboBox2 control.
