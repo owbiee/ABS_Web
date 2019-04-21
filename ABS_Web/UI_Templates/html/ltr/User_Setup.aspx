@@ -14,7 +14,7 @@
     <link href="../../../Content/bootstrap-theme.css" rel="stylesheet" />
     <link href="../../../Content/bootstrap.min.css" rel="stylesheet" />
 
-    <style>
+    <style type="text/css">
         .body{
             text-align: center;
             background-color: white;
@@ -307,7 +307,7 @@
                                     <table class="tab-center">
                                         <tr>
                                             <td><h5>Roles:</h5></td>
-                                            <td><dx:BootstrapComboBox ID="BootstrapComboBox2" runat="server" style="padding-bottom: 15px;" TextField="ROLE_NAME" DataSourceID="SqlDataSource4">                              
+                                            <td><dx:BootstrapComboBox ID="BootstrapComboBox2" runat="server" style="padding-bottom: 15px;" TextField="ROLE_NAME" DataSourceID="SqlDataSource4" OnSelectedIndexChanged="BootstrapComboBox2_SelectedIndexChanged" AutoPostBack="true">                              
                                     </dx:BootstrapComboBox></td>                                                                                      
                                         </tr>                                                       
                                     </table>
@@ -316,8 +316,8 @@
                                     <div class="row p-2" >
                                         <div class="col-md-5">
                                             <h4>Available Functions</h4>
-                                            <dx:BootstrapListBox ID="BootstrapListBox1" runat="server" TextField="ROLE_NAME" DataSourceID="SqlDataSource4"></dx:BootstrapListBox>
-                                            <asp:SqlDataSource ID="SqlDataSource5" runat="server" ConnectionString="<%$ ConnectionStrings:Ipolicy_DBConnectionString %>" SelectCommand="SELECT [ROLE_NAME] FROM [ABSROLEMST]"></asp:SqlDataSource>
+                                            <dx:BootstrapListBox ID="ListBoxFunc" runat="server" TextField="TASK_NAME"></dx:BootstrapListBox>
+                                            <%--<asp:SqlDataSource ID="SqlDataSource5" runat="server" ConnectionString="<%$ ConnectionStrings:Ipolicy_DBConnectionString %>" SelectCommand="SELECT [ROLE_NAME] FROM [ABSROLEMST]"></asp:SqlDataSource>--%>
                                         </div>
                                         <div class="col-md-2" style="padding-top: 60px;">
                                       <asp:Button ID="Button5" runat="server" Text="Assign Function >>" class="btn btn-blue-grey" OnClick="Button5_Click"/><br /><br />
@@ -330,14 +330,7 @@
                                         </div>
                                     </div>
                                                                                                                    
-                                    <table class="tab-right">
-                                        <tr>
-                                     <td><dx:BootstrapCheckBox ID="chkCreate" runat="server" Text="Create" style="padding-right: 10px;"></dx:BootstrapCheckBox></td>
-                                    <td><dx:BootstrapCheckBox ID="chkEdit" runat="server" Text="Edit" style="padding-right: 10px;"></dx:BootstrapCheckBox></td>
-                                    <td><dx:BootstrapCheckBox ID="chkDelete" runat="server" Text="Delete" style="padding-right: 10px;"></dx:BootstrapCheckBox></td>
-                                    <td><dx:BootstrapCheckBox ID="chkApprove" runat="server" Text="Approve" style="padding-right: 10px;"></dx:BootstrapCheckBox></td>
-                                      </tr>
-                                    </table>
+                                    
                                     <br />
                                     <asp:Button ID="Save_Func" runat="server" Text="SAVE" class="btn btn-primary" OnClick="Save_Func_Click"/>
                                     

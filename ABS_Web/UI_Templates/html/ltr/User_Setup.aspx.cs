@@ -169,13 +169,13 @@ namespace ABS_Web.UI_Templates.html.ltr
         //Function ListBox Select: Assign Function
         protected void Button5_Click(object sender, EventArgs e)
         {
-            Func_ListBox.Items.Add(BootstrapListBox1.SelectedItem);
+            Func_ListBox.Items.Add(ListBoxFunc.SelectedItem);
         }
 
         //Remove Function:
         protected void Button6_Click(object sender, EventArgs e)
         {
-            BootstrapListBox1.Items.Add(Func_ListBox.SelectedItem);
+            ListBoxFunc.Items.Add(Func_ListBox.SelectedItem);
         }
 
         //Register selected User Roles to ABSROLECHK:
@@ -187,46 +187,28 @@ namespace ABS_Web.UI_Templates.html.ltr
         //Save Functions to ABSROLEDTLS:
         protected void Save_Func_Click(object sender, EventArgs e)
         {
-            List<string> li = new List<string>();
-            foreach(ListEditItem item in Func_ListBox.Items)
-            {
-                if(item.Selected)
-                {
-                    li.Add(item.Text);
-                }
-            }
-            //Call Insert Method Here:
-            Add_Function(li);
+           
         }
 
-        protected void Add_Function(List<string> li)
+        protected void BootstrapComboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
-            try
+            if(BootstrapComboBox2.SelectedItem != null)
             {
-                StringBuilder str = new StringBuilder(string.Empty);
-
-                foreach(string item in li)
+                try
                 {
-                    const string query = "INSERT INTO [ABSROLEDTLS](ROLE_DTL_MODULE_NAME) VALUES";
-                    str.AppendFormat("{0}{'{1}'};", query, item);
-                }
-                using (SqlConnection conn = new SqlConnection(CS))
-                {
-                    conn.Open();
-                    SqlCommand command = new SqlCommand();
-                    command.CommandType = CommandType.Text;
-                    command.CommandText = str.ToString();
-                    command.Connection = conn;
-                    int a = command.ExecuteNonQuery();
-                    if (a > 0)
+                    using (SqlConnection conn = new SqlConnection(CS))
                     {
-                        lblErrFunc.Text = "Functions Saved";
+
+                        SqlCommand cmd = new SqlCommand("SELECT TASK_NAME FROM [dbo].[ABSROLETASK] WHERE TASK_ROLE_NUM = '" + BootstrapComboBox2.Text + "'", conn);
+                        conn.Open();
+                        ListBoxFunc.DataSource = cmd.ExecuteReader();
+                        ListBoxFunc.DataBind();
                     }
                 }
-            }
-            catch(Exception ex)
-            {
-                lblErrFunc.Text = ex.Message;
+                catch(Exception ex)
+                {
+                    lblErrFunc.Text = ex.Message;
+                }
             }
         }
     }

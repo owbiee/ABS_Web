@@ -9,7 +9,7 @@
     <link href="../../../Content/bootstrap-theme.css" rel="stylesheet" />
     <link href="../../../Content/bootstrap.css" rel="stylesheet" />
     <link href="../../../Content/Site.css" rel="stylesheet" />
-    <style>
+    <style type="text/css">
         .body{
             text-align: center;
             background-color: white;
