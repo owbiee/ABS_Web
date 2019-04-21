@@ -80,7 +80,7 @@
             <div class="body">
                 <br />
                 <h4><i class="icon-user-tie"></i>User Setup</h4>
-                <dx:BootstrapPageControl ID="BootstrapPageControl1" runat="server" ActiveTabIndex="2">
+                <dx:BootstrapPageControl ID="BootstrapPageControl1" runat="server" ActiveTabIndex="3">
                     <TabPages>
                         <%--Tab1--%>
                         <dx:BootstrapTabPage Text="Register User">
@@ -343,7 +343,36 @@
                         <dx:BootstrapTabPage Text="Other Setup">
                             <ContentCollection>
                                 <dx:ContentControl>
-                                    <h3>Nothing Here!</h3>
+                                    <%--<h3>Nothing Here!</h3>--%><br />
+                                    <h4>Setup User Actions</h4>
+                                    <asp:GridView ID="GridView2" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" CellPadding="4" DataSourceID="SqlDataSource5" ForeColor="#333333" GridLines="None">
+                                        <AlternatingRowStyle BackColor="White" />
+                                        <Columns>
+                                            <asp:CommandField ShowSelectButton="True" />
+                                            <asp:BoundField DataField="STAFF_NAME" HeaderText="STAFF_NAME" SortExpression="STAFF_NAME" />
+                                            <asp:BoundField DataField="STAFF_EMAIL" HeaderText="STAFF_EMAIL" SortExpression="STAFF_EMAIL" />
+                                            <asp:BoundField DataField="USER_ROLE" HeaderText="USER_ROLE" SortExpression="USER_ROLE" />
+                                            <asp:BoundField DataField="USER_FUNC" HeaderText="USER_FUNC" SortExpression="USER_FUNC" />
+                                            <asp:BoundField DataField="ROLE_INSERT" HeaderText="ROLE_INSERT" SortExpression="ROLE_INSERT" />
+                                            <asp:BoundField DataField="ROLE_UPDATE" HeaderText="ROLE_UPDATE" SortExpression="ROLE_UPDATE" />
+                                            <asp:BoundField DataField="ROLE_DELETE" HeaderText="ROLE_DELETE" SortExpression="ROLE_DELETE" />
+                                            <asp:BoundField DataField="ROLE_APPROVE" HeaderText="ROLE_APPROVE" SortExpression="ROLE_APPROVE" />
+                                            <asp:BoundField DataField="ROLE_FLAG" HeaderText="ROLE_FLAG" SortExpression="ROLE_FLAG" />
+                                            <asp:BoundField DataField="CREATED_BY" HeaderText="CREATED_BY" SortExpression="CREATED_BY" />
+                                            <asp:BoundField DataField="KEYED_DATE" HeaderText="KEYED_DATE" SortExpression="KEYED_DATE" />
+                                        </Columns>
+                                        <EditRowStyle BackColor="#2461BF" />
+                                        <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+                                        <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+                                        <PagerStyle BackColor="#2461BF" ForeColor="White" HorizontalAlign="Center" />
+                                        <RowStyle BackColor="#EFF3FB" />
+                                        <SelectedRowStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
+                                        <SortedAscendingCellStyle BackColor="#F5F7FB" />
+                                        <SortedAscendingHeaderStyle BackColor="#6D95E1" />
+                                        <SortedDescendingCellStyle BackColor="#E9EBEF" />
+                                        <SortedDescendingHeaderStyle BackColor="#4870BE" />
+                                    </asp:GridView>
+                                    <asp:SqlDataSource ID="SqlDataSource5" runat="server" ConnectionString="<%$ ConnectionStrings:Ipolicy_DBConnectionString %>" SelectCommand="SELECT [STAFF_NAME], [STAFF_EMAIL], [USER_ROLE], [USER_FUNC], [ROLE_INSERT], [ROLE_UPDATE], [ROLE_DELETE], [ROLE_APPROVE], [ROLE_FLAG], [CREATED_BY], [KEYED_DATE] FROM [ABSROLEDETAILS]"></asp:SqlDataSource>
                                 </dx:ContentControl>
                             </ContentCollection>
                         </dx:BootstrapTabPage>
