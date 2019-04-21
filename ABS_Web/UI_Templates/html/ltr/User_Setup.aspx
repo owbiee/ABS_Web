@@ -397,7 +397,8 @@
                                 <dx:ContentControl>
                                     <%--<h3>Nothing Here!</h3>--%><br />
                                     <h4>Setup User Actions</h4>
-                                    <asp:GridView ID="GridView2" runat="server" AllowPaging="True" PageSize="8" PagerStyle-CssClass="paging" BorderWidth="1px" AllowSorting="True" AutoGenerateColumns="False" CellSpacing="2" CellPadding="7" DataSourceID="SqlDataSource5" Width="100%" ForeColor="#333333" GridLines="None" CssClass="center">
+                                    <div style="width: 100%; height: 400px; overflow: scroll;">
+                                    <asp:GridView ID="GridView2" runat="server" BorderWidth="1px" AllowSorting="True" AutoGenerateColumns="False" CellSpacing="2" CellPadding="7" DataSourceID="SqlDataSource5" Width="100%" ForeColor="#333333" GridLines="None" CssClass="center" OnSelectedIndexChanged="GridView2_SelectedIndexChanged">
                                         <AlternatingRowStyle BackColor="White" />
                                         <Columns>
                                             <asp:CommandField ShowSelectButton="True" />
@@ -423,7 +424,75 @@
                                         <SortedDescendingCellStyle BackColor="#E9EBEF" />
                                         <SortedDescendingHeaderStyle BackColor="#4870BE" />
                                     </asp:GridView>
+                                    </div>
                                     <asp:SqlDataSource ID="SqlDataSource5" runat="server" ConnectionString="<%$ ConnectionStrings:Ipolicy_DBConnectionString %>" SelectCommand="SELECT [STAFF_NAME], [STAFF_EMAIL], [USER_ROLE], [USER_FUNC], [ROLE_INSERT], [ROLE_UPDATE], [ROLE_DELETE], [ROLE_APPROVE], [CREATED_BY], [KEYED_DATE] FROM [ABSROLEDETAILS]"></asp:SqlDataSource>
+                                <hr />
+                                    <table class="tab-center">
+                                        <tr style="display: none;">
+                                            <td>Role ID</td>
+                                            <td>
+                                                <dx:BootstrapTextBox ID="Id" runat="server"></dx:BootstrapTextBox>
+                                            </td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>UserName</td>
+                                            <td><dx:BootstrapTextBox ID="Name" runat="server" Enabled="false"></dx:BootstrapTextBox></td>
+                                            <td>Email</td>
+                                            <td><dx:BootstrapTextBox ID="Email" runat="server" Enabled="false"></dx:BootstrapTextBox></td>
+                                            <td>Role</td>
+                                            <td><dx:BootstrapTextBox ID="Role" runat="server" Enabled="false"></dx:BootstrapTextBox></td>
+                                            <td>Function</td>
+                                            <td><dx:BootstrapTextBox ID="Function" runat="server" Enabled="false"></dx:BootstrapTextBox></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Insert</td>
+                                            <td><dx:BootstrapComboBox ID="Insert" runat="server">
+                                                <Items>
+                                                    <dx:BootstrapListEditItem Value="Y"/>
+                                                    <dx:BootstrapListEditItem Value="N"/>
+                                                </Items>
+                                                </dx:BootstrapComboBox></td>
+                                            <td>Update</td>
+                                            <td><dx:BootstrapComboBox ID="Update" runat="server">
+                                                <Items>
+                                                    <dx:BootstrapListEditItem Value="Y"/>
+                                                    <dx:BootstrapListEditItem Value="N"/>
+                                                </Items>
+                                                </dx:BootstrapComboBox></td>
+                                            <td>Delete</td>
+                                            <td><dx:BootstrapComboBox ID="Delete" runat="server">
+                                                <Items>
+                                                    <dx:BootstrapListEditItem Value="Y"/>
+                                                    <dx:BootstrapListEditItem Value="N"/>
+                                                </Items>
+                                                </dx:BootstrapComboBox></td>
+                                            <td>Approve</td>
+                                            <td><dx:BootstrapComboBox ID="Approve" runat="server">
+                                                <Items>
+                                                    <dx:BootstrapListEditItem Value="Y"/>
+                                                    <dx:BootstrapListEditItem Value="N"/>
+                                                </Items>
+                                                </dx:BootstrapComboBox></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Created By</td>
+                                            <td><dx:BootstrapTextBox ID="CreatedBy" runat="server" Enabled="false"></dx:BootstrapTextBox></td>
+                                            <td>Keyed Date</td>
+                                            <td><dx:BootstrapTextBox ID="KeyedDate" runat="server" Enabled="false"></dx:BootstrapTextBox></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                    </table>
+                                    <br />
+                                    <asp:Button ID="Button7" runat="server" Text="Add Actions" class="btn btn-primary"/>
                                 </dx:ContentControl>
                             </ContentCollection>
                         </dx:BootstrapTabPage>
@@ -433,6 +502,7 @@
             </div>
         
     </form>
+    
 </asp:Content>
    
     

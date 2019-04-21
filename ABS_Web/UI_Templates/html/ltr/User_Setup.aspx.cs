@@ -181,7 +181,7 @@ namespace ABS_Web.UI_Templates.html.ltr
         //Register selected User Roles to ABSROLECHK:
         protected void Button2_Click(object sender, EventArgs e)
         {
-
+            //NO CODE HERE...
         }
 
         //Save Functions to ABSROLEDETAILS:
@@ -234,6 +234,25 @@ namespace ABS_Web.UI_Templates.html.ltr
                     lblErrFunc.Text = ex.Message;
                 }
             }
+        }
+
+        //Select User From ABSROLEDETAILS:
+        protected void GridView2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            GridViewRow viewRow = GridView2.SelectedRow;
+            Id.Text = viewRow.Cells[0].Text;
+            Name.Text = viewRow.Cells[1].Text;
+            Email.Text = viewRow.Cells[2].Text;
+            Role.Text = viewRow.Cells[3].Text;
+            Function.Text = viewRow.Cells[4].Text;
+            Insert.Text = viewRow.Cells[5].Text;
+            Update.Text = viewRow.Cells[6].Text;
+            Delete.Text = viewRow.Cells[7].Text;
+            Approve.Text = viewRow.Cells[8].Text;
+            CreatedBy.Text = viewRow.Cells[9].Text;
+            KeyedDate.Text = viewRow.Cells[10].Text;
+            //Staff_Email.Text = viewRow.Cells[1].Text;
+
         }
     }
 }
