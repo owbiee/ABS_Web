@@ -156,6 +156,24 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
+    <Content Include="alertifyjs %282%29\alertify.js" />
+    <Content Include="alertifyjs %282%29\alertify.min.js" />
+    <Content Include="alertifyjs %282%29\css\alertify.css" />
+    <Content Include="alertifyjs %282%29\css\alertify.min.css" />
+    <Content Include="alertifyjs %282%29\css\alertify.rtl.css" />
+    <Content Include="alertifyjs %282%29\css\alertify.rtl.min.css" />
+    <Content Include="alertifyjs %282%29\css\themes\bootstrap.css" />
+    <Content Include="alertifyjs %282%29\css\themes\bootstrap.min.css" />
+    <Content Include="alertifyjs %282%29\css\themes\bootstrap.rtl.css" />
+    <Content Include="alertifyjs %282%29\css\themes\bootstrap.rtl.min.css" />
+    <Content Include="alertifyjs %282%29\css\themes\default.css" />
+    <Content Include="alertifyjs %282%29\css\themes\default.min.css" />
+    <Content Include="alertifyjs %282%29\css\themes\default.rtl.css" />
+    <Content Include="alertifyjs %282%29\css\themes\default.rtl.min.css" />
+    <Content Include="alertifyjs %282%29\css\themes\semantic.css" />
+    <Content Include="alertifyjs %282%29\css\themes\semantic.min.css" />
+    <Content Include="alertifyjs %282%29\css\themes\semantic.rtl.css" />
+    <Content Include="alertifyjs %282%29\css\themes\semantic.rtl.min.css" />
     <Content Include="Model\User_Login.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>User_Login.edmx</DependentUpon>

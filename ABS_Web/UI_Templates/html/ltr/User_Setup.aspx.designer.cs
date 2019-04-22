@@ -112,15 +112,6 @@ namespace ABS_Web.UI_Templates.html.ltr {
         protected global::System.Web.UI.WebControls.Label lblError;
         
         /// <summary>
-        /// ScriptManager1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.ScriptManager ScriptManager1;
-        
-        /// <summary>
         /// Grid_Register control.
         /// </summary>
         /// <remarks>
@@ -472,12 +463,21 @@ namespace ABS_Web.UI_Templates.html.ltr {
         protected global::DevExpress.Web.Bootstrap.BootstrapTextBox KeyedDate;
         
         /// <summary>
-        /// Button7 control.
+        /// Add_Actions control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button7;
+        protected global::System.Web.UI.WebControls.Button Add_Actions;
+        
+        /// <summary>
+        /// Action_Error control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Action_Error;
     }
 }

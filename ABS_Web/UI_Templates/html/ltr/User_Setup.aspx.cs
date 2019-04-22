@@ -205,6 +205,7 @@ namespace ABS_Web.UI_Templates.html.ltr
                     conn.Close();
                     ListBoxFunc.Items.Clear();
                     Func_ListBox.Items.Clear();
+                    lblErrFunc.Text = "User Roles Saved Successfully!";
                 }
             }
             catch(Exception ex)
@@ -214,6 +215,7 @@ namespace ABS_Web.UI_Templates.html.ltr
             }
         }
 
+        //LOAD FUNCTIONS FROM ABSROLETASK ON ROLE SELECT:
         protected void BootstrapComboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
             if(BootstrapComboBox2.SelectedItem != null)
@@ -240,19 +242,45 @@ namespace ABS_Web.UI_Templates.html.ltr
         protected void GridView2_SelectedIndexChanged(object sender, EventArgs e)
         {
             GridViewRow viewRow = GridView2.SelectedRow;
-            Id.Text = viewRow.Cells[0].Text;
-            Name.Text = viewRow.Cells[1].Text;
-            Email.Text = viewRow.Cells[2].Text;
-            Role.Text = viewRow.Cells[3].Text;
-            Function.Text = viewRow.Cells[4].Text;
-            Insert.Text = viewRow.Cells[5].Text;
-            Update.Text = viewRow.Cells[6].Text;
-            Delete.Text = viewRow.Cells[7].Text;
-            Approve.Text = viewRow.Cells[8].Text;
-            CreatedBy.Text = viewRow.Cells[9].Text;
-            KeyedDate.Text = viewRow.Cells[10].Text;
+            Id.Text = viewRow.Cells[1].Text;
+            Name.Text = viewRow.Cells[2].Text;
+            Email.Text = viewRow.Cells[3].Text;
+            Role.Text = viewRow.Cells[4].Text;
+            Function.Text = viewRow.Cells[5].Text;
+            Insert.Text = viewRow.Cells[6].Text;
+            Update.Text = viewRow.Cells[7].Text;
+            Delete.Text = viewRow.Cells[8].Text;
+            Approve.Text = viewRow.Cells[9].Text;
+            CreatedBy.Text = viewRow.Cells[10].Text;
+            KeyedDate.Text = viewRow.Cells[11].Text;
             //Staff_Email.Text = viewRow.Cells[1].Text;
 
+        }
+
+        //UPDATE CRUD ACTIONS IN ABSROLEDETAILS:
+        protected void Add_Actions_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(CS))
+                {
+                    SqlCommand command = new SqlCommand();
+                    conn.Open();
+                    command = conn.CreateCommand();
+                    command.CommandType = CommandType.Text;
+                    command.CommandText = "UPDATE [dbo].[ABSROLEDETAILS] SET ROLE_INSERT='"+Insert.SelectedItem.Text+"', ROLE_UPDATE='"+Update.SelectedItem.Text+"',ROLE_DELETE='"+Delete.SelectedItem.Text+"',ROLE_APPROVE='"+Approve.SelectedItem.Text+"' WHERE ROLE_ID = '"+Id.Text+"'";
+                    command.ExecuteNonQuery();
+                    conn.Close();
+                    GridView2.DataBind();
+                    Action_Error.Text = "Actions Registered Successfully!";
+
+                    ScriptManager.RegisterStartupScript(Page, GetType(), "JsStatus", "Popup();", true);
+                }
+            }
+            catch(Exception ex)
+            {
+                Action_Error.Text = ex.Message;
+            }
         }
     }
 }

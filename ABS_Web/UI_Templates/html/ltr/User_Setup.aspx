@@ -13,7 +13,9 @@
     <link href="../../../Content/Site.css" rel="stylesheet" />
     <link href="../../../Content/bootstrap-theme.css" rel="stylesheet" />
     <link href="../../../Content/bootstrap.min.css" rel="stylesheet" />
-
+    <script src="../../../alertifyjs%20(2)/alertify.js"></script>
+    <script src="../../../alertifyjs%20(2)/alertify.min.js"></script>
+    <link href="../../../alertifyjs%20(2)/css/alertify.css" rel="stylesheet" />
     <style type="text/css">
         .body{
             text-align: center;
@@ -122,8 +124,11 @@
 
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-
+    
     <form id="form1" runat="server">
+        <asp:ScriptManager runat="server"></asp:ScriptManager>
+    <asp:UpdatePanel runat="server">
+        <ContentTemplate>
         <div class="header">
             <br />
             <h1 class="icon-cogs"> ABS Settings</h1>
@@ -185,7 +190,7 @@
                                 <br /><br />
                                     <asp:Label ID="lblError" runat="server" Text="" style="color: red;"></asp:Label>
                                     <hr />
-                                    <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+                                    <%--<asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>--%>
 
                                     <%--Grid--%>
                                     <asp:GridView ID="Grid_Register" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" CssClass="center" Width="90%" CellSpacing="1" CellPadding="7" DataSourceID="SqlDataSource3" BackColor="White" BorderColor="#3366CC" BorderStyle="None" BorderWidth="1px" OnSelectedIndexChanged="Grid_Register_SelectedIndexChanged" DataKeyNames="UserID">
@@ -398,10 +403,11 @@
                                     <%--<h3>Nothing Here!</h3>--%><br />
                                     <h4>Setup User Actions</h4>
                                     <div style="width: 100%; height: 400px; overflow: scroll;">
-                                    <asp:GridView ID="GridView2" runat="server" BorderWidth="1px" AllowSorting="True" AutoGenerateColumns="False" CellSpacing="2" CellPadding="7" DataSourceID="SqlDataSource5" Width="100%" ForeColor="#333333" GridLines="None" CssClass="center" OnSelectedIndexChanged="GridView2_SelectedIndexChanged">
+                                    <asp:GridView ID="GridView2" runat="server" BorderWidth="1px" AllowSorting="True" AutoGenerateColumns="False" CellSpacing="2" CellPadding="7" DataSourceID="SqlDataSource5" Width="100%" ForeColor="#333333" GridLines="None" CssClass="center" OnSelectedIndexChanged="GridView2_SelectedIndexChanged" DataKeyNames="ROLE_ID">
                                         <AlternatingRowStyle BackColor="White" />
                                         <Columns>
                                             <asp:CommandField ShowSelectButton="True" />
+                                            <asp:BoundField DataField="ROLE_ID" HeaderText="ROLE_ID" SortExpression="ROLE_ID" InsertVisible="False" ReadOnly="True" />
                                             <asp:BoundField DataField="STAFF_NAME" HeaderText="STAFF_NAME" SortExpression="STAFF_NAME" />
                                             <asp:BoundField DataField="STAFF_EMAIL" HeaderText="STAFF_EMAIL" SortExpression="STAFF_EMAIL" />
                                             <asp:BoundField DataField="USER_ROLE" HeaderText="USER_ROLE" SortExpression="USER_ROLE" />
@@ -425,13 +431,13 @@
                                         <SortedDescendingHeaderStyle BackColor="#4870BE" />
                                     </asp:GridView>
                                     </div>
-                                    <asp:SqlDataSource ID="SqlDataSource5" runat="server" ConnectionString="<%$ ConnectionStrings:Ipolicy_DBConnectionString %>" SelectCommand="SELECT [STAFF_NAME], [STAFF_EMAIL], [USER_ROLE], [USER_FUNC], [ROLE_INSERT], [ROLE_UPDATE], [ROLE_DELETE], [ROLE_APPROVE], [CREATED_BY], [KEYED_DATE] FROM [ABSROLEDETAILS]"></asp:SqlDataSource>
+                                    <asp:SqlDataSource ID="SqlDataSource5" runat="server" ConnectionString="<%$ ConnectionStrings:Ipolicy_DBConnectionString %>" SelectCommand="SELECT [ROLE_ID], [STAFF_NAME], [STAFF_EMAIL], [USER_ROLE], [USER_FUNC], [ROLE_INSERT], [ROLE_UPDATE], [ROLE_DELETE], [ROLE_APPROVE], [CREATED_BY], [KEYED_DATE] FROM [ABSROLEDETAILS]"></asp:SqlDataSource>
                                 <hr />
                                     <table class="tab-center">
                                         <tr style="display: none;">
                                             <td>Role ID</td>
                                             <td>
-                                                <dx:BootstrapTextBox ID="Id" runat="server"></dx:BootstrapTextBox>
+                                                <dx:BootstrapTextBox ID="Id" runat="server" Enabled="false"></dx:BootstrapTextBox>
                                             </td>
                                             <td></td>
                                             <td></td>
@@ -492,7 +498,9 @@
                                         </tr>
                                     </table>
                                     <br />
-                                    <asp:Button ID="Button7" runat="server" Text="Add Actions" class="btn btn-primary"/>
+                                    <asp:Button ID="Add_Actions" runat="server" Text="+ Add Actions" class="btn btn-primary" OnClick="Add_Actions_Click" OnClientClick="PopUp();"/>
+                                <br />
+                                    <asp:Label ID="Action_Error" runat="server" Text="" style="color: red;"></asp:Label>
                                 </dx:ContentControl>
                             </ContentCollection>
                         </dx:BootstrapTabPage>
@@ -500,8 +508,18 @@
                 </dx:BootstrapPageControl>
                 <%--Tab4 End--%>
             </div>
-        
+        </ContentTemplate>
+        </asp:UpdatePanel>
     </form>
+        
+    <script type="text/javascript">
+        function PopUp() {
+            alertify.alert('Message', 'Actions Added!',
+                function () {
+                    alertify.success('Ok');
+                });
+        }
+    </script>
     
 </asp:Content>
    
