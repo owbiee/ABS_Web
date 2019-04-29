@@ -16,7 +16,7 @@
             background-color: white;
             margin: 0 auto;
             height: 100%;
-            width: 1200px;
+            width: 1300px;
             border-radius: 10px;
             /*padding-top: 30px;*/
             padding-bottom: 20px;
@@ -60,10 +60,10 @@
                                             <tr>
                                                 <td><h6>User Defined Treaty Code:</h6></td>
                                                 <td>
-                                                    <dx:BootstrapTextBox ID="txtTreatyCode" runat="server"></dx:BootstrapTextBox>
+                                                    <dx:BootstrapTextBox ID="txtTreatyCode" runat="server" Width="350px"></dx:BootstrapTextBox>
                                                 </td>
                                                 <td><h6>Description:</h6></td>
-                                                <td><dx:BootstrapTextBox ID="txtDesc" runat="server"></dx:BootstrapTextBox></td>
+                                                <td><dx:BootstrapTextBox ID="txtDesc" runat="server" Width="350px"></dx:BootstrapTextBox></td>
                                             </tr>
                                             <tr>
                                                 <td><h6>Underwriting Year (YYYY):</h6></td>

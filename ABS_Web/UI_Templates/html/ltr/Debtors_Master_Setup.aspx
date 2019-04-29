@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/UI_Templates/html/ltr/Underwriter_Master.Master" AutoEventWireup="true" CodeBehind="Debtors_Master_Setup.aspx.cs" Inherits="ABS_Web.UI_Templates.html.ltr.Debtors_Master_Setup" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/UI/html/ltr/New_Master.Master" AutoEventWireup="true" CodeBehind="Debtors_Master_Setup.aspx.cs" Inherits="ABS_Web.UI_Templates.html.ltr.Debtors_Master_Setup" %>
 
 <%@ Register Assembly="DevExpress.Web.Bootstrap.v17.2, Version=17.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Namespace="DevExpress.Web.Bootstrap" TagPrefix="dx" %>
 <%@ Register assembly="DevExpress.Web.v17.2, Version=17.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" namespace="DevExpress.Web" tagprefix="dx" %>
@@ -23,6 +23,8 @@
         }
         td{
             padding-bottom: 10px;
+            padding-right: 20px;
+            text-align: left;
         }
         .textbox{
             width: 300px;
@@ -32,16 +34,21 @@
 
 <%--Main Content--%>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <form runat="server">
+        <asp:ScriptManager runat="server"></asp:ScriptManager>
+        <asp:UpdatePanel runat="server">
+            <ContentTemplate>         
     <br /><br />
     <div class="body">
     <dx:BootstrapPageControl ID="BootstrapPageControl1" runat="server">
         <TabPages>
             <%--Tab1--%>
-            <dx:BootstrapTabPage Text="General">
+            <dx:BootstrapTabPage Text="Debtors Master Setup">
                 <ContentCollection>                    
                   <dx:ContentControl>
                       <%--<h2>Hello World...General</h2>--%>
-                      <h3>Debtors Master Setup</h3><br />
+                      <%--<h3>Debtors Master Setup</h3>--%>
+                      <br />
                       <h6>Key Parameters</h6>
                       <table class="tab-center">
                           <tr>
@@ -150,4 +157,7 @@
         </TabPages>
     </dx:BootstrapPageControl>
         </div>
+                </ContentTemplate>
+        </asp:UpdatePanel>
+        </form>
 </asp:Content>
