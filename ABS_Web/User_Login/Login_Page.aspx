@@ -106,9 +106,9 @@
                 <%--<h1>Hello</h1>--%>
                     <table class="tab-center">
                         <tr>
-                <td><asp:Label ID="Label1" runat="server" Text="Username:"></asp:Label></td>
+                <td><asp:Label ID="Label1" runat="server" Text="User Name:"></asp:Label></td>
                 <%--<asp:TextBox ID="TextBox1" runat="server" required="required"></asp:TextBox><span style="color: red;">*</span><br /><br />--%>
-                    <td style="padding-bottom: 10px;"><dx:BootstrapTextBox ID="BootstrapTextBox1" runat="server">
+                    <td style="padding-bottom: 10px;"><dx:BootstrapTextBox ID="BootstrapTextBox1" runat="server" AutoCompleteType="None">
                         <ValidationSettings ValidationGroup="Validation">
                         <RequiredField IsRequired="true" ErrorText="E-mail is required"/>
                         <RegularExpression ErrorText="Invalid e-mail" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"/>

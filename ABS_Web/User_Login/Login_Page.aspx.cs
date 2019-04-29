@@ -7,14 +7,14 @@ using System.Web.UI.WebControls;
 using System.Data;
 using System.Data.SqlClient;
 using ABS_Web.Model;
-using ABS_Web;
+using ABS_Web.User_Login;
 
 namespace ABS_Web.User_Login
 {
     public partial class Login_Page : System.Web.UI.Page
     {
         //Database Entities;
-        Ipolicy_DBEntities1 entities = new Ipolicy_DBEntities1();
+        Ipolicy_DBEntities1 DbEntities = new Ipolicy_DBEntities1();
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -26,24 +26,34 @@ namespace ABS_Web.User_Login
         }
        
 
-        //Login Click
+        //Login Click:
         protected void Button1_Click1(object sender, EventArgs e)
         {
             try
-            {
-                //Button1.Enabled = false;
+            {               
                 //Check if Username & Password Exists in Ipolicy_DB:
-                var result = entities.ABSPASSTABs.FirstOrDefault(i => i.PWD_USER_NAME.Equals(BootstrapTextBox1.Text)
+                
+                var result = DbEntities.ABSPASSTABs.FirstOrDefault(i => i.PWD_EMAIL_NUM.Equals(BootstrapTextBox1.Text)
                 && i.PWD_CODE.Equals(BootstrapTextBox2.Text));
 
-                if (result != null)
+                //var checkRole = DbEntities.ABSROLEUSERS.FirstOrDefault(i => i.USER_ROLE_USER_NAME.Equals(BootstrapTextBox1.Text));
+
+                if (result != null) //checkRole != null
                 {
+                    //if (checkRole.USER_ROLE_NAME.Equals("UNDERWRITING"))
+                    //{
+                    //    UND_Menu menu = new UND_Menu();
+                    //    var Control = menu.FindControl("link_UND");
+                    //    Control.Visible = true;
+                    //}
+
                     string myuid = "";
                     //myuid = BootstrapTextBox1.Text;
-                    myuid = result.PWD_ID;
+                    myuid = result.PWD_USER_NAME;
                     Session["loginname"] = myuid;
+                    Session["loginemail"] = BootstrapTextBox1.Text;
+                    //Session["User"] = BootstrapTextBox1.Text;
                     Response.Redirect("UND_Menu.aspx");
-
                 }
                 else
                 {

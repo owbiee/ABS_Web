@@ -12,16 +12,13 @@ namespace ABS_Web.Model
     using System;
     using System.Collections.Generic;
     
-    public partial class ABSROLEMST
+    public partial class ABSROLECHK
     {
-        public string ROLE_ID { get; set; }
-        public string ROLE_NUM { get; set; }
-        public Nullable<decimal> ROLE_NO { get; set; }
-        public string ROLE_NAME { get; set; }
-        public string ROLE_TYPE { get; set; }
-        public string ROLE_FLAG { get; set; }
-        public System.DateTime ROLE_KEYDTE { get; set; }
-        public string ROLE_OPERID { get; set; }
-        public long ID { get; set; }
+        public long ChkID { get; set; }
+        public string UserName { get; set; }
+        public string Email { get; set; }
+        public string RoleName { get; set; }
+        public string CreatedBy { get; set; }
+        public Nullable<System.DateTime> CreatedDate { get; set; }
     }
 }

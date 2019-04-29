@@ -58,13 +58,13 @@ namespace ABS_Web.UI_Templates.html.ltr {
         protected global::DevExpress.Web.Bootstrap.BootstrapTextBox txtEmail;
         
         /// <summary>
-        /// txtPassword control.
+        /// Group_Name control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DevExpress.Web.Bootstrap.BootstrapTextBox txtPassword;
+        protected global::DevExpress.Web.Bootstrap.BootstrapComboBox Group_Name;
         
         /// <summary>
         /// txtCreatedBy control.
@@ -76,22 +76,67 @@ namespace ABS_Web.UI_Templates.html.ltr {
         protected global::DevExpress.Web.Bootstrap.BootstrapTextBox txtCreatedBy;
         
         /// <summary>
-        /// txtDate control.
+        /// Phone_No control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DevExpress.Web.Bootstrap.BootstrapTextBox txtDate;
+        protected global::DevExpress.Web.Bootstrap.BootstrapTextBox Phone_No;
         
         /// <summary>
-        /// txtLoginCount control.
+        /// Keyed_Date control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DevExpress.Web.Bootstrap.BootstrapTextBox txtLoginCount;
+        protected global::DevExpress.Web.Bootstrap.BootstrapTextBox Keyed_Date;
+        
+        /// <summary>
+        /// lstSystem_Roles1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::DevExpress.Web.Bootstrap.BootstrapListBox lstSystem_Roles1;
+        
+        /// <summary>
+        /// SqlDataSource6 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource6;
+        
+        /// <summary>
+        /// btnMoveRole control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnMoveRole;
+        
+        /// <summary>
+        /// btnMRemoveRole control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnMRemoveRole;
+        
+        /// <summary>
+        /// lstUser_Roles1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::DevExpress.Web.Bootstrap.BootstrapListBox lstUser_Roles1;
         
         /// <summary>
         /// Button1 control.
@@ -101,6 +146,15 @@ namespace ABS_Web.UI_Templates.html.ltr {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button Button1;
+        
+        /// <summary>
+        /// Add_Roles control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Add_Roles;
         
         /// <summary>
         /// lblError control.
@@ -175,6 +229,15 @@ namespace ABS_Web.UI_Templates.html.ltr {
         protected global::DevExpress.Web.Bootstrap.BootstrapTextBox txt_Email;
         
         /// <summary>
+        /// BootstrapComboBox1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::DevExpress.Web.Bootstrap.BootstrapComboBox BootstrapComboBox1;
+        
+        /// <summary>
         /// ListBox2 control.
         /// </summary>
         /// <remarks>
@@ -238,6 +301,24 @@ namespace ABS_Web.UI_Templates.html.ltr {
         protected global::System.Web.UI.WebControls.Button Button2;
         
         /// <summary>
+        /// Staff_Name control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::DevExpress.Web.Bootstrap.BootstrapTextBox Staff_Name;
+        
+        /// <summary>
+        /// Staff_Email control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::DevExpress.Web.Bootstrap.BootstrapTextBox Staff_Email;
+        
+        /// <summary>
         /// BootstrapTextBox1 control.
         /// </summary>
         /// <remarks>
@@ -263,24 +344,6 @@ namespace ABS_Web.UI_Templates.html.ltr {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource2;
-        
-        /// <summary>
-        /// Staff_Name control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::DevExpress.Web.Bootstrap.BootstrapTextBox Staff_Name;
-        
-        /// <summary>
-        /// Staff_Email control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::DevExpress.Web.Bootstrap.BootstrapTextBox Staff_Email;
         
         /// <summary>
         /// BootstrapComboBox2 control.

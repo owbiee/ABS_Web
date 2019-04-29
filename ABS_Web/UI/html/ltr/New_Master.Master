@@ -75,7 +75,7 @@
                     <asp:Label ID="lblUser" runat="server" Text=""></asp:Label>               
               </li>
                 <!--Logout Button Here-->
-              <li class="dropdown dropdown-language nav-item" style="padding-top: 10px;"><a id="dropdown-flag" href="#" class="btn btn-danger icon-switch" >Logout</a>
+              <li class="dropdown dropdown-language nav-item" style="padding-top: 10px;"><a id="dropdown-flag" href="../../../User_Login/Login_Page.aspx" class="btn btn-danger icon-switch" >Logout</a>
                 <!--<div aria-labelledby="dropdown-flag" class="dropdown-menu"><a href="#" class="btn btn-blue">English</a></div>-->
               </li>
               <!--<li class="dropdown dropdown-notification nav-item"><a href="#" data-toggle="dropdown" class="nav-link nav-link-label"><i class="ficon icon-bell4"></i><span class="tag tag-pill tag-default tag-danger tag-default tag-up">5</span></a>-->
@@ -203,8 +203,8 @@
           </li>-->
           <li class=" nav-item"><a href="#"><i class="icon-cogs"></i><span data-i18n="nav.page_layouts.main" class="menu-title">Setup</span></a>
             <ul class="menu-content">
-                <li><a href="../../../UI_Templates/html/ltr/WebForm2.aspx" data-i18n="nav.page_layouts.1_column" class="menu-item"><i class="icon-users2"></i>User Setup</a>
-              </li>
+                <%--<li><a href="../../../UI_Templates/html/ltr/WebForm2.aspx" data-i18n="nav.page_layouts.1_column" class="menu-item"><i class="icon-users2"></i>User Setup</a>
+              </li>--%>
                 <li><a href="#" data-i18n="nav.menu_levels.second_level_child.third_level_child.main" class="menu-item">Code Entry</a>
                     <ul class="menu-content">
                       <li><a href="#" data-i18n="nav.menu_levels.second_level_child.third_level_child.fourth_level1" class="menu-item">Business Sector Setup</a>
@@ -219,6 +219,10 @@
                       </li>
                         <li><a href="../../../UI_Templates/html/ltr/Insured_Codes_Setup.aspx" data-i18n="nav.menu_levels.second_level_child.third_level_child.fourth_level2" class="menu-item">Insured Codes Setup</a>
                       </li>
+                        <%--<li>
+                            <asp:LinkButton ID="LinkButton1" runat="server" data-i18n="nav.menu_levels.second_level_child.third_level_child.fourth_level2" class="menu-item" OnClick="LinkButton1_Click">LinkButton</asp:LinkButton>
+                      </li>--%>
+                        
                         <li><a href="#" data-i18n="nav.menu_levels.second_level_child.third_level_child.fourth_level2" class="menu-item">Update Insured Data</a>
                       </li>
                         <li><a href="../../../UI_Templates/html/ltr/Branch_Codes_Setup.aspx" data-i18n="nav.menu_levels.second_level_child.third_level_child.fourth_level2" class="menu-item">Branch Code Setup</a>
@@ -256,7 +260,7 @@
                     </ul>
                   </li>
               
-              <li><a href="#" data-i18n="nav.page_layouts.2_columns" class="menu-item">Underwriting Budget</a>
+              <li><a href="../../../UI_Templates/html/ltr/Underwriting_Budget_Entry.aspx" data-i18n="nav.page_layouts.2_columns" class="menu-item">Underwriting Budget</a>
               </li>
               <li><a href="#" data-i18n="nav.page_layouts.boxed_layout" class="menu-item">Treaty Proportions Rate</a>
               </li>
@@ -267,7 +271,7 @@
               </li>
               <li><a href="#" data-i18n="nav.page_layouts.dark_layout" class="menu-item">Reinsurance Treaty</a>
               </li>
-              <li><a href="#" data-i18n="nav.page_layouts.semi_dark_layout" class="menu-item">Earthquake & Fire Rates</a>
+              <li><a href="../../../UI_Templates/html/ltr/Flood_Rates_Setup.aspx" data-i18n="nav.page_layouts.semi_dark_layout" class="menu-item">Earthquake & Fire Rates</a>
               </li>
                 <li><a href="#" data-i18n="nav.page_layouts.dark_layout" class="menu-item">ABS Memo Setup</a>
               </li>

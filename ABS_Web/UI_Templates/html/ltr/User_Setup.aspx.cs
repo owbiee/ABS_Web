@@ -24,8 +24,12 @@ namespace ABS_Web.UI_Templates.html.ltr
         {
             if (!IsPostBack)
             {
-                txtDate.Value = DateTime.Now;
+                //lstSystem_Roles.Items.Clear();
+                //lstUser_Roles.Items.Clear();
+                Keyed_Date.Value = DateTime.Now;
                 txtCreatedBy.Text = Convert.ToString(Session["loginname"]);
+                Add_Actions.Enabled = false;
+                Add_Roles.Enabled = false;
             }
 
         }
@@ -38,53 +42,41 @@ namespace ABS_Web.UI_Templates.html.ltr
                 
                 using (SqlConnection conn = new SqlConnection(CS))
                 {
-                    SqlCommand cmd = new SqlCommand("spRegisterUser", conn);
-                    cmd.CommandType = CommandType.StoredProcedure;
-
-                    //Hash Password:
-                    string Password = FormsAuthentication.HashPasswordForStoringInConfigFile(txtPassword.Text, "SHA1");
-                    //var pwd = Membership.CreateUser(txtUserName.Text, txtPassword.Text);
-
-                    SqlParameter username = new SqlParameter("@UserName", txtUserName.Text);
-                    SqlParameter password = new SqlParameter("@User_Pass", Password);
-                    SqlParameter count = new SqlParameter("@Login_Count", txtLoginCount.Text);
-                    SqlParameter email = new SqlParameter("@Email", txtEmail.Text);
-                    SqlParameter createdby = new SqlParameter("@Created_By", txtCreatedBy.Text);
-                    SqlParameter date = new SqlParameter("@Date_Created", txtDate.Text);
-
-                    cmd.Parameters.Add(username);
-                    cmd.Parameters.Add(password);
-                    cmd.Parameters.Add(count);
-                    cmd.Parameters.Add(email);
-                    cmd.Parameters.Add(createdby);
-                    cmd.Parameters.Add(date);
-
-                    conn.Open();
-                    int ReturnCode = (int)cmd.ExecuteScalar();
-
-                    if (ReturnCode == -1)
+                    if (Button1.Text == "Register")
                     {
-                        lblError.Text = "User already exist!";
-                    }
-                    else
-                     if (ReturnCode == 2)
-                    {
-                        lblError.Text = "User Profile Updated Sucessfully!";
-                        
-                    }
-                    else
-                    {
-                        lblError.Text = "Registration Sucessful!";
-                    }
-                    txtRefID.Text = "";
-                    txtUserName.Text = "";
-                    txtPassword.Text = "";
-                    //txtCreatedBy.Text = "";
-                    txtDate.Value = DateTime.Now;
-                    txtEmail.Text = "";
-                    txtEmail.Enabled = true;
+                        //string strQuery = "";
 
-                    Grid_Register.DataBind();
+                        conn.Open();
+                        SqlCommand cmd = conn.CreateCommand();
+                        cmd.CommandType = CommandType.Text;
+                        cmd.CommandText = "INSERT INTO [dbo].[ABSPASSTAB] (PWD_GROUP_ID, PWD_ID, PWD_USER_NAME, PWD_CODE, PWD_EMAIL_NUM, PWD_MOBILE_NUM, PWD_KEYDTE, PWD_OPERID) VALUES('" + 001 + "','" + Group_Name.SelectedItem.Value + "','" + txtUserName.Text + "','" + "CAI" + "', '" + txtEmail.Text + "', '" + Phone_No.Text + "', '" + DateTime.Now.ToString() + "', '" + txtCreatedBy.Text + "')";
+                        cmd.ExecuteNonQuery();
+                        conn.Close();
+                        Grid_Register.DataBind();
+
+                        //strQuery = "insert into table1 (fld, fld2, fld3) values (@p1, @p2, @P3)";
+                        //cmd.Parameters.Clear();
+                        //cmd.Parameters.AddWithValue("@p1", "001");
+                        //cmd.Parameters.AddWithValue("@p2", BootstrapTextBox1.Text);
+                        //int c = cmd.ExecuteNonQuery();
+
+
+                        lblError.Text = "User Registeration Successful!";
+                        ScriptManager.RegisterStartupScript(Page, GetType(), "Status", "PopupRegister();", true);
+
+                        InsertRole();
+                    }
+                    else if(Button1.Text == "Update")
+                    {
+                        conn.Open();
+                        SqlCommand cmd = conn.CreateCommand();
+                        cmd.CommandType = CommandType.Text;
+                        cmd.CommandText = "UPDATE [dbo].[ABSPASSTAB] SET PWD_ID='"+Group_Name.Text+"', PWD_USER_NAME='"+txtUserName.Text+"',PWD_EMAIL_NUM='"+txtEmail.Text+"', PWD_MOBILE_NUM='"+Phone_No.Text+"' WHERE PWD_REC_NO='"+txtRefID.Text+"'";
+                        cmd.ExecuteNonQuery();
+                        conn.Close();
+                        Grid_Register.DataBind();
+                    }
+                    
                 }
             }
             catch (Exception ex)
@@ -92,8 +84,39 @@ namespace ABS_Web.UI_Templates.html.ltr
                 lblError.Text = ex.Message;
             }
 
-            Button1.Text = "Register";
+            //Button1.Text = "Register";
         }
+
+        //INSERT INTO ABSROLEUSERS:
+        public void InsertRole()
+        {
+            try
+            {
+
+                using (SqlConnection conn = new SqlConnection(CS))
+                {
+                    conn.Open();
+                    SqlCommand cmd = conn.CreateCommand();
+                    cmd.CommandType = CommandType.Text;
+
+                    //Loop through Selected User Functions ListBox:
+                    foreach (ListEditItem item in lstUser_Roles1.Items)
+                    {
+                        cmd.CommandText = "INSERT INTO [dbo].[ABSROLEUSERS] (USER_ROLE_ID, USER_ROLE_USER_ID, USER_ROLE_USER_NAME, USER_ROLE_NUM, USER_ROLE_NAME, USER_ROLE_KEYDTE) VALUES('" + 001 + "','" +txtCreatedBy.Text + "','" + txtEmail.Text + "','" + 002 + "', '" + item + "', '" + DateTime.Now.ToString() +"')";
+                        cmd.ExecuteNonQuery();
+                    }
+
+                    conn.Close();
+                   
+                    
+                }
+            }
+            catch (Exception ex)
+            {
+                lblError.Text = ex.Message;
+            }
+        }
+
 
         //On Select Row:
         protected void ASPxGridView1_SelectionChanged(object sender, EventArgs e)
@@ -110,31 +133,59 @@ namespace ABS_Web.UI_Templates.html.ltr
         protected void GridUser_SelectedIndexChanged(object sender, EventArgs e)
         {
             GridViewRow view = GridUser.SelectedRow;
-            
+
             txt_Username.Text = view.Cells[1].Text;
             txt_Email.Text = view.Cells[2].Text;
-            
+
         }
 
-       
+
 
         protected void Grid_Register_SelectedIndexChanged(object sender, EventArgs e)
         {
+            //  OnSelectedIndexChanged="Grid_Register_SelectedIndexChanged"
             GridViewRow view = Grid_Register.SelectedRow;
             
-            txtUserName.Text = view.Cells[1].Text;
-            txtEmail.Text = view.Cells[2].Text;
-            txtCreatedBy.Text = view.Cells[3].Text;
-            txtRefID.Text = view.Cells[5].Text;
+            txtUserName.Text = view.Cells[5].Text;
+            txtEmail.Text = view.Cells[6].Text;
+            txtCreatedBy.Text = view.Cells[9].Text;
+            txtRefID.Text = view.Cells[1].Text;
+            Keyed_Date.Text = view.Cells[8].Text;
+            Phone_No.Text = view.Cells[7].Text;
             Button1.Text = "Update";
             txtEmail.Enabled = false;
             lblError.Text = "";
         }
 
+        protected void Grid_Register_SelectedIndexChanged1(object sender, EventArgs e)
+        {
+            try
+            {
+                GridViewRow view = Grid_Register.SelectedRow;
+
+                txtUserName.Text = view.Cells[4].Text;
+                txtEmail.Text = view.Cells[5].Text;
+                //txtCreatedBy.Text = view.Cells[9].Text;
+                txtRefID.Text = view.Cells[1].Text;
+                //Keyed_Date.Text = view.Cells[8].Text;
+                Phone_No.Text = view.Cells[6].Text;
+                Group_Name.Text = view.Cells[3].Text;
+                Button1.Text = "Update";
+                txtEmail.Enabled = false;
+                Add_Roles.Enabled = true;
+                lblError.Text = "";
+            }
+            catch(Exception ex)
+            {
+                lblError.Text = ex.Message;
+            }
+
+        }
+
         //Assign Roles:
         protected void Button3_Click(object sender, EventArgs e)
         {
-            if(ListBox2.SelectedIndex == -1)
+            if (ListBox2.SelectedIndex == -1)
             {
                 lblErrRole.Text = "Select a Role!";
             }
@@ -142,7 +193,7 @@ namespace ABS_Web.UI_Templates.html.ltr
             {
                 ListBox1.Items.Add(ListBox2.SelectedItem);
             }
-            
+
         }
 
         //Remove Roles:
@@ -156,7 +207,7 @@ namespace ABS_Web.UI_Templates.html.ltr
             {
                 ListBox2.Items.Add(ListBox1.SelectedItem);
             }
-            
+
         }
 
         protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
@@ -164,18 +215,42 @@ namespace ABS_Web.UI_Templates.html.ltr
             GridViewRow view = GridView1.SelectedRow;
             Staff_Name.Text = view.Cells[1].Text;
             Staff_Email.Text = view.Cells[2].Text;
+
+            LoadRoles();
         }
 
         //Function ListBox Select: Assign Function
         protected void Button5_Click(object sender, EventArgs e)
         {
-            Func_ListBox.Items.Add(ListBoxFunc.SelectedItem);
+            if(ListBoxFunc.SelectedIndex == -1)
+            {
+                lblErrFunc.Text = "Select User Functions";
+            }
+            else
+            {
+                foreach(ListEditItem item in ListBoxFunc.SelectedItems)
+                {
+                    Func_ListBox.Items.Add(item);
+                }
+            }
+            
         }
 
         //Remove Function:
         protected void Button6_Click(object sender, EventArgs e)
         {
-            ListBoxFunc.Items.Add(Func_ListBox.SelectedItem);
+            if(Func_ListBox.SelectedIndex == -1)
+            {
+                lblErrFunc.Text = "Select Function";
+            }
+            else
+            {
+                foreach(ListEditItem item in Func_ListBox.SelectedItems)
+                {
+                    ListBoxFunc.Items.Add(item);
+                }
+            }
+            
         }
 
         //Register selected User Roles to ABSROLECHK:
@@ -238,7 +313,7 @@ namespace ABS_Web.UI_Templates.html.ltr
             }
         }
 
-        //Select User From ABSROLEDETAILS:
+        //Select User From ABSROLEDETAILS: Assign CRUD Actions
         protected void GridView2_SelectedIndexChanged(object sender, EventArgs e)
         {
             GridViewRow viewRow = GridView2.SelectedRow;
@@ -254,6 +329,7 @@ namespace ABS_Web.UI_Templates.html.ltr
             CreatedBy.Text = viewRow.Cells[10].Text;
             KeyedDate.Text = viewRow.Cells[11].Text;
             //Staff_Email.Text = viewRow.Cells[1].Text;
+            Add_Actions.Enabled = true;
 
         }
 
@@ -273,6 +349,7 @@ namespace ABS_Web.UI_Templates.html.ltr
                     conn.Close();
                     GridView2.DataBind();
                     Action_Error.Text = "Actions Registered Successfully!";
+                    Add_Actions.Enabled = false;
 
                     ScriptManager.RegisterStartupScript(Page, GetType(), "JsStatus", "Popup();", true);
                 }
@@ -282,5 +359,65 @@ namespace ABS_Web.UI_Templates.html.ltr
                 Action_Error.Text = ex.Message;
             }
         }
+                   
+        //Assign Selected Roles to User:
+        protected void btnMoveRole_Click(object sender, EventArgs e)
+        {
+            //Loop through all selected Roles:
+            foreach (ListEditItem item in lstSystem_Roles1.SelectedItems)
+            {
+                lstUser_Roles1.Items.Add(item);
+            }
+
+        }
+
+        //Remove Selected Roles from User:
+        protected void btnMRemoveRole_Click(object sender, EventArgs e)
+        {
+            foreach (ListEditItem item in lstUser_Roles1.SelectedItems)
+            {
+                lstSystem_Roles1.Items.Add(item);
+            }
+        }
+
+        //Add Roles to Existing Users:
+        protected void Add_Roles_Click(object sender, EventArgs e)
+        {
+            InsertRole();
+        }
+
+        //On Email Text_Changed: Load Assigned Roles:
+        protected void Staff_Email_TextChanged(object sender, EventArgs e)
+        {
+            
+
+        }
+
+        protected void Staff_Email_ValueChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void LoadRoles()
+        {
+            if (Staff_Email.Text != "")
+            {
+                try
+                {
+                    using (SqlConnection conn = new SqlConnection(CS))
+                    {
+                        SqlCommand cmd = new SqlCommand("SELECT USER_ROLE_NAME FROM [dbo].[ABSROLEUSERS] WHERE USER_ROLE_USER_NAME = '" + Staff_Email.Value + "'", conn);
+                        conn.Open();
+                        BootstrapComboBox2.DataSource = cmd.ExecuteReader();
+                        BootstrapComboBox2.DataBind();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    lblErrFunc.Text = ex.Message;
+                }
+            }
+        }
     }
 }
+

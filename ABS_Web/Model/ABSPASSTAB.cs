@@ -14,7 +14,7 @@ namespace ABS_Web.Model
     
     public partial class ABSPASSTAB
     {
-        public decimal PWD_REC_NO { get; set; }
+        public long PWD_REC_NO { get; set; }
         public string PWD_GROUP_ID { get; set; }
         public string PWD_ID { get; set; }
         public string PWD_USER_NAME { get; set; }

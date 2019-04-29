@@ -31,48 +31,21 @@ namespace ABS_Web.User_Login {
         protected global::System.Web.UI.WebControls.Label lblUser;
         
         /// <summary>
-        /// Button1 control.
+        /// Log_Out control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button1;
+        protected global::System.Web.UI.WebControls.Button Log_Out;
         
         /// <summary>
-        /// link_fin control.
+        /// Error1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton link_fin;
-        
-        /// <summary>
-        /// link_reins control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton link_reins;
-        
-        /// <summary>
-        /// UND control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton UND;
-        
-        /// <summary>
-        /// link_Setup control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton link_Setup;
+        protected global::System.Web.UI.WebControls.Label Error1;
     }
 }

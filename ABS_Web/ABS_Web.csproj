@@ -174,15 +174,15 @@
     <Content Include="alertifyjs %282%29\css\themes\semantic.min.css" />
     <Content Include="alertifyjs %282%29\css\themes\semantic.rtl.css" />
     <Content Include="alertifyjs %282%29\css\themes\semantic.rtl.min.css" />
-    <Content Include="Model\User_Login.Context.tt">
+    <Content Include="Model\Login.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>User_Login.edmx</DependentUpon>
-      <LastGenOutput>User_Login.Context.cs</LastGenOutput>
+      <DependentUpon>Login.edmx</DependentUpon>
+      <LastGenOutput>Login.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="Model\User_Login.tt">
+    <Content Include="Model\Login.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>User_Login.edmx</DependentUpon>
-      <LastGenOutput>User_Login.cs</LastGenOutput>
+      <DependentUpon>Login.edmx</DependentUpon>
+      <LastGenOutput>Login.cs</LastGenOutput>
     </Content>
     <Content Include="UI\app-assets\css-rtl\app.css" />
     <Content Include="UI\app-assets\css-rtl\app.min.css" />
@@ -1592,198 +1592,8 @@
     <Content Include="UI\gulp-tasks\uglify\min.js" />
     <Content Include="UI\gulp-tasks\validate-html.js" />
     <Content Include="UI\gulpfile.js" />
-    <Content Include="UI\html\ltr\card-actions.html" />
-    <Content Include="UI\html\ltr\card-bootstrap.html" />
-    <Content Include="UI\html\ltr\card-charts.html" />
-    <Content Include="UI\html\ltr\card-statistics.html" />
-    <Content Include="UI\html\ltr\changelog.html" />
-    <Content Include="UI\html\ltr\chartjs-bar-charts.html" />
-    <Content Include="UI\html\ltr\chartjs-line-charts.html" />
-    <Content Include="UI\html\ltr\chartjs-pie-doughnut-charts.html" />
-    <Content Include="UI\html\ltr\color-palette-amber.html" />
-    <Content Include="UI\html\ltr\color-palette-blue-grey.html" />
-    <Content Include="UI\html\ltr\color-palette-blue.html" />
-    <Content Include="UI\html\ltr\color-palette-brown.html" />
-    <Content Include="UI\html\ltr\color-palette-cyan.html" />
-    <Content Include="UI\html\ltr\color-palette-danger.html" />
-    <Content Include="UI\html\ltr\color-palette-deep-orange.html" />
-    <Content Include="UI\html\ltr\color-palette-deep-purple.html" />
-    <Content Include="UI\html\ltr\color-palette-green.html" />
-    <Content Include="UI\html\ltr\color-palette-grey.html" />
-    <Content Include="UI\html\ltr\color-palette-indigo.html" />
-    <Content Include="UI\html\ltr\color-palette-info.html" />
-    <Content Include="UI\html\ltr\color-palette-light-blue.html" />
-    <Content Include="UI\html\ltr\color-palette-light-green.html" />
-    <Content Include="UI\html\ltr\color-palette-lime.html" />
-    <Content Include="UI\html\ltr\color-palette-orange.html" />
-    <Content Include="UI\html\ltr\color-palette-pink.html" />
-    <Content Include="UI\html\ltr\color-palette-primary.html" />
-    <Content Include="UI\html\ltr\color-palette-purple.html" />
-    <Content Include="UI\html\ltr\color-palette-red.html" />
-    <Content Include="UI\html\ltr\color-palette-success.html" />
-    <Content Include="UI\html\ltr\color-palette-teal.html" />
-    <Content Include="UI\html\ltr\color-palette-warning.html" />
-    <Content Include="UI\html\ltr\color-palette-yellow.html" />
-    <Content Include="UI\html\ltr\coming-soon-flat.html" />
-    <Content Include="UI\html\ltr\component-alerts.html" />
-    <Content Include="UI\html\ltr\component-buttons-basic.html" />
-    <Content Include="UI\html\ltr\component-carousel.html" />
-    <Content Include="UI\html\ltr\component-collapse.html" />
-    <Content Include="UI\html\ltr\component-dropdowns.html" />
-    <Content Include="UI\html\ltr\component-list-group.html" />
-    <Content Include="UI\html\ltr\component-media-objects.html" />
-    <Content Include="UI\html\ltr\component-modals.html" />
-    <Content Include="UI\html\ltr\component-navs-component.html" />
-    <Content Include="UI\html\ltr\component-pagination.html" />
-    <Content Include="UI\html\ltr\component-pill-tags.html" />
-    <Content Include="UI\html\ltr\component-pills-component.html" />
-    <Content Include="UI\html\ltr\component-popovers.html" />
-    <Content Include="UI\html\ltr\component-progress.html" />
-    <Content Include="UI\html\ltr\component-tabs-component.html" />
-    <Content Include="UI\html\ltr\component-tags.html" />
-    <Content Include="UI\html\ltr\component-tooltips.html" />
-    <Content Include="UI\html\ltr\content-grid.html" />
-    <Content Include="UI\html\ltr\content-helper-classes.html" />
-    <Content Include="UI\html\ltr\content-text-utilities.html" />
-    <Content Include="UI\html\ltr\content-typography.html" />
-    <Content Include="UI\html\ltr\dashboard-2.html" />
-    <Content Include="UI\html\ltr\dashboard-lite.html" />
-    <Content Include="UI\html\ltr\error-400.html" />
-    <Content Include="UI\html\ltr\error-401.html" />
-    <Content Include="UI\html\ltr\error-403.html" />
-    <Content Include="UI\html\ltr\error-404.html" />
-    <Content Include="UI\html\ltr\error-500.html" />
-    <Content Include="UI\html\ltr\flot-bar-charts.html" />
-    <Content Include="UI\html\ltr\flot-line-charts.html" />
-    <Content Include="UI\html\ltr\flot-pie-charts.html" />
-    <Content Include="UI\html\ltr\form-layout-basic.html" />
-    <Content Include="UI\html\ltr\gallery-grid.html" />
-    <Content Include="UI\html\ltr\gmaps-basic-maps.html" />
-    <Content Include="UI\html\ltr\google-bar-charts.html" />
-    <Content Include="UI\html\ltr\google-line-charts.html" />
-    <Content Include="UI\html\ltr\google-pie-charts.html" />
-    <Content Include="UI\html\ltr\icons-evil.html" />
-    <Content Include="UI\html\ltr\icons-feather.html" />
-    <Content Include="UI\html\ltr\icons-font-awesome.html" />
-    <Content Include="UI\html\ltr\icons-fps-line.html" />
-    <Content Include="UI\html\ltr\icons-ico-moon.html" />
-    <Content Include="UI\html\ltr\icons-ionicons.html" />
-    <Content Include="UI\html\ltr\icons-linecons.html" />
-    <Content Include="UI\html\ltr\icons-meteocons.html" />
-    <Content Include="UI\html\ltr\index.html" />
-    <Content Include="UI\html\ltr\invoice-template.html" />
-    <Content Include="UI\html\ltr\layout-1-column.html" />
-    <Content Include="UI\html\ltr\layout-2-columns.html" />
-    <Content Include="UI\html\ltr\layout-boxed.html" />
-    <Content Include="UI\html\ltr\layout-dark.html" />
-    <Content Include="UI\html\ltr\layout-light.html" />
-    <Content Include="UI\html\ltr\layout-semi-dark.html" />
-    <Content Include="UI\html\ltr\layout-static.html" />
     <Content Include="UI\html\ltr\login-simple.html" />
-    <Content Include="UI\html\ltr\recover-password.html" />
-    <Content Include="UI\html\ltr\register-simple.html" />
-    <Content Include="UI\html\ltr\search-page.html" />
-    <Content Include="UI\html\ltr\search-website.html" />
-    <Content Include="UI\html\ltr\table-basic.html" />
     <Content Include="UI\html\ltr\under-maintenance.html" />
-    <Content Include="UI\html\ltr\unlock-user.html" />
-    <Content Include="UI\html\ltr\vector-maps-jvq.html" />
-    <Content Include="UI\html\rtl\card-actions.html" />
-    <Content Include="UI\html\rtl\card-bootstrap.html" />
-    <Content Include="UI\html\rtl\card-charts.html" />
-    <Content Include="UI\html\rtl\card-statistics.html" />
-    <Content Include="UI\html\rtl\changelog.html" />
-    <Content Include="UI\html\rtl\chartjs-bar-charts.html" />
-    <Content Include="UI\html\rtl\chartjs-line-charts.html" />
-    <Content Include="UI\html\rtl\chartjs-pie-doughnut-charts.html" />
-    <Content Include="UI\html\rtl\color-palette-amber.html" />
-    <Content Include="UI\html\rtl\color-palette-blue-grey.html" />
-    <Content Include="UI\html\rtl\color-palette-blue.html" />
-    <Content Include="UI\html\rtl\color-palette-brown.html" />
-    <Content Include="UI\html\rtl\color-palette-cyan.html" />
-    <Content Include="UI\html\rtl\color-palette-danger.html" />
-    <Content Include="UI\html\rtl\color-palette-deep-orange.html" />
-    <Content Include="UI\html\rtl\color-palette-deep-purple.html" />
-    <Content Include="UI\html\rtl\color-palette-green.html" />
-    <Content Include="UI\html\rtl\color-palette-grey.html" />
-    <Content Include="UI\html\rtl\color-palette-indigo.html" />
-    <Content Include="UI\html\rtl\color-palette-info.html" />
-    <Content Include="UI\html\rtl\color-palette-light-blue.html" />
-    <Content Include="UI\html\rtl\color-palette-light-green.html" />
-    <Content Include="UI\html\rtl\color-palette-lime.html" />
-    <Content Include="UI\html\rtl\color-palette-orange.html" />
-    <Content Include="UI\html\rtl\color-palette-pink.html" />
-    <Content Include="UI\html\rtl\color-palette-primary.html" />
-    <Content Include="UI\html\rtl\color-palette-purple.html" />
-    <Content Include="UI\html\rtl\color-palette-red.html" />
-    <Content Include="UI\html\rtl\color-palette-success.html" />
-    <Content Include="UI\html\rtl\color-palette-teal.html" />
-    <Content Include="UI\html\rtl\color-palette-warning.html" />
-    <Content Include="UI\html\rtl\color-palette-yellow.html" />
-    <Content Include="UI\html\rtl\coming-soon-flat.html" />
-    <Content Include="UI\html\rtl\component-alerts.html" />
-    <Content Include="UI\html\rtl\component-buttons-basic.html" />
-    <Content Include="UI\html\rtl\component-carousel.html" />
-    <Content Include="UI\html\rtl\component-collapse.html" />
-    <Content Include="UI\html\rtl\component-dropdowns.html" />
-    <Content Include="UI\html\rtl\component-list-group.html" />
-    <Content Include="UI\html\rtl\component-media-objects.html" />
-    <Content Include="UI\html\rtl\component-modals.html" />
-    <Content Include="UI\html\rtl\component-navs-component.html" />
-    <Content Include="UI\html\rtl\component-pagination.html" />
-    <Content Include="UI\html\rtl\component-pill-tags.html" />
-    <Content Include="UI\html\rtl\component-pills-component.html" />
-    <Content Include="UI\html\rtl\component-popovers.html" />
-    <Content Include="UI\html\rtl\component-progress.html" />
-    <Content Include="UI\html\rtl\component-tabs-component.html" />
-    <Content Include="UI\html\rtl\component-tags.html" />
-    <Content Include="UI\html\rtl\component-tooltips.html" />
-    <Content Include="UI\html\rtl\content-grid.html" />
-    <Content Include="UI\html\rtl\content-helper-classes.html" />
-    <Content Include="UI\html\rtl\content-text-utilities.html" />
-    <Content Include="UI\html\rtl\content-typography.html" />
-    <Content Include="UI\html\rtl\dashboard-2.html" />
-    <Content Include="UI\html\rtl\dashboard-lite.html" />
-    <Content Include="UI\html\rtl\error-400.html" />
-    <Content Include="UI\html\rtl\error-401.html" />
-    <Content Include="UI\html\rtl\error-403.html" />
-    <Content Include="UI\html\rtl\error-404.html" />
-    <Content Include="UI\html\rtl\error-500.html" />
-    <Content Include="UI\html\rtl\flot-bar-charts.html" />
-    <Content Include="UI\html\rtl\flot-line-charts.html" />
-    <Content Include="UI\html\rtl\flot-pie-charts.html" />
-    <Content Include="UI\html\rtl\form-layout-basic.html" />
-    <Content Include="UI\html\rtl\gallery-grid.html" />
-    <Content Include="UI\html\rtl\gmaps-basic-maps.html" />
-    <Content Include="UI\html\rtl\google-bar-charts.html" />
-    <Content Include="UI\html\rtl\google-line-charts.html" />
-    <Content Include="UI\html\rtl\google-pie-charts.html" />
-    <Content Include="UI\html\rtl\icons-evil.html" />
-    <Content Include="UI\html\rtl\icons-feather.html" />
-    <Content Include="UI\html\rtl\icons-font-awesome.html" />
-    <Content Include="UI\html\rtl\icons-fps-line.html" />
-    <Content Include="UI\html\rtl\icons-ico-moon.html" />
-    <Content Include="UI\html\rtl\icons-ionicons.html" />
-    <Content Include="UI\html\rtl\icons-linecons.html" />
-    <Content Include="UI\html\rtl\icons-meteocons.html" />
-    <Content Include="UI\html\rtl\index.html" />
-    <Content Include="UI\html\rtl\invoice-template.html" />
-    <Content Include="UI\html\rtl\layout-1-column.html" />
-    <Content Include="UI\html\rtl\layout-2-columns.html" />
-    <Content Include="UI\html\rtl\layout-boxed.html" />
-    <Content Include="UI\html\rtl\layout-dark.html" />
-    <Content Include="UI\html\rtl\layout-light.html" />
-    <Content Include="UI\html\rtl\layout-semi-dark.html" />
-    <Content Include="UI\html\rtl\layout-static.html" />
-    <Content Include="UI\html\rtl\login-simple.html" />
-    <Content Include="UI\html\rtl\recover-password.html" />
-    <Content Include="UI\html\rtl\register-simple.html" />
-    <Content Include="UI\html\rtl\search-page.html" />
-    <Content Include="UI\html\rtl\search-website.html" />
-    <Content Include="UI\html\rtl\table-basic.html" />
-    <Content Include="UI\html\rtl\under-maintenance.html" />
-    <Content Include="UI\html\rtl\unlock-user.html" />
-    <Content Include="UI\html\rtl\vector-maps-jvq.html" />
     <Content Include="UI\src\js\core\app-menu.js" />
     <Content Include="UI\src\js\core\app.js" />
     <Content Include="UI\src\js\core\libraries\bootstrap.min.js" />
@@ -1886,23 +1696,26 @@
     <Content Include="UI_Templates\015-web.png" />
     <Content Include="UI_Templates\Custodian_Logo.jpg" />
     <Content Include="UI_Templates\html\ltr\Branch_Codes_Setup.aspx" />
+    <Content Include="UI_Templates\html\ltr\Business_Distr_Setup.aspx" />
+    <Content Include="UI_Templates\html\ltr\Company_Setup.aspx" />
     <Content Include="UI_Templates\html\ltr\Debtors_Master_Setup.aspx" />
+    <Content Include="UI_Templates\html\ltr\Division_Business_Sector.aspx" />
+    <Content Include="UI_Templates\html\ltr\Error_Page.aspx" />
+    <Content Include="UI_Templates\html\ltr\Flood_Rates_Setup.aspx" />
     <Content Include="UI_Templates\html\ltr\Forms_Template.aspx" />
     <Content Include="UI_Templates\html\ltr\Function_Setup.aspx" />
     <Content Include="UI_Templates\html\ltr\General_Settings.aspx" />
-    <Content Include="UI_Templates\html\ltr\Graphics.jpg" />
-    <Content Include="UI_Templates\html\ltr\index New.html" />
     <Content Include="UI_Templates\html\ltr\Insured_Codes_Setup.aspx" />
     <Content Include="UI_Templates\html\ltr\menu2.jpg" />
+    <Content Include="UI_Templates\html\ltr\NAICOM_Info.aspx" />
     <Content Include="UI_Templates\html\ltr\Risk_Codes_Setup.aspx" />
     <Content Include="UI_Templates\html\ltr\Risk_Profile_Setup.aspx" />
     <Content Include="UI_Templates\html\ltr\Role_Setup.aspx" />
     <Content Include="UI_Templates\html\ltr\settings.jpg" />
+    <Content Include="UI_Templates\html\ltr\Setup_User_Roles.aspx" />
+    <Content Include="UI_Templates\html\ltr\Underwriting_Budget_Entry.aspx" />
     <Content Include="UI_Templates\html\ltr\User_Setup.aspx" />
-    <Content Include="UI_Templates\html\WebForm1.aspx.designer.vb" />
-    <Content Include="UI_Templates\html\WebForm1.aspx.vb" />
     <Content Include="UI_Templates\html\ltr\WebForm2.aspx" />
-    <Content Include="UI_Templates\html\WebForm3.aspx" />
     <Content Include="UI_Templates\insure_Img.jpg" />
     <Content Include="UI_Templates\UNDW_Menu.aspx" />
     <Content Include="User_Login\001-clock.png" />
@@ -1941,18 +1754,12 @@
     <Content Include="User_Login\ABS_Img.jpg" />
     <Content Include="ABS_Menu.aspx" />
     <Content Include="Contact.aspx" />
-    <Content Include="container %281%29.png" />
-    <Content Include="container %282%29.png" />
-    <Content Include="container.png" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
-    <Content Include="coworkers.png" />
-    <Content Include="customs-broker.jpg" />
     <Content Include="Default.aspx" />
-    <Content Include="delivery-truck.png" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -1964,14 +1771,14 @@
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="WebForm1.aspx" />
-    <EntityDeploy Include="Model\User_Login.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>User_Login.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="Model\User_Login.edmx.diagram">
-      <DependentUpon>User_Login.edmx</DependentUpon>
-    </Content>
     <Content Include="Connected Services\Office365\ConnectedService.json" />
+    <EntityDeploy Include="Model\Login.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Login.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Model\Login.edmx.diagram">
+      <DependentUpon>Login.edmx</DependentUpon>
+    </Content>
     <None Include="packages.config" />
     <None Include="Properties\PublishProfiles\ABSWebCustodian - Web Deploy.pubxml" />
     <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
@@ -3413,201 +3220,10 @@
     <Content Include="UI_Templates\gulp-tasks\uglify\min.js" />
     <Content Include="UI_Templates\gulp-tasks\validate-html.js" />
     <Content Include="UI_Templates\gulpfile.js" />
-    <Content Include="UI_Templates\html\ltr\card-actions.html" />
-    <Content Include="UI_Templates\html\ltr\card-bootstrap.html" />
-    <Content Include="UI_Templates\html\ltr\card-charts.html" />
-    <Content Include="UI_Templates\html\ltr\card-statistics.html" />
-    <Content Include="UI_Templates\html\ltr\changelog.html" />
-    <Content Include="UI_Templates\html\ltr\chartjs-bar-charts.html" />
-    <Content Include="UI_Templates\html\ltr\chartjs-line-charts.html" />
-    <Content Include="UI_Templates\html\ltr\chartjs-pie-doughnut-charts.html" />
-    <Content Include="UI_Templates\html\ltr\color-palette-amber.html" />
-    <Content Include="UI_Templates\html\ltr\color-palette-blue-grey.html" />
-    <Content Include="UI_Templates\html\ltr\color-palette-blue.html" />
-    <Content Include="UI_Templates\html\ltr\color-palette-brown.html" />
-    <Content Include="UI_Templates\html\ltr\color-palette-cyan.html" />
-    <Content Include="UI_Templates\html\ltr\color-palette-danger.html" />
-    <Content Include="UI_Templates\html\ltr\color-palette-deep-orange.html" />
-    <Content Include="UI_Templates\html\ltr\color-palette-deep-purple.html" />
-    <Content Include="UI_Templates\html\ltr\color-palette-green.html" />
-    <Content Include="UI_Templates\html\ltr\color-palette-grey.html" />
-    <Content Include="UI_Templates\html\ltr\color-palette-indigo.html" />
-    <Content Include="UI_Templates\html\ltr\color-palette-info.html" />
-    <Content Include="UI_Templates\html\ltr\color-palette-light-blue.html" />
-    <Content Include="UI_Templates\html\ltr\color-palette-light-green.html" />
-    <Content Include="UI_Templates\html\ltr\color-palette-lime.html" />
-    <Content Include="UI_Templates\html\ltr\color-palette-orange.html" />
-    <Content Include="UI_Templates\html\ltr\color-palette-pink.html" />
-    <Content Include="UI_Templates\html\ltr\color-palette-primary.html" />
-    <Content Include="UI_Templates\html\ltr\color-palette-purple.html" />
-    <Content Include="UI_Templates\html\ltr\color-palette-red.html" />
-    <Content Include="UI_Templates\html\ltr\color-palette-success.html" />
-    <Content Include="UI_Templates\html\ltr\color-palette-teal.html" />
-    <Content Include="UI_Templates\html\ltr\color-palette-warning.html" />
-    <Content Include="UI_Templates\html\ltr\color-palette-yellow.html" />
-    <Content Include="UI_Templates\html\ltr\coming-soon-flat.html" />
-    <Content Include="UI_Templates\html\ltr\component-alerts.html" />
-    <Content Include="UI_Templates\html\ltr\component-buttons-basic.html" />
-    <Content Include="UI_Templates\html\ltr\component-carousel.html" />
-    <Content Include="UI_Templates\html\ltr\component-collapse.html" />
-    <Content Include="UI_Templates\html\ltr\component-dropdowns.html" />
-    <Content Include="UI_Templates\html\ltr\component-list-group.html" />
-    <Content Include="UI_Templates\html\ltr\component-media-objects.html" />
-    <Content Include="UI_Templates\html\ltr\component-modals.html" />
-    <Content Include="UI_Templates\html\ltr\component-navs-component.html" />
-    <Content Include="UI_Templates\html\ltr\component-pagination.html" />
-    <Content Include="UI_Templates\html\ltr\component-pill-tags.html" />
-    <Content Include="UI_Templates\html\ltr\component-pills-component.html" />
-    <Content Include="UI_Templates\html\ltr\component-popovers.html" />
-    <Content Include="UI_Templates\html\ltr\component-progress.html" />
-    <Content Include="UI_Templates\html\ltr\component-tabs-component.html" />
-    <Content Include="UI_Templates\html\ltr\component-tags.html" />
-    <Content Include="UI_Templates\html\ltr\component-tooltips.html" />
-    <Content Include="UI_Templates\html\ltr\content-grid.html" />
-    <Content Include="UI_Templates\html\ltr\content-helper-classes.html" />
-    <Content Include="UI_Templates\html\ltr\content-text-utilities.html" />
-    <Content Include="UI_Templates\html\ltr\content-typography.html" />
-    <Content Include="UI_Templates\html\ltr\dashboard-2.html" />
-    <Content Include="UI_Templates\html\ltr\dashboard-lite.html" />
     <Content Include="UI_Templates\html\ltr\error-400.html" />
-    <Content Include="UI_Templates\html\ltr\error-401.html" />
-    <Content Include="UI_Templates\html\ltr\error-403.html" />
-    <Content Include="UI_Templates\html\ltr\error-404.html" />
-    <Content Include="UI_Templates\html\ltr\error-500.html" />
-    <Content Include="UI_Templates\html\ltr\flot-bar-charts.html" />
-    <Content Include="UI_Templates\html\ltr\flot-line-charts.html" />
-    <Content Include="UI_Templates\html\ltr\flot-pie-charts.html" />
-    <Content Include="UI_Templates\html\ltr\form-layout-basic.html" />
-    <Content Include="UI_Templates\html\ltr\gallery-grid.html" />
-    <Content Include="UI_Templates\html\ltr\gmaps-basic-maps.html" />
-    <Content Include="UI_Templates\html\ltr\google-bar-charts.html" />
-    <Content Include="UI_Templates\html\ltr\google-line-charts.html" />
-    <Content Include="UI_Templates\html\ltr\google-pie-charts.html" />
-    <Content Include="UI_Templates\html\ltr\icons-evil.html" />
-    <Content Include="UI_Templates\html\ltr\icons-feather.html" />
-    <Content Include="UI_Templates\html\ltr\icons-font-awesome.html" />
-    <Content Include="UI_Templates\html\ltr\icons-fps-line.html" />
-    <Content Include="UI_Templates\html\ltr\icons-ico-moon.html" />
-    <Content Include="UI_Templates\html\ltr\icons-ionicons.html" />
-    <Content Include="UI_Templates\html\ltr\icons-linecons.html" />
-    <Content Include="UI_Templates\html\ltr\icons-meteocons.html" />
-    <Content Include="UI_Templates\html\ltr\index.html" />
     <Content Include="UI_Templates\html\ltr\insure_Img.jpg" />
-    <Content Include="UI_Templates\html\ltr\invoice-template.html" />
-    <Content Include="UI_Templates\html\ltr\layout-1-column.html" />
-    <Content Include="UI_Templates\html\ltr\layout-2-columns.html" />
-    <Content Include="UI_Templates\html\ltr\layout-boxed.html" />
-    <Content Include="UI_Templates\html\ltr\layout-dark.html" />
-    <Content Include="UI_Templates\html\ltr\layout-light.html" />
-    <Content Include="UI_Templates\html\ltr\layout-semi-dark.html" />
-    <Content Include="UI_Templates\html\ltr\layout-static.html" />
-    <Content Include="UI_Templates\html\ltr\login-simple.html" />
     <Content Include="UI_Templates\html\ltr\POL1101.aspx" />
-    <Content Include="UI_Templates\html\ltr\recover-password.html" />
-    <Content Include="UI_Templates\html\ltr\register-simple.html" />
-    <Content Include="UI_Templates\html\ltr\search-page.html" />
-    <Content Include="UI_Templates\html\ltr\search-website.html" />
-    <Content Include="UI_Templates\html\ltr\table-basic.html" />
-    <Content Include="UI_Templates\html\ltr\under-maintenance.html" />
     <Content Include="UI_Templates\html\ltr\UnderWriter.aspx" />
-    <Content Include="UI_Templates\html\ltr\unlock-user.html" />
-    <Content Include="UI_Templates\html\ltr\vector-maps-jvq.html" />
-    <Content Include="UI_Templates\html\rtl\card-actions.html" />
-    <Content Include="UI_Templates\html\rtl\card-bootstrap.html" />
-    <Content Include="UI_Templates\html\rtl\card-charts.html" />
-    <Content Include="UI_Templates\html\rtl\card-statistics.html" />
-    <Content Include="UI_Templates\html\rtl\changelog.html" />
-    <Content Include="UI_Templates\html\rtl\chartjs-bar-charts.html" />
-    <Content Include="UI_Templates\html\rtl\chartjs-line-charts.html" />
-    <Content Include="UI_Templates\html\rtl\chartjs-pie-doughnut-charts.html" />
-    <Content Include="UI_Templates\html\rtl\color-palette-amber.html" />
-    <Content Include="UI_Templates\html\rtl\color-palette-blue-grey.html" />
-    <Content Include="UI_Templates\html\rtl\color-palette-blue.html" />
-    <Content Include="UI_Templates\html\rtl\color-palette-brown.html" />
-    <Content Include="UI_Templates\html\rtl\color-palette-cyan.html" />
-    <Content Include="UI_Templates\html\rtl\color-palette-danger.html" />
-    <Content Include="UI_Templates\html\rtl\color-palette-deep-orange.html" />
-    <Content Include="UI_Templates\html\rtl\color-palette-deep-purple.html" />
-    <Content Include="UI_Templates\html\rtl\color-palette-green.html" />
-    <Content Include="UI_Templates\html\rtl\color-palette-grey.html" />
-    <Content Include="UI_Templates\html\rtl\color-palette-indigo.html" />
-    <Content Include="UI_Templates\html\rtl\color-palette-info.html" />
-    <Content Include="UI_Templates\html\rtl\color-palette-light-blue.html" />
-    <Content Include="UI_Templates\html\rtl\color-palette-light-green.html" />
-    <Content Include="UI_Templates\html\rtl\color-palette-lime.html" />
-    <Content Include="UI_Templates\html\rtl\color-palette-orange.html" />
-    <Content Include="UI_Templates\html\rtl\color-palette-pink.html" />
-    <Content Include="UI_Templates\html\rtl\color-palette-primary.html" />
-    <Content Include="UI_Templates\html\rtl\color-palette-purple.html" />
-    <Content Include="UI_Templates\html\rtl\color-palette-red.html" />
-    <Content Include="UI_Templates\html\rtl\color-palette-success.html" />
-    <Content Include="UI_Templates\html\rtl\color-palette-teal.html" />
-    <Content Include="UI_Templates\html\rtl\color-palette-warning.html" />
-    <Content Include="UI_Templates\html\rtl\color-palette-yellow.html" />
-    <Content Include="UI_Templates\html\rtl\coming-soon-flat.html" />
-    <Content Include="UI_Templates\html\rtl\component-alerts.html" />
-    <Content Include="UI_Templates\html\rtl\component-buttons-basic.html" />
-    <Content Include="UI_Templates\html\rtl\component-carousel.html" />
-    <Content Include="UI_Templates\html\rtl\component-collapse.html" />
-    <Content Include="UI_Templates\html\rtl\component-dropdowns.html" />
-    <Content Include="UI_Templates\html\rtl\component-list-group.html" />
-    <Content Include="UI_Templates\html\rtl\component-media-objects.html" />
-    <Content Include="UI_Templates\html\rtl\component-modals.html" />
-    <Content Include="UI_Templates\html\rtl\component-navs-component.html" />
-    <Content Include="UI_Templates\html\rtl\component-pagination.html" />
-    <Content Include="UI_Templates\html\rtl\component-pill-tags.html" />
-    <Content Include="UI_Templates\html\rtl\component-pills-component.html" />
-    <Content Include="UI_Templates\html\rtl\component-popovers.html" />
-    <Content Include="UI_Templates\html\rtl\component-progress.html" />
-    <Content Include="UI_Templates\html\rtl\component-tabs-component.html" />
-    <Content Include="UI_Templates\html\rtl\component-tags.html" />
-    <Content Include="UI_Templates\html\rtl\component-tooltips.html" />
-    <Content Include="UI_Templates\html\rtl\content-grid.html" />
-    <Content Include="UI_Templates\html\rtl\content-helper-classes.html" />
-    <Content Include="UI_Templates\html\rtl\content-text-utilities.html" />
-    <Content Include="UI_Templates\html\rtl\content-typography.html" />
-    <Content Include="UI_Templates\html\rtl\dashboard-2.html" />
-    <Content Include="UI_Templates\html\rtl\dashboard-lite.html" />
-    <Content Include="UI_Templates\html\rtl\error-400.html" />
-    <Content Include="UI_Templates\html\rtl\error-401.html" />
-    <Content Include="UI_Templates\html\rtl\error-403.html" />
-    <Content Include="UI_Templates\html\rtl\error-404.html" />
-    <Content Include="UI_Templates\html\rtl\error-500.html" />
-    <Content Include="UI_Templates\html\rtl\flot-bar-charts.html" />
-    <Content Include="UI_Templates\html\rtl\flot-line-charts.html" />
-    <Content Include="UI_Templates\html\rtl\flot-pie-charts.html" />
-    <Content Include="UI_Templates\html\rtl\form-layout-basic.html" />
-    <Content Include="UI_Templates\html\rtl\gallery-grid.html" />
-    <Content Include="UI_Templates\html\rtl\gmaps-basic-maps.html" />
-    <Content Include="UI_Templates\html\rtl\google-bar-charts.html" />
-    <Content Include="UI_Templates\html\rtl\google-line-charts.html" />
-    <Content Include="UI_Templates\html\rtl\google-pie-charts.html" />
-    <Content Include="UI_Templates\html\rtl\icons-evil.html" />
-    <Content Include="UI_Templates\html\rtl\icons-feather.html" />
-    <Content Include="UI_Templates\html\rtl\icons-font-awesome.html" />
-    <Content Include="UI_Templates\html\rtl\icons-fps-line.html" />
-    <Content Include="UI_Templates\html\rtl\icons-ico-moon.html" />
-    <Content Include="UI_Templates\html\rtl\icons-ionicons.html" />
-    <Content Include="UI_Templates\html\rtl\icons-linecons.html" />
-    <Content Include="UI_Templates\html\rtl\icons-meteocons.html" />
-    <Content Include="UI_Templates\html\rtl\index.html" />
-    <Content Include="UI_Templates\html\rtl\invoice-template.html" />
-    <Content Include="UI_Templates\html\rtl\layout-1-column.html" />
-    <Content Include="UI_Templates\html\rtl\layout-2-columns.html" />
-    <Content Include="UI_Templates\html\rtl\layout-boxed.html" />
-    <Content Include="UI_Templates\html\rtl\layout-dark.html" />
-    <Content Include="UI_Templates\html\rtl\layout-light.html" />
-    <Content Include="UI_Templates\html\rtl\layout-semi-dark.html" />
-    <Content Include="UI_Templates\html\rtl\layout-static.html" />
-    <Content Include="UI_Templates\html\rtl\login-simple.html" />
-    <Content Include="UI_Templates\html\rtl\recover-password.html" />
-    <Content Include="UI_Templates\html\rtl\register-simple.html" />
-    <Content Include="UI_Templates\html\rtl\search-page.html" />
-    <Content Include="UI_Templates\html\rtl\search-website.html" />
-    <Content Include="UI_Templates\html\rtl\table-basic.html" />
-    <Content Include="UI_Templates\html\rtl\under-maintenance.html" />
-    <Content Include="UI_Templates\html\rtl\unlock-user.html" />
-    <Content Include="UI_Templates\html\rtl\vector-maps-jvq.html" />
     <Content Include="UI_Templates\html\ltr\POL1401.aspx" />
     <Content Include="UI_Templates\src\js\core\app-menu.js" />
     <Content Include="UI_Templates\src\js\core\app.js" />
@@ -3690,6 +3306,47 @@
     <Content Include="Site.Mobile.Master" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App_Code\ABS_Class_Connect.cs" />
+    <Compile Include="App_Code\ABS_Class_Populate.cs" />
+    <Compile Include="Model\ABSPASSTAB.cs">
+      <DependentUpon>Login.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\ABSROLECHK.cs">
+      <DependentUpon>Login.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\ABSROLEDETAIL.cs">
+      <DependentUpon>Login.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\ABSROLEDTL.cs">
+      <DependentUpon>Login.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\ABSROLEMST.cs">
+      <DependentUpon>Login.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\ABSROLETASK.cs">
+      <DependentUpon>Login.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\ABSROLEUSER.cs">
+      <DependentUpon>Login.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\ABSUSER.cs">
+      <DependentUpon>Login.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Login.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Login.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Login.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Login.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Login.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Login.edmx</DependentUpon>
+    </Compile>
     <Compile Include="UI\html\ltr\Settings_Master.Master.cs">
       <DependentUpon>Settings_Master.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -3703,6 +3360,41 @@
     </Compile>
     <Compile Include="UI_Templates\html\ltr\Branch_Codes_Setup.aspx.designer.cs">
       <DependentUpon>Branch_Codes_Setup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI_Templates\html\ltr\Business_Distr_Setup.aspx.cs">
+      <DependentUpon>Business_Distr_Setup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI_Templates\html\ltr\Business_Distr_Setup.aspx.designer.cs">
+      <DependentUpon>Business_Distr_Setup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI_Templates\html\ltr\Company_Setup.aspx.cs">
+      <DependentUpon>Company_Setup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI_Templates\html\ltr\Company_Setup.aspx.designer.cs">
+      <DependentUpon>Company_Setup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI_Templates\html\ltr\Division_Business_Sector.aspx.cs">
+      <DependentUpon>Division_Business_Sector.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI_Templates\html\ltr\Division_Business_Sector.aspx.designer.cs">
+      <DependentUpon>Division_Business_Sector.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI_Templates\html\ltr\Error_Page.aspx.cs">
+      <DependentUpon>Error_Page.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI_Templates\html\ltr\Error_Page.aspx.designer.cs">
+      <DependentUpon>Error_Page.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI_Templates\html\ltr\Flood_Rates_Setup.aspx.cs">
+      <DependentUpon>Flood_Rates_Setup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI_Templates\html\ltr\Flood_Rates_Setup.aspx.designer.cs">
+      <DependentUpon>Flood_Rates_Setup.aspx</DependentUpon>
     </Compile>
     <Compile Include="UI_Templates\html\ltr\Forms_Template.aspx.cs">
       <DependentUpon>Forms_Template.aspx</DependentUpon>
@@ -3725,6 +3417,13 @@
     <Compile Include="UI_Templates\html\ltr\General_Settings.aspx.designer.cs">
       <DependentUpon>General_Settings.aspx</DependentUpon>
     </Compile>
+    <Compile Include="UI_Templates\html\ltr\NAICOM_Info.aspx.cs">
+      <DependentUpon>NAICOM_Info.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI_Templates\html\ltr\NAICOM_Info.aspx.designer.cs">
+      <DependentUpon>NAICOM_Info.aspx</DependentUpon>
+    </Compile>
     <Compile Include="UI_Templates\html\ltr\Risk_Profile_Setup.aspx.cs">
       <DependentUpon>Risk_Profile_Setup.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -3739,6 +3438,20 @@
     <Compile Include="UI_Templates\html\ltr\Role_Setup.aspx.designer.cs">
       <DependentUpon>Role_Setup.aspx</DependentUpon>
     </Compile>
+    <Compile Include="UI_Templates\html\ltr\Setup_User_Roles.aspx.cs">
+      <DependentUpon>Setup_User_Roles.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI_Templates\html\ltr\Setup_User_Roles.aspx.designer.cs">
+      <DependentUpon>Setup_User_Roles.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI_Templates\html\ltr\Underwriting_Budget_Entry.aspx.cs">
+      <DependentUpon>Underwriting_Budget_Entry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI_Templates\html\ltr\Underwriting_Budget_Entry.aspx.designer.cs">
+      <DependentUpon>Underwriting_Budget_Entry.aspx</DependentUpon>
+    </Compile>
     <Compile Include="UI_Templates\html\ltr\User_Setup.aspx.cs">
       <DependentUpon>User_Setup.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -3752,13 +3465,6 @@
     </Compile>
     <Compile Include="UI_Templates\html\ltr\WebForm2.aspx.designer.cs">
       <DependentUpon>WebForm2.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="UI_Templates\html\WebForm3.aspx.cs">
-      <DependentUpon>WebForm3.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="UI_Templates\html\WebForm3.aspx.designer.cs">
-      <DependentUpon>WebForm3.aspx</DependentUpon>
     </Compile>
     <Compile Include="WebForm1.aspx.cs">
       <DependentUpon>WebForm1.aspx</DependentUpon>
@@ -3800,30 +3506,6 @@
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
-    </Compile>
-    <Compile Include="Model\ABSPASSTAB.cs">
-      <DependentUpon>User_Login.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model\ABSROLEDTL.cs">
-      <DependentUpon>User_Login.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model\ABSROLEMST.cs">
-      <DependentUpon>User_Login.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model\User_Login.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>User_Login.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model\User_Login.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>User_Login.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model\User_Login.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>User_Login.edmx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site.Master.cs">
@@ -3936,6 +3618,7 @@
     <Folder Include="App_Data\" />
     <Folder Include="Main_Content\" />
     <Folder Include="UI\html\ltr\Underwriting\" />
+    <Folder Include="UI\html\rtl\" />
     <Folder Include="UI_Templates\Policy\" />
   </ItemGroup>
   <ItemGroup>

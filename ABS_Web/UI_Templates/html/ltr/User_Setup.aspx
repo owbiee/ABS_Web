@@ -34,6 +34,7 @@
 
         td{
             padding-bottom: 10px;
+            text-align: left;
         }
 
         body{
@@ -116,7 +117,32 @@
         {
             border: none;
         }
-       
+
+        #ContentPlaceHolder1_BootstrapPageControl1_lstSystem_Roles1,
+        #ContentPlaceHolder1_BootstrapPageControl1_lstUser_Roles1
+        {
+            padding: 0;
+            margin: 0 auto;
+            height: 200px;
+            width: 100px;
+            line-height: 50px;
+            align-content: flex-start;
+        }
+        #ContentPlaceHolder1_BootstrapPageControl1_lstSystem_Roles1 li,
+        #ContentPlaceHolder1_BootstrapPageControl1_lstSystem_Roles1 a,
+        #ContentPlaceHolder1_BootstrapPageControl1_lstSystem_Roles1 span,
+        #ContentPlaceHolder1_BootstrapPageControl1_lstUser_Roles1 li,
+        #ContentPlaceHolder1_BootstrapPageControl1_lstUser_Roles1 a,
+        #ContentPlaceHolder1_BootstrapPageControl1_lstUser_Roles1 span
+        {
+            padding: 0;
+            margin: 0 auto;
+            height: 23px;
+            line-height: 23px;
+            font-size: small;
+        }
+
+        
     </style>
 </asp:Content>
 
@@ -137,7 +163,7 @@
             <div class="body">
                 <br />
                 <h4><i class="icon-user-tie"></i>User Setup</h4>
-                <dx:BootstrapPageControl ID="BootstrapPageControl1" runat="server" ActiveTabIndex="3">
+                <dx:BootstrapPageControl ID="BootstrapPageControl1" runat="server" ActiveTabIndex="2">
                     <TabPages>
                         <%--Tab1--%>
                         <dx:BootstrapTabPage Text="Register User">
@@ -150,6 +176,7 @@
                                             <td><dx:BootstrapTextBox ID="txtRefID" runat="server" style="padding-right: 15px;" Enabled="false" ></dx:BootstrapTextBox></td>
                                         <td></td>
                                         <td></td>
+                                        <td></td>
                                             
                                         </tr>
                                         <tr>
@@ -157,6 +184,7 @@
                                             <td>
                                                 <dx:BootstrapTextBox ID="txtUserName" runat="server" style="padding-right: 15px;"></dx:BootstrapTextBox>
                                             </td>
+                                            <td></td>
                                             <td><h6>Email Address:</h6></td>
                                             <td><dx:BootstrapTextBox ID="txtEmail" runat="server">
                                                 <ValidationSettings ValidationGroup="Validation">
@@ -167,42 +195,96 @@
                                         </tr>
 
                                         <tr>
-                                            <td><h6>Password:</h6></td>
-                                            <td><dx:BootstrapTextBox ID="txtPassword" runat="server" PasswordChar="*" Password="true" style="padding-right: 15px;"></dx:BootstrapTextBox></td>
+                                            <td><h6>User Group:</h6></td>
+                                            <%--<td><dx:BootstrapTextBox ID="txtPassword" runat="server" PasswordChar="*" Password="true" style="padding-right: 15px;"></dx:BootstrapTextBox></td>--%>
+                                            <td>
+                                                <dx:BootstrapComboBox ID="Group_Name" runat="server">
+                                                    <Items>
+                                                        <dx:BootstrapListEditItem Value="Finance"/>
+                                                        <dx:BootstrapListEditItem Value="Marketing"/>
+                                                        <dx:BootstrapListEditItem Value="Administration"/>
+                                                        <dx:BootstrapListEditItem Value="Information Technology"/>
+                                                        <dx:BootstrapListEditItem Value="Audit"/>
+                                                        <dx:BootstrapListEditItem Value="Investment"/>
+                                                    </Items>
+                                                </dx:BootstrapComboBox>
+                                            </td>
+                                            <td></td>
                                             <td><h6>Created By:</h6></td>
                                             <td><dx:BootstrapTextBox ID="txtCreatedBy" Enabled="false" runat="server"></dx:BootstrapTextBox></td>
                                         </tr>
 
                                         <tr>
-                                            <td><h6>Date:</h6></td>
+                                            <td><h6>Phone No:</h6></td>
                                             <td>
                                                 <%--<dx:BootstrapDateEdit ID="BootstrapDateEdit1" runat="server"></dx:BootstrapDateEdit>--%>
-                                                <dx:BootstrapTextBox ID="txtDate" runat="server" Enabled="false" style="padding-right: 15px;"></dx:BootstrapTextBox>
+                                                <dx:BootstrapTextBox ID="Phone_No" runat="server" Enabled="true" style="padding-right: 15px;">
+                                                    <ValidationSettings ValidationGroup="Validation">
+                                                    <RegularExpression ValidationExpression="\(?\b[0-9]{4}\)?[-. ]?[0-9]{3}[-. ]?[0-9]{4}\b" ErrorText="Please input missing digits"/>                      
+                                                        </ValidationSettings>
+                                                        <MaskSettings Mask="+234 (9999) 999-9999" IncludeLiterals="None" />
+                                                </dx:BootstrapTextBox>
                                             </td>
-                                            <td><h6>Login Count:</h6></td>
-                                            <td><dx:BootstrapTextBox ID="txtLoginCount" runat="server" Enabled="false"></dx:BootstrapTextBox></td>
+                                            <td></td>
+                                            <td><h6>Keyed Date:</h6></td>
+                                            <td><dx:BootstrapTextBox ID="Keyed_Date" runat="server" Enabled="false"></dx:BootstrapTextBox></td>
 
                                         </tr>
+                                        <tr>
+                                            <td><h6>System Roles:</h6></td>
+                                            <td style="text-align: left;">
+
+                                             <dx:BootstrapListBox ID="lstSystem_Roles1" runat="server" style=" margin: 0 auto 0 0px; width: 300px; height: 200px; overflow: scroll; padding-left: 0;" SelectionMode="Multiple" DataSourceID="SqlDataSource6" TextField="ROLE_NAME" ValueField="ROLE_NUM" ></dx:BootstrapListBox>
+                                            <%--<asp:ListBox ID="lstSystem_Roles_Old" Rows="5" runat="server" style="width: 400px; height: 170px; overflow: scroll;" DataSourceID="SqlDataSource6" DataTextField="ROLE_NAME" DataValueField="ROLE_NUM"></asp:ListBox>--%>
+                                                <asp:SqlDataSource ID="SqlDataSource6" runat="server" ConnectionString="<%$ ConnectionStrings:Ipolicy_DBConnectionString %>" SelectCommand="SELECT [ROLE_NUM], [ROLE_NAME] FROM [ABSROLEMST]"></asp:SqlDataSource>
+
+                                            </td>
+                                            <td> 
+                                                <asp:Button ID="btnMoveRole" runat="server" Text="Assign Role >>" style="padding-bottom: 5px; width: 150px;" CssClass="btn btn-primary" OnClick="btnMoveRole_Click"/> <br /><br />
+                                                <asp:Button ID="btnMRemoveRole" runat="server" Text="<< Remove Role" CssClass="btn btn-danger" style="width: 150px;" OnClick="btnMRemoveRole_Click"/>
+                                            </td>
+                                            <td><h6>User Role:</h6></td>
+                                            <td style="padding-left: 1px; text-align: left;">
+                                                <%--<asp:ListBox ID="lstUser_Roles" runat="server" style="width: 400px; height: 170px; overflow: scroll;"></asp:ListBox></td>--%>
+                                            <dx:BootstrapListBox ID="lstUser_Roles1" runat="server" SelectionMode="Multiple" style="margin: 0 auto 0 0px; width: 300px; height: 200px; overflow: scroll; padding-left: 0;"></dx:BootstrapListBox>
+                                        </tr>
+                                        <%--<tr>
+                                            <td>System Roles:</td>
+                                            <td>
+                                                
+                                            </td>
+                                            <td>User Role:</td>
+                                            <td>
+                                                
+                                            </td>
+                                        </tr>--%>
                                     </table>
                                     <br />
-
-                                    <asp:Button ID="Button1" runat="server" Text="Register" CssClass="btn btn-success" style="height: 50px; width: 100px; font-weight: bolder;" OnClick="Button1_Click"/>
-                                <br /><br />
-                                    <asp:Label ID="lblError" runat="server" Text="" style="color: red;"></asp:Label>
+ 
                                     <hr />
+                                    <asp:Button ID="Button1" runat="server" Text="Register" CssClass="btn btn-green" style="height: 50px; padding-right: 30px; width: 100px; font-weight: bolder;" OnClick="Button1_Click" OnClientClick="PopUpRegister();"/>
+                                    <asp:Button ID="Add_Roles" runat="server" Text="+ Add Roles to Existing User" CssClass="btn btn-blue-grey" style="height: 50px; font-weight: bolder;" OnClientClick="PopUpRegister();" OnClick="Add_Roles_Click"/>
+                                   
+                                    <br /><br />
+                                    <asp:Label ID="lblError" runat="server" Text="" style="color: red;"></asp:Label>
+                                   
+                                    <h4 style="text-align: left; background-color: #ddd; color: black; margin-bottom: 1px; padding-bottom: 7px; padding-top: 7px;">Registered Users</h4><br />
                                     <%--<asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>--%>
 
                                     <%--Grid--%>
-                                    <asp:GridView ID="Grid_Register" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" CssClass="center" Width="90%" CellSpacing="1" CellPadding="7" DataSourceID="SqlDataSource3" BackColor="White" BorderColor="#3366CC" BorderStyle="None" BorderWidth="1px" OnSelectedIndexChanged="Grid_Register_SelectedIndexChanged" DataKeyNames="UserID">
+                                    <asp:GridView ID="Grid_Register" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" CssClass="center" Width="90%" CellSpacing="1" CellPadding="7" DataSourceID="SqlDataSource3" BackColor="White" BorderColor="#3366CC" BorderStyle="None" BorderWidth="1px" OnSelectedIndexChanged="Grid_Register_SelectedIndexChanged1" DataKeyNames="PWD_REC_NO">
                                         <Columns>
 
                                             <asp:CommandField ShowSelectButton="True" />
 
-                                            <asp:BoundField DataField="UserName" HeaderText="UserName" SortExpression="UserName" />
-                                            <asp:BoundField DataField="Email" HeaderText="Email" SortExpression="Email" />
-                                            <asp:BoundField DataField="Created_By" HeaderText="Created_By" SortExpression="Created_By" />
-                                            <asp:BoundField DataField="Date_Created" HeaderText="Date_Created" SortExpression="Date_Created" />
-                                            <asp:BoundField DataField="UserID" HeaderText="RefID" SortExpression="UserID" Visible="false" ReadOnly="True" />
+                                            <asp:BoundField DataField="PWD_REC_NO" HeaderText="PWD_REC_NO" SortExpression="PWD_REC_NO" InsertVisible="False" ReadOnly="True" />
+                                            <asp:BoundField DataField="PWD_GROUP_ID" HeaderText="PWD_GROUP_ID" SortExpression="PWD_GROUP_ID" ReadOnly="True" />
+                                            <asp:BoundField DataField="PWD_ID" HeaderText="PWD_ID" SortExpression="PWD_ID" ReadOnly="True" />
+                                            <asp:BoundField DataField="PWD_USER_NAME" HeaderText="PWD_USER_NAME" SortExpression="PWD_USER_NAME" />
+                                            <asp:BoundField DataField="PWD_EMAIL_NUM" HeaderText="PWD_EMAIL_NUM" SortExpression="PWD_EMAIL_NUM" />
+                                            <asp:BoundField DataField="PWD_MOBILE_NUM" HeaderText="PWD_MOBILE_NUM" SortExpression="PWD_MOBILE_NUM" />
+                                            <asp:BoundField DataField="PWD_KEYDTE" HeaderText="PWD_KEYDTE" SortExpression="PWD_KEYDTE" />
+                                            <asp:BoundField DataField="PWD_OPERID" HeaderText="PWD_OPERID" SortExpression="PWD_OPERID" />
                                         </Columns>
                                         <FooterStyle BackColor="#99CCCC" ForeColor="#003399" />
                                         <HeaderStyle BackColor="#003399" Font-Bold="True" ForeColor="#CCCCFF" />
@@ -214,7 +296,7 @@
                                         <SortedDescendingCellStyle BackColor="#D6DFDF" />
                                         <SortedDescendingHeaderStyle BackColor="#002876" />
                                     </asp:GridView>
-                                    <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:Ipolicy_DBConnectionString2 %>" SelectCommand="SELECT  [UserName], [Email], [Created_By], [Date_Created], [UserID] FROM [ABSUSERS] ORDER BY [Date_Created] DESC"></asp:SqlDataSource>
+                                    <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:Ipolicy_DBConnectionString %>" SelectCommand="SELECT [PWD_REC_NO], [PWD_GROUP_ID], [PWD_ID], [PWD_USER_NAME], [PWD_EMAIL_NUM], [PWD_MOBILE_NUM], [PWD_KEYDTE], [PWD_OPERID] FROM [ABSPASSTAB]"></asp:SqlDataSource>
                                 
                                     <%--<asp:RoundedCornersExtender ID="GridView1_RoundedCornersExtender" runat="server" Enabled="True" TargetControlID="GridView1">
                                     </asp:RoundedCornersExtender>--%>
@@ -269,13 +351,13 @@
                                 <br />
                                     <h3>System Roles</h3>
                                     <hr />
-                                    <%--<table class="tab-center">
+                                    <table class="tab-center">
                                         <tr>
                                             <td><h5>Roles:</h5></td>
                                             <td><dx:BootstrapComboBox ID="BootstrapComboBox1" runat="server" style="padding-bottom: 15px;" TextField="ROLE_NAME" DataSourceID="SqlDataSource4">                              
                                     </dx:BootstrapComboBox></td>                                                                                      
                                         </tr>                                                       
-                                    </table>--%>
+                                    </table>
 
                                     <%--ListBox Container--%>
                                     <div class="row p-2" >
@@ -292,9 +374,7 @@
                                             <h4>User Roles</h4>
                                             <dx:BootstrapListBox ID="ListBox1" runat="server" SelectionMode="Multiple"></dx:BootstrapListBox>
                                             <asp:Label ID="lblErrRole" runat="server" Text=""></asp:Label>
-
                                         </div>
-
                                     </div>
                                                                                                                    
                                     <%--<table class="tab-center">
@@ -305,9 +385,9 @@
                                     <td><dx:BootstrapCheckBox ID="BootstrapCheckBox4" runat="server" Text="Approve" style="padding-right: 10px;"></dx:BootstrapCheckBox></td>
                                         </tr>
                                     </table>--%>
+
                                     <br />
-                                    <asp:Button ID="Button2" runat="server" Text="SAVE" class="btn btn-primary" OnClick="Button2_Click"/>
-                                    
+                                    <asp:Button ID="Button2" runat="server" Text="SAVE" class="btn btn-primary" OnClick="Button2_Click"/>                                   
                                 </dx:ContentControl>
                             </ContentCollection>
                         </dx:BootstrapTabPage>
@@ -320,6 +400,11 @@
                                     <br />
                                     <table class="tab-center">
                                         <tr>
+                                            <td><h6>Username:</h6></td>
+                                        <td><dx:BootstrapTextBox ID="Staff_Name" runat="server" Enabled="false" style="padding-right: 15px;"></dx:BootstrapTextBox></td>
+                                        <td><h6>Email:</h6></td>
+                                        <td><dx:BootstrapTextBox ID="Staff_Email" runat="server" Enabled="false" style="padding-right: 10px;" OnTextChanged="Staff_Email_TextChanged" OnValueChanged="Staff_Email_ValueChanged"></dx:BootstrapTextBox></td>
+                                        
                                             <td><h6>Search:</h6></td>
                                             <td><dx:BootstrapTextBox ID="BootstrapTextBox1" runat="server"></dx:BootstrapTextBox></td>
                                         </tr>
@@ -349,14 +434,6 @@
                                      <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:Ipolicy_DBConnectionString %>" SelectCommand="SELECT [UserName], [Email], [Created_By], [Date_Created] FROM [ABSUSERS]"></asp:SqlDataSource>
                                      <br />
                                     <table class="tab-center">
-                                    <tr>
-                                        <td><h6>Username:</h6></td>
-                                        <td><dx:BootstrapTextBox ID="Staff_Name" runat="server" Enabled="false" style="padding-right: 15px;"></dx:BootstrapTextBox></td>
-                                        <td><h6>Email:</h6></td>
-                                        <td><dx:BootstrapTextBox ID="Staff_Email" runat="server" Enabled="false" style="padding-right: 10px;"></dx:BootstrapTextBox></td>
-                                        
-                                
-                                    </tr>
                                 </table>
                                 <br />
                                     <h3>System Functions</h3>
@@ -364,7 +441,7 @@
                                     <table class="tab-center">
                                         <tr>
                                             <td><h5>Roles:</h5></td>
-                                            <td><dx:BootstrapComboBox ID="BootstrapComboBox2" runat="server" style="padding-bottom: 15px;" TextField="ROLE_NAME" DataSourceID="SqlDataSource4" OnSelectedIndexChanged="BootstrapComboBox2_SelectedIndexChanged" AutoPostBack="true">                              
+                                            <td><dx:BootstrapComboBox ID="BootstrapComboBox2" runat="server" style="padding-bottom: 15px;" TextField="ROLE_NAME" AutoPostBack="true" OnSelectedIndexChanged="BootstrapComboBox2_SelectedIndexChanged">                              
                                     </dx:BootstrapComboBox></td>                                                                                      
                                         </tr>                                                       
                                     </table>
@@ -373,7 +450,7 @@
                                     <div class="row p-2" >
                                         <div class="col-md-5">
                                             <h4>Available Functions</h4>
-                                            <dx:BootstrapListBox ID="ListBoxFunc" runat="server" TextField="TASK_NAME"></dx:BootstrapListBox>
+                                            <dx:BootstrapListBox ID="ListBoxFunc" runat="server" SelectionMode="CheckColumn" TextField="TASK_NAME" style="text-align: left;"></dx:BootstrapListBox>
                                             <%--<asp:SqlDataSource ID="SqlDataSource5" runat="server" ConnectionString="<%$ ConnectionStrings:Ipolicy_DBConnectionString %>" SelectCommand="SELECT [ROLE_NAME] FROM [ABSROLEMST]"></asp:SqlDataSource>--%>
                                         </div>
                                         <div class="col-md-2" style="padding-top: 60px;">
@@ -382,7 +459,7 @@
                                         </div>
                                         <div class="col-md-5">
                                             <h4>User Functions</h4>
-                                            <dx:BootstrapListBox ID="Func_ListBox" runat="server"></dx:BootstrapListBox>   
+                                            <dx:BootstrapListBox ID="Func_ListBox" runat="server" SelectionMode="CheckColumn" style="text-align: left;"></dx:BootstrapListBox>   
                                             <asp:Label ID="lblErrFunc" runat="server" Text=""></asp:Label>
                                         </div>
                                     </div>
@@ -511,12 +588,20 @@
         </ContentTemplate>
         </asp:UpdatePanel>
     </form>
-        
+
+     <%--Alertify JS PopUp Modal:--%>    
     <script type="text/javascript">
         function PopUp() {
             alertify.alert('Message', 'Actions Added!',
                 function () {
                     alertify.success('Ok');
+                });
+        }
+
+        function PopUpRegister() {
+            alertify.alert('Message', 'User Registered Successfully!',
+                function () {
+                    alertify.success('1 User Added!');
                 });
         }
     </script>

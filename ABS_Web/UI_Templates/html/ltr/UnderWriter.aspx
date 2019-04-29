@@ -20,10 +20,5 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <%--<h1>Hello</h1>--%>
-    <form runat="server">
-        <br />
-        <div class="content">
-    <%--<dx:BootstrapCalendar ID="BootstrapCalendar1" runat="server"></dx:BootstrapCalendar>--%>
-            </div>
-        </form>
+    
 </asp:Content>

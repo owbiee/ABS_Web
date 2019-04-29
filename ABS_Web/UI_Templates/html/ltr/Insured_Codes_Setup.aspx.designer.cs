@@ -31,13 +31,13 @@ namespace ABS_Web.UI_Templates.html.ltr {
         protected global::System.Web.UI.WebControls.Label Label1;
         
         /// <summary>
-        /// BootstrapTextBox1 control.
+        /// txtInsuredID control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DevExpress.Web.Bootstrap.BootstrapTextBox BootstrapTextBox1;
+        protected global::DevExpress.Web.Bootstrap.BootstrapTextBox txtInsuredID;
         
         /// <summary>
         /// Label2 control.
@@ -49,13 +49,13 @@ namespace ABS_Web.UI_Templates.html.ltr {
         protected global::System.Web.UI.WebControls.Label Label2;
         
         /// <summary>
-        /// BootstrapTextBox2 control.
+        /// txtInsuredCode control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DevExpress.Web.Bootstrap.BootstrapTextBox BootstrapTextBox2;
+        protected global::DevExpress.Web.Bootstrap.BootstrapTextBox txtInsuredCode;
         
         /// <summary>
         /// Label3 control.
@@ -67,13 +67,13 @@ namespace ABS_Web.UI_Templates.html.ltr {
         protected global::System.Web.UI.WebControls.Label Label3;
         
         /// <summary>
-        /// BootstrapTextBox3 control.
+        /// txtInsuredName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DevExpress.Web.Bootstrap.BootstrapTextBox BootstrapTextBox3;
+        protected global::DevExpress.Web.Bootstrap.BootstrapTextBox txtInsuredName;
         
         /// <summary>
         /// Label4 control.
@@ -85,13 +85,13 @@ namespace ABS_Web.UI_Templates.html.ltr {
         protected global::System.Web.UI.WebControls.Label Label4;
         
         /// <summary>
-        /// BootstrapTextBox4 control.
+        /// txtOtherNames control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DevExpress.Web.Bootstrap.BootstrapTextBox BootstrapTextBox4;
+        protected global::DevExpress.Web.Bootstrap.BootstrapTextBox txtOtherNames;
         
         /// <summary>
         /// Label5 control.
@@ -103,13 +103,13 @@ namespace ABS_Web.UI_Templates.html.ltr {
         protected global::System.Web.UI.WebControls.Label Label5;
         
         /// <summary>
-        /// BootstrapTextBox5 control.
+        /// txtAddress1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DevExpress.Web.Bootstrap.BootstrapTextBox BootstrapTextBox5;
+        protected global::DevExpress.Web.Bootstrap.BootstrapTextBox txtAddress1;
         
         /// <summary>
         /// Label6 control.
@@ -121,13 +121,13 @@ namespace ABS_Web.UI_Templates.html.ltr {
         protected global::System.Web.UI.WebControls.Label Label6;
         
         /// <summary>
-        /// BootstrapTextBox6 control.
+        /// txtAddress2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DevExpress.Web.Bootstrap.BootstrapTextBox BootstrapTextBox6;
+        protected global::DevExpress.Web.Bootstrap.BootstrapTextBox txtAddress2;
         
         /// <summary>
         /// Label7 control.
@@ -139,13 +139,13 @@ namespace ABS_Web.UI_Templates.html.ltr {
         protected global::System.Web.UI.WebControls.Label Label7;
         
         /// <summary>
-        /// BootstrapTextBox7 control.
+        /// txtAddress3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DevExpress.Web.Bootstrap.BootstrapTextBox BootstrapTextBox7;
+        protected global::DevExpress.Web.Bootstrap.BootstrapTextBox txtAddress3;
         
         /// <summary>
         /// Label8 control.
@@ -157,13 +157,13 @@ namespace ABS_Web.UI_Templates.html.ltr {
         protected global::System.Web.UI.WebControls.Label Label8;
         
         /// <summary>
-        /// BootstrapTextBox8 control.
+        /// txtAgentPhone control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DevExpress.Web.Bootstrap.BootstrapTextBox BootstrapTextBox8;
+        protected global::DevExpress.Web.Bootstrap.BootstrapTextBox txtAgentPhone;
         
         /// <summary>
         /// Label9 control.
@@ -175,13 +175,13 @@ namespace ABS_Web.UI_Templates.html.ltr {
         protected global::System.Web.UI.WebControls.Label Label9;
         
         /// <summary>
-        /// BootstrapTextBox9 control.
+        /// txtInsuredPhone control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DevExpress.Web.Bootstrap.BootstrapTextBox BootstrapTextBox9;
+        protected global::DevExpress.Web.Bootstrap.BootstrapTextBox txtInsuredPhone;
         
         /// <summary>
         /// Label10 control.
@@ -193,13 +193,13 @@ namespace ABS_Web.UI_Templates.html.ltr {
         protected global::System.Web.UI.WebControls.Label Label10;
         
         /// <summary>
-        /// BootstrapDropDownEdit1 control.
+        /// InsuredType control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DevExpress.Web.Bootstrap.BootstrapDropDownEdit BootstrapDropDownEdit1;
+        protected global::DevExpress.Web.Bootstrap.BootstrapComboBox InsuredType;
         
         /// <summary>
         /// Label11 control.
@@ -211,13 +211,13 @@ namespace ABS_Web.UI_Templates.html.ltr {
         protected global::System.Web.UI.WebControls.Label Label11;
         
         /// <summary>
-        /// BootstrapTextBox11 control.
+        /// txtEmail control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DevExpress.Web.Bootstrap.BootstrapTextBox BootstrapTextBox11;
+        protected global::DevExpress.Web.Bootstrap.BootstrapTextBox txtEmail;
         
         /// <summary>
         /// Label12 control.
@@ -229,13 +229,13 @@ namespace ABS_Web.UI_Templates.html.ltr {
         protected global::System.Web.UI.WebControls.Label Label12;
         
         /// <summary>
-        /// BootstrapTextBox12 control.
+        /// txtOccupation control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DevExpress.Web.Bootstrap.BootstrapTextBox BootstrapTextBox12;
+        protected global::DevExpress.Web.Bootstrap.BootstrapTextBox txtOccupation;
         
         /// <summary>
         /// Label13 control.
@@ -247,13 +247,13 @@ namespace ABS_Web.UI_Templates.html.ltr {
         protected global::System.Web.UI.WebControls.Label Label13;
         
         /// <summary>
-        /// BootstrapDropDownEdit2 control.
+        /// txtGender control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DevExpress.Web.Bootstrap.BootstrapDropDownEdit BootstrapDropDownEdit2;
+        protected global::DevExpress.Web.Bootstrap.BootstrapComboBox txtGender;
         
         /// <summary>
         /// Label14 control.
@@ -274,13 +274,13 @@ namespace ABS_Web.UI_Templates.html.ltr {
         protected global::System.Web.UI.WebControls.Label Label15;
         
         /// <summary>
-        /// BootstrapDropDownEdit3 control.
+        /// txtState control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DevExpress.Web.Bootstrap.BootstrapDropDownEdit BootstrapDropDownEdit3;
+        protected global::DevExpress.Web.Bootstrap.BootstrapComboBox txtState;
         
         /// <summary>
         /// BootstrapTextBox15 control.
@@ -301,13 +301,13 @@ namespace ABS_Web.UI_Templates.html.ltr {
         protected global::System.Web.UI.WebControls.Label Label17;
         
         /// <summary>
-        /// BootstrapDropDownEdit4 control.
+        /// txtLocalGovt1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DevExpress.Web.Bootstrap.BootstrapDropDownEdit BootstrapDropDownEdit4;
+        protected global::DevExpress.Web.Bootstrap.BootstrapComboBox txtLocalGovt1;
         
         /// <summary>
         /// BootstrapTextBox17 control.
@@ -328,13 +328,13 @@ namespace ABS_Web.UI_Templates.html.ltr {
         protected global::System.Web.UI.WebControls.Label Label19;
         
         /// <summary>
-        /// BootstrapTextBox18 control.
+        /// txtCountry control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DevExpress.Web.Bootstrap.BootstrapTextBox BootstrapTextBox18;
+        protected global::DevExpress.Web.Bootstrap.BootstrapTextBox txtCountry;
         
         /// <summary>
         /// Label20 control.
@@ -346,49 +346,58 @@ namespace ABS_Web.UI_Templates.html.ltr {
         protected global::System.Web.UI.WebControls.Label Label20;
         
         /// <summary>
-        /// BootstrapDateEdit1 control.
+        /// DOB control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DevExpress.Web.Bootstrap.BootstrapDateEdit BootstrapDateEdit1;
+        protected global::DevExpress.Web.Bootstrap.BootstrapDateEdit DOB;
         
         /// <summary>
-        /// Button1 control.
+        /// txtBVN control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button1;
+        protected global::DevExpress.Web.Bootstrap.BootstrapTextBox txtBVN;
         
         /// <summary>
-        /// Button2 control.
+        /// Btn_Save control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button2;
+        protected global::System.Web.UI.WebControls.Button Btn_Save;
         
         /// <summary>
-        /// Button3 control.
+        /// Btn_Delete control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button3;
+        protected global::System.Web.UI.WebControls.Button Btn_Delete;
         
         /// <summary>
-        /// Button4 control.
+        /// Btn_Cancel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button4;
+        protected global::System.Web.UI.WebControls.Button Btn_Cancel;
+        
+        /// <summary>
+        /// lblMsg control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblMsg;
         
         /// <summary>
         /// Button5 control.
