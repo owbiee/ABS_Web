@@ -9,6 +9,7 @@ using ABS_Web.UI.html;
 using ABS_Web.UI.Underwriting;
 using System.Data.SqlClient;
 using System.Data;
+using System.Configuration;
 //using ABS_Web.App_Code;
 
 namespace ABS_Web.UI_Templates.html.ltr
@@ -21,70 +22,89 @@ namespace ABS_Web.UI_Templates.html.ltr
         {
             if(!IsPostBack)
             {
-                new ABS_Web_NS_Utility.ABS_Class_Populate().ABS_Populate_ComboBox("STATE", txtState);
+                new ABS_Web_NS_Utility.ABS_Class_Utility().ABS_Populate_ComboBox("STATE", txtState);
+                txtInsuredCode.Text = "";
                 txtInsuredID.Text = "001";
-                txtInsuredCode.Text="I0000004";
-                txtInsuredName.Text="MTN NIGERIA LIMITED";
-                txtOtherNames.Text="";
-                txtAddress1.Text="10 Downing Street";
-                txtAddress2.Text= "101 B Close";
-                txtAddress3.Text= "";
-                //InsuredType.Text="CLASS A";
-                txtOccupation.Text="TELECOMS";
-                txtAgentPhone.Text="8084657711";
-                txtInsuredPhone.Text="9077761123";
-                txtInsuredPhone.Text="";
-                txtEmail.Text="enquiries@mtnnigeria.com";
-                txtInsuredName.Text="";
-                //sqlcmd.Parameters.AddWithValue("@CTINSRD_TAG", "");
-                //sqlcmd.Parameters.AddWithValue("@CTINSRD_FLAG", "A");
-                //sqlcmd.Parameters.AddWithValue("@CTINSRD_KEYDTE", DateTime.Now);
-                //sqlcmd.Parameters.AddWithValue("@CTINSRD_OPERID", "ADM");
-                
-                //sqlcmd.Parameters.AddWithValue("@CTINSRD_DOB", DBNull.Value);
-                
-                //sqlcmd.Parameters.AddWithValue("@CTINSRD_DOB", DOB.Text); // save the date in the format MM/dd/yyyy
-                
-                //sqlcmd.Parameters.AddWithValue("@CTINSRD_GENDER", txtGender.SelectedItem.Value);
-                //sqlcmd.Parameters.AddWithValue("CTINSRD_ORIGIN", txtState.SelectedItem.Text);
-                //sqlcmd.Parameters.AddWithValue("@CTINSRD_LGA", txtLocalGovt.Text);
-                //sqlcmd.Parameters.AddWithValue("@CTINSRD_BIZORIGIN", txtState.Text); // store value of txtOrign
-                txtCountry.Text="Nigeria";
-                txtBVN.Text="9008077123001";
+                txtInsuredNo.Text = "0";
+                Btn_Save.Enabled = true;
+                Btn_Delete.Enabled = false;
+
+                ////txtInsuredCode.Text="I0000004";
+                //txtInsuredCode.Enabled = false;
+                //txtInsuredName.Text="NIGERIA WATERCORPORATION";
+                //txtOtherNames.Text="";
+                //txtAddress1.Text="23 IKOYI STREET";
+                //txtAddress2.Text= "LAGOS";
+                //txtAddress3.Text= "NIGERIA";
+                ////InsuredType.Text="CLASS A";
+                //txtOccupation.Text="WATER SERVICES";
+                //txtAgentPhone.Text="09046577110";
+                //txtInsuredPhone.Text="09007776112";
+                //txtInsuredPhone.Text="";
+                //txtEmail.Text="enquiries@watercorpnigeria.com";
+           
+                //txtCountry.Text="Nigeria";
+                //txtBVN.Text="65123";
+
+
+                try
+                {
+                    string CS = ConfigurationManager.ConnectionStrings["Ipolicy_DBConnectionString"].ConnectionString;
+                    using (SqlConnection conn = new SqlConnection(CS))
+                    {
+                        SqlCommand cmd = new SqlCommand("SELECT * FROM [dbo].[ABSATTACH_TAB]", conn);
+                        conn.Open();
+                        GridView2.DataSource = cmd.ExecuteReader();
+                        GridView2.DataBind();
+                        
+                    }
+                }
+                catch(Exception ex)
+                {
+
+                }
                 
             }
 
-            //INSTANCE OF THE OBJECT (MASTER PAGE): 
-            New_Master new_Master = new New_Master();
-
-            //GET USERNAME CONTROL FROM MASTER PAGE:
-            var userControl = new_Master.FindControl("lblUser");
-
-            //CHECK IF EMAIL COLUMN IN ABSROLEDETAILS = USER EMAIL:
-            var result = DbEntities.ABSROLEDETAILS.FirstOrDefault(i => i.STAFF_EMAIL.Equals(userControl));
-
-            if (result != null)
-            {
-                
-                if (result.USER_FUNC.Equals("Insured Codes Setup"))
-                {
-                    Response.Redirect("Insured_Codes_Setup.aspx");
-                }
-                else
-                {
-                    Response.Redirect("Error_Page.aspx");
-                }
-            }
-
-
+           
         }
 
         //SAVE:
         protected void Btn_Save_Click(object sender, EventArgs e)
         {
 
-            // get database connection string
-            string strCONN = (new ABS_Web_NS_Connect.ABS_Class_Connect().ABS_Get_Con());
+            // "ABSInsuredSave"
+            string strSP_Name = "";
+            string strINS_NUM = "";
+            if (txtInsuredCode.Text.Trim() == "")
+            {
+                // call method to get next no
+                strINS_NUM = (new ABS_Web_NS_Utility.ABS_Class_Utility().ABS_Class_GetNext_No("INS_CODE", "001", ""));
+                if (strINS_NUM.Substring(0, 4) == "ERROR")
+                {
+                    lblMsg.Text = strINS_NUM.ToString();
+                    return;
+                }
+
+                lblMsg.Text = "New ID Generaated: " + strINS_NUM.ToString();
+                txtInsuredCode.Text = strINS_NUM.Trim();
+                strSP_Name = "ABSSP_INSRDTAB_INSERT";
+                //return;
+            }
+            else
+            {
+                strSP_Name = "ABSSP_INSRDTAB_UPDATE";
+            }
+
+            if (txtInsuredCode.Text.Trim() == "")
+            {
+                lblMsg.Text = "Sorry! Cannot save data. Missing insured code.";
+                return;
+            }
+
+
+                // get database connection string
+                string strCONN = (new ABS_Web_NS_Connect.ABS_Class_Connect().ABS_Get_Con());
 
             SqlConnection sqlcon = new SqlConnection();
             sqlcon.ConnectionString = (strCONN);
@@ -93,9 +113,6 @@ namespace ABS_Web.UI_Templates.html.ltr
             {
                 sqlcon.Open();
             }
-
-            // "ABSInsuredSave"
-            string strSP_Name = "ABSSP_INSRDTAB_INSERT";
 
             SqlCommand sqlcmd = new SqlCommand(strSP_Name, sqlcon);
             sqlcmd.CommandType = CommandType.StoredProcedure;
@@ -138,11 +155,20 @@ namespace ABS_Web.UI_Templates.html.ltr
 
             try
             {
-                sqlcmd.ExecuteNonQuery();
+                //sqlcmd.ExecuteNonQuery();
+                SqlDataReader sqlDR = sqlcmd.ExecuteReader();
+                if(sqlDR.Read())
+                {
+                    txtInsuredNo.Text = sqlDR["FLD_IDENTITY_NO"].ToString();
+
+                }
                 //lblMsg.Visible = true;
                 lblMsg.Text = "Data Saved successfully";
                 //lblMsg.Visible = false;
-
+                Btn_Save.Text = "Update";
+                Btn_Delete.Enabled = true;
+                txtReferenceNo.Text = txtInsuredCode.Text;
+                
                 sqlcon.Close();
                 sqlcmd.Dispose();
 
@@ -157,6 +183,52 @@ namespace ABS_Web.UI_Templates.html.ltr
             }
 
             
+        }
+
+        //UPLOAD FILE:
+        //protected void btn_Upload_Click(object sender, EventArgs e)
+        //{
+        //    string fileName = System.IO.Path.GetFileName(FileUpload1.PostedFile.FileName);
+        //    FileUpload1.PostedFile.SaveAs(Server.MapPath("~/Upload/") + fileName);
+        //    Response.Redirect(Request.Url.AbsoluteUri);
+        //}
+
+        protected void lnkDownload_Click(object sender, EventArgs e)
+        {
+            string filePath = (sender as LinkButton).CommandArgument;
+            Response.ContentType = ContentType;
+            Response.AppendHeader("Content-Disposition", "attachment; filename=" + System.IO.Path.GetFileName(filePath));
+            Response.WriteFile(filePath);
+            Response.End();
+        }
+
+        protected void lnkDelete_Click(object sender, EventArgs e)
+        {
+            string filePath = (sender as LinkButton).CommandArgument;
+            System.IO.File.Delete(filePath);
+            Response.Redirect(Request.Url.AbsoluteUri);
+        }
+
+        //UPLOAD:
+        protected void Upload_Click(object sender, EventArgs e)
+        {
+            if(txtReferenceNo.Text == "" || txtDocType.SelectedItem.Text=="" || txtDescr.Text=="")
+            {
+                lblMessage.Text = "Information Required!";
+            }
+            else
+            {
+                string fileName = System.IO.Path.GetFileName(FileUpload1.PostedFile.FileName);
+                FileUpload1.PostedFile.SaveAs(Server.MapPath("~/Upload/") + fileName);
+                Response.Redirect(Request.Url.AbsoluteUri);
+            }
+            
+        }
+
+        
+        protected void Btn_Save1_Click1(object sender, EventArgs e)
+        {
+
         }
     }
 }

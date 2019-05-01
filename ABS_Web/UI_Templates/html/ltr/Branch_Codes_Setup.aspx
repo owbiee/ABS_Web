@@ -13,7 +13,7 @@
             background-color: white;
             margin: 0 auto;
             height: 100%;
-            width: 1000px;
+            width: 1200px;
             border-radius: 10px;
             /*padding-top: 30px;*/
             padding-bottom: 20px;
@@ -28,12 +28,17 @@
         td
         {
             padding-bottom: 10px;
+            padding-right: 20px;
+            text-align: left;
         }
     </style>
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <form runat="server">
+        <asp:ScriptManager runat="server"></asp:ScriptManager>
+        <asp:UpdatePanel runat="server">
+            <ContentTemplate>            
         <br />
     <div class="body">
         <br />
@@ -48,26 +53,26 @@
                         <table class="tab-center">
                             <tr>
                                 <td><h6>Rec ID:</h6></td>
-                                <td>
-                                   <dx:BootstrapTextBox ID="BootstrapTextBox1" runat="server" style="padding-right: 10px;"></dx:BootstrapTextBox>
-                                </td>
+                                <td><dx:BootstrapTextBox ID="txtRecID" runat="server" style="padding-right: 10px;"></dx:BootstrapTextBox></td>
                                 <td><h6>Branch Code:</h6></td>
-                                <td><dx:BootstrapTextBox ID="BootstrapTextBox2" runat="server" style="padding-right: 10px;"></dx:BootstrapTextBox></td>
+                                <td><dx:BootstrapTextBox ID="txtBranchCode" runat="server" style="padding-right: 10px;"></dx:BootstrapTextBox></td>
                                 <td><h6>Branch Manager:</h6></td>
-                                <td><dx:BootstrapTextBox ID="BootstrapTextBox3" runat="server"></dx:BootstrapTextBox></td>                                
+                                <td><dx:BootstrapTextBox ID="txtBranchMgr" runat="server"></dx:BootstrapTextBox></td>                                
                             </tr>
                             <tr>
                                 <td><h6>Name:</h6></td>
-                                <td><dx:BootstrapTextBox ID="BootstrapTextBox4" runat="server" style="padding-right: 10px;"></dx:BootstrapTextBox></td>
+                                <td><dx:BootstrapTextBox ID="txtName" runat="server" style="padding-right: 10px;"></dx:BootstrapTextBox></td>
                                 <td><h6>Address:</h6></td>
-                                <td><dx:BootstrapTextBox ID="BootstrapTextBox5" runat="server" style="padding-right: 10px;"></dx:BootstrapTextBox></td>
+                                <td><dx:BootstrapTextBox ID="txtAddress" runat="server" style="padding-right: 10px;"></dx:BootstrapTextBox></td>
                                 <td><h6>Region:</h6></td>
-                                <td><dx:BootstrapTextBox ID="BootstrapTextBox6" runat="server"></dx:BootstrapTextBox></td>                                
+                                <td><dx:BootstrapTextBox ID="txtRegion" runat="server"></dx:BootstrapTextBox></td>                                
                             </tr>
                         </table><br />
-                        <asp:Button ID="Button1" runat="server" Text="Save Data" CssClass="btn btn-green"/>
-                        <asp:Button ID="Button2" runat="server" Text="Cancel" CssClass="btn btn-blue-grey"/>
-                        <asp:Button ID="Button3" runat="server" Text="Delete" CssClass="btn btn-danger"/>
+                        <asp:Button ID="btn_Save" runat="server" Text="Save Data" CssClass="btn btn-green" OnClick="btn_Save_Click"/>
+                        <asp:Button ID="btn_Cancel" runat="server" Text="Cancel" CssClass="btn btn-blue-grey"/>
+                        <asp:Button ID="btn_Delete" runat="server" Text="Delete" CssClass="btn btn-danger"/>
+                        <br />
+                        <asp:Label ID="lblMessage" runat="server"></asp:Label>
                     </dx:ContentControl>
                 </ContentCollection>
             </dx:BootstrapTabPage>
@@ -82,5 +87,7 @@
         </TabPages>
     </dx:BootstrapPageControl>
         </div>
+                </ContentTemplate>
+        </asp:UpdatePanel>
         </form>
 </asp:Content>

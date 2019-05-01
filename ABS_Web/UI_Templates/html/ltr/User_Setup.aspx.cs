@@ -213,10 +213,10 @@ namespace ABS_Web.UI_Templates.html.ltr
         protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
         {
             GridViewRow view = GridView1.SelectedRow;
-            Staff_Name.Text = view.Cells[1].Text;
-            Staff_Email.Text = view.Cells[2].Text;
+            Staff_Name.Text = view.Cells[3].Text;
+            Staff_Email.Text = view.Cells[4].Text;
 
-            LoadRoles();
+            //LoadRoles();
         }
 
         //Function ListBox Select: Assign Function

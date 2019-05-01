@@ -82,11 +82,11 @@
                                             
                                         </table>
                                         <br />
-                                        <asp:Button ID="btn_Save" runat="server" Text="Save" CssClass="btn btn-deep-purple"/>
+                                        <asp:Button ID="btn_Save" runat="server" Text="Save" CssClass="btn btn-deep-purple" OnClick="btn_Save_Click"/>
                                         <asp:Button ID="btn_Cancel" runat="server" Text="Cancel" CssClass="btn btn-blue-grey"/>
                                         <asp:Button ID="btn_Delete" runat="server" Text="Delete" CssClass="btn btn-danger"/>
-                                        <br />
-                                        <asp:Label ID="lblError" runat="server" Text=""></asp:Label>
+                                        <br /><br />
+                                        <asp:Label ID="lblMessage" runat="server" Text=""></asp:Label>
                                     </dx:ContentControl>
                                 </ContentCollection>
                             </dx:BootstrapTabPage>

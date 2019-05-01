@@ -35,6 +35,7 @@
         td{
             padding-bottom: 10px;
             text-align: left;
+            padding-right: 10px;
         }
 
         body{
@@ -163,7 +164,7 @@
             <div class="body">
                 <br />
                 <h4><i class="icon-user-tie"></i>User Setup</h4>
-                <dx:BootstrapPageControl ID="BootstrapPageControl1" runat="server" ActiveTabIndex="2">
+                <dx:BootstrapPageControl ID="BootstrapPageControl1" runat="server" ActiveTabIndex="3">
                     <TabPages>
                         <%--Tab1--%>
                         <dx:BootstrapTabPage Text="Register User">
@@ -319,11 +320,13 @@
                                     <asp:GridView ID="GridUser" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" CellPadding="4" Width="90%" DataSourceID="SqlDataSource1" ForeColor="#333333" GridLines="None" OnSelectedIndexChanged="GridUser_SelectedIndexChanged" CssClass="center">
                                         <AlternatingRowStyle BackColor="White" />
                                         <Columns>
-                                            <asp:CommandField ShowSelectButton="True" />
-                                            <asp:BoundField DataField="UserName" HeaderText="UserName" SortExpression="UserName" />
-                                            <asp:BoundField DataField="Email" HeaderText="Email" SortExpression="Email" />
-                                            <asp:BoundField DataField="Created_By" HeaderText="Created_By" SortExpression="Created_By" />
-                                            <asp:BoundField DataField="Date_Created" HeaderText="Date_Created" SortExpression="Date_Created" />
+                                            <asp:BoundField DataField="PWD_REC_NO" HeaderText="PWD_REC_NO" SortExpression="PWD_REC_NO" InsertVisible="False" ReadOnly="True" />
+                                            <asp:BoundField DataField="PWD_GROUP_ID" HeaderText="PWD_GROUP_ID" SortExpression="PWD_GROUP_ID" />
+                                            <asp:BoundField DataField="PWD_USER_NAME" HeaderText="PWD_USER_NAME" SortExpression="PWD_USER_NAME" />
+                                            <asp:BoundField DataField="PWD_EMAIL_NUM" HeaderText="PWD_EMAIL_NUM" SortExpression="PWD_EMAIL_NUM" />
+                                            <asp:BoundField DataField="PWD_MOBILE_NUM" HeaderText="PWD_MOBILE_NUM" SortExpression="PWD_MOBILE_NUM" />
+                                            <asp:BoundField DataField="PWD_KEYDTE" HeaderText="PWD_KEYDTE" SortExpression="PWD_KEYDTE" />
+                                            <asp:BoundField DataField="PWD_OPERID" HeaderText="PWD_OPERID" SortExpression="PWD_OPERID" />
                                         </Columns>
                                         <EditRowStyle BackColor="#2461BF" />
                                         <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
@@ -336,7 +339,7 @@
                                         <SortedDescendingCellStyle BackColor="#E9EBEF" />
                                         <SortedDescendingHeaderStyle BackColor="#4870BE" />
                                     </asp:GridView>
-                                     <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:Ipolicy_DBConnectionString %>" SelectCommand="SELECT [UserName], [Email], [Created_By], [Date_Created] FROM [ABSUSERS]"></asp:SqlDataSource>
+                                     <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:Ipolicy_DBConnectionString %>" SelectCommand="SELECT [PWD_REC_NO], [PWD_GROUP_ID], [PWD_USER_NAME], [PWD_EMAIL_NUM], [PWD_MOBILE_NUM], [PWD_KEYDTE], [PWD_OPERID] FROM [ABSPASSTAB]"></asp:SqlDataSource>
                                      <br />
                                     <table class="tab-center">
                                     <tr>
@@ -411,26 +414,30 @@
                                     </table>
                                     <br />
                                     
-                                    <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" CellPadding="4" Width="90%" DataSourceID="SqlDataSource1" ForeColor="#333333" GridLines="None" OnSelectedIndexChanged="GridView1_SelectedIndexChanged" CssClass="center">
-                                        <AlternatingRowStyle BackColor="White" />
+                                    <%--<div style="width: 80%; height: 400px; overflow: scroll;" class="tab-center">--%>
+                                    <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" CellPadding="3" Width="90%" DataSourceID="SqlDataSource1" GridLines="Horizontal" OnSelectedIndexChanged="GridView1_SelectedIndexChanged" CssClass="center" BackColor="White" BorderColor="#E7E7FF" BorderStyle="None" BorderWidth="1px">
+                                        <AlternatingRowStyle BackColor="#F7F7F7" />
                                         <Columns>
-                                            <asp:CommandField ShowSelectButton="True" />
-                                            <asp:BoundField DataField="UserName" HeaderText="UserName" SortExpression="UserName" />
-                                            <asp:BoundField DataField="Email" HeaderText="Email" SortExpression="Email" />
-                                            <asp:BoundField DataField="Created_By" HeaderText="Created_By" SortExpression="Created_By" />
-                                            <asp:BoundField DataField="Date_Created" HeaderText="Date_Created" SortExpression="Date_Created" />
+                                            <asp:CommandField ShowSelectButton="True"/>
+                                            <asp:BoundField DataField="PWD_REC_NO" HeaderText="PWD_REC_NO" SortExpression="PWD_REC_NO" InsertVisible="False" ReadOnly="True" />
+                                            <asp:BoundField DataField="PWD_GROUP_ID" HeaderText="PWD_GROUP_ID" SortExpression="PWD_GROUP_ID" />
+                                            <asp:BoundField DataField="PWD_USER_NAME" HeaderText="PWD_USER_NAME" SortExpression="PWD_USER_NAME" />
+                                            <asp:BoundField DataField="PWD_EMAIL_NUM" HeaderText="PWD_EMAIL_NUM" SortExpression="PWD_EMAIL_NUM" />
+                                            <asp:BoundField DataField="PWD_MOBILE_NUM" HeaderText="PWD_MOBILE_NUM" SortExpression="PWD_MOBILE_NUM" />
+                                            <asp:BoundField DataField="PWD_KEYDTE" HeaderText="PWD_KEYDTE" SortExpression="PWD_KEYDTE" />
+                                            <asp:BoundField DataField="PWD_OPERID" HeaderText="PWD_OPERID" SortExpression="PWD_OPERID" />
                                         </Columns>
-                                        <EditRowStyle BackColor="#2461BF" />
-                                        <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
-                                        <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
-                                        <PagerStyle BackColor="#2461BF" ForeColor="White" HorizontalAlign="Center" />
-                                        <RowStyle BackColor="#EFF3FB" />
-                                        <SelectedRowStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
-                                        <SortedAscendingCellStyle BackColor="#F5F7FB" />
-                                        <SortedAscendingHeaderStyle BackColor="#6D95E1" />
-                                        <SortedDescendingCellStyle BackColor="#E9EBEF" />
-                                        <SortedDescendingHeaderStyle BackColor="#4870BE" />
+                                        <FooterStyle BackColor="#B5C7DE" ForeColor="#4A3C8C" />
+                                        <HeaderStyle BackColor="#4A3C8C" Font-Bold="True" ForeColor="#F7F7F7" />
+                                        <PagerStyle BackColor="#E7E7FF" ForeColor="#4A3C8C" HorizontalAlign="Right" />
+                                        <RowStyle BackColor="#E7E7FF" ForeColor="#4A3C8C" />
+                                        <SelectedRowStyle BackColor="#738A9C" Font-Bold="True" ForeColor="#F7F7F7" />
+                                        <SortedAscendingCellStyle BackColor="#F4F4FD" />
+                                        <SortedAscendingHeaderStyle BackColor="#5A4C9D" />
+                                        <SortedDescendingCellStyle BackColor="#D8D8F0" />
+                                        <SortedDescendingHeaderStyle BackColor="#3E3277" />
                                     </asp:GridView>
+                                        <%--</div>--%>
                                      <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:Ipolicy_DBConnectionString %>" SelectCommand="SELECT [UserName], [Email], [Created_By], [Date_Created] FROM [ABSUSERS]"></asp:SqlDataSource>
                                      <br />
                                     <table class="tab-center">
@@ -441,8 +448,10 @@
                                     <table class="tab-center">
                                         <tr>
                                             <td><h5>Roles:</h5></td>
-                                            <td><dx:BootstrapComboBox ID="BootstrapComboBox2" runat="server" style="padding-bottom: 15px;" TextField="ROLE_NAME" AutoPostBack="true" OnSelectedIndexChanged="BootstrapComboBox2_SelectedIndexChanged">                              
-                                    </dx:BootstrapComboBox></td>                                                                                      
+                                            <td><dx:BootstrapComboBox ID="BootstrapComboBox2" runat="server" style="padding-bottom: 15px;" TextField="ROLE_NAME" AutoPostBack="true" OnSelectedIndexChanged="BootstrapComboBox2_SelectedIndexChanged" DataSourceID="SqlDataSource7">                              
+                                    </dx:BootstrapComboBox>
+                                                <asp:SqlDataSource ID="SqlDataSource7" runat="server" ConnectionString="<%$ ConnectionStrings:Ipolicy_DBConnectionString %>" SelectCommand="SELECT [ROLE_NAME] FROM [ABSROLEMST]"></asp:SqlDataSource>
+                                            </td>                                                                                      
                                         </tr>                                                       
                                     </table>
 
@@ -480,8 +489,8 @@
                                     <%--<h3>Nothing Here!</h3>--%><br />
                                     <h4>Setup User Actions</h4>
                                     <div style="width: 100%; height: 400px; overflow: scroll;">
-                                    <asp:GridView ID="GridView2" runat="server" BorderWidth="1px" AllowSorting="True" AutoGenerateColumns="False" CellSpacing="2" CellPadding="7" DataSourceID="SqlDataSource5" Width="100%" ForeColor="#333333" GridLines="None" CssClass="center" OnSelectedIndexChanged="GridView2_SelectedIndexChanged" DataKeyNames="ROLE_ID">
-                                        <AlternatingRowStyle BackColor="White" />
+                                    <asp:GridView ID="GridView2" runat="server" BorderWidth="1px" AllowSorting="True" AutoGenerateColumns="False" CellPadding="3" DataSourceID="SqlDataSource5" Width="100%" GridLines="Horizontal" CssClass="center" OnSelectedIndexChanged="GridView2_SelectedIndexChanged" DataKeyNames="ROLE_ID" BackColor="White" BorderColor="#E7E7FF" BorderStyle="None">
+                                        <AlternatingRowStyle BackColor="#F7F7F7" />
                                         <Columns>
                                             <asp:CommandField ShowSelectButton="True" />
                                             <asp:BoundField DataField="ROLE_ID" HeaderText="ROLE_ID" SortExpression="ROLE_ID" InsertVisible="False" ReadOnly="True" />
@@ -496,16 +505,15 @@
                                             <asp:BoundField DataField="CREATED_BY" HeaderText="CREATED_BY" SortExpression="CREATED_BY" />
                                             <asp:BoundField DataField="KEYED_DATE" HeaderText="KEYED_DATE" SortExpression="KEYED_DATE" />
                                         </Columns>
-                                        <EditRowStyle BackColor="#2461BF" />
-                                        <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
-                                        <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
-                                        <PagerStyle BackColor="#2461BF" ForeColor="White" HorizontalAlign="Center" />
-                                        <RowStyle BackColor="#EFF3FB" />
-                                        <SelectedRowStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
-                                        <SortedAscendingCellStyle BackColor="#F5F7FB" />
-                                        <SortedAscendingHeaderStyle BackColor="#6D95E1" />
-                                        <SortedDescendingCellStyle BackColor="#E9EBEF" />
-                                        <SortedDescendingHeaderStyle BackColor="#4870BE" />
+                                        <FooterStyle BackColor="#B5C7DE" ForeColor="#4A3C8C" />
+                                        <HeaderStyle BackColor="#4A3C8C" Font-Bold="True" ForeColor="#F7F7F7" />
+                                        <PagerStyle BackColor="#E7E7FF" ForeColor="#4A3C8C" HorizontalAlign="Right" />
+                                        <RowStyle BackColor="#E7E7FF" ForeColor="#4A3C8C" />
+                                        <SelectedRowStyle BackColor="#738A9C" Font-Bold="True" ForeColor="#F7F7F7" />
+                                        <SortedAscendingCellStyle BackColor="#F4F4FD" />
+                                        <SortedAscendingHeaderStyle BackColor="#5A4C9D" />
+                                        <SortedDescendingCellStyle BackColor="#D8D8F0" />
+                                        <SortedDescendingHeaderStyle BackColor="#3E3277" />
                                     </asp:GridView>
                                     </div>
                                     <asp:SqlDataSource ID="SqlDataSource5" runat="server" ConnectionString="<%$ ConnectionStrings:Ipolicy_DBConnectionString %>" SelectCommand="SELECT [ROLE_ID], [STAFF_NAME], [STAFF_EMAIL], [USER_ROLE], [USER_FUNC], [ROLE_INSERT], [ROLE_UPDATE], [ROLE_DELETE], [ROLE_APPROVE], [CREATED_BY], [KEYED_DATE] FROM [ABSROLEDETAILS]"></asp:SqlDataSource>

@@ -36,14 +36,9 @@
         .textBox{
             width: 250px;
         }
-
-
-
     </style>  
-
-
-
 </asp:Content>
+
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <form runat="server">
@@ -63,7 +58,7 @@
                                             <tr>
                                                 <td><h6>Sector ID:</h6></td>
                                                 <td>
-                                                    <dx:BootstrapTextBox ID="txtSectorID" runat="server" class="textBox" Width="400px"></dx:BootstrapTextBox>
+                                                    <dx:BootstrapTextBox ID="txtSectorID" runat="server" class="textBox" Width="400px" Enabled="false"></dx:BootstrapTextBox>
                                                 </td>
                                             </tr>
                                             <tr>
@@ -88,11 +83,11 @@
                                             </tr>
                                         </table>
                                         <br />
-                                        <asp:Button ID="btn_Save" runat="server" Text="Save" CssClass="btn btn-deep-purple"/>
+                                        <asp:Button ID="btn_Save" runat="server" Text="Save" CssClass="btn btn-deep-purple" OnClick="btn_Save_Click"/>
                                         <asp:Button ID="btn_Cancel" runat="server" Text="Cancel" CssClass="btn btn-blue-grey"/>
                                         <asp:Button ID="btn_Delete" runat="server" Text="Delete" CssClass="btn btn-danger"/>
                                         <br />
-                                        <asp:Label ID="lblError" runat="server" Text=""></asp:Label>
+                                        <asp:Label ID="lblMessage" runat="server" Text=""></asp:Label>
                                     </dx:ContentControl>
                                 </ContentCollection>
                             </dx:BootstrapTabPage>

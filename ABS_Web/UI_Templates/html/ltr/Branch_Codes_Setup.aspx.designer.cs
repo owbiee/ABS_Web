@@ -22,84 +22,93 @@ namespace ABS_Web.UI_Templates.html.ltr {
         protected global::DevExpress.Web.Bootstrap.BootstrapPageControl BootstrapPageControl1;
         
         /// <summary>
-        /// BootstrapTextBox1 control.
+        /// txtRecID control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DevExpress.Web.Bootstrap.BootstrapTextBox BootstrapTextBox1;
+        protected global::DevExpress.Web.Bootstrap.BootstrapTextBox txtRecID;
         
         /// <summary>
-        /// BootstrapTextBox2 control.
+        /// txtBranchCode control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DevExpress.Web.Bootstrap.BootstrapTextBox BootstrapTextBox2;
+        protected global::DevExpress.Web.Bootstrap.BootstrapTextBox txtBranchCode;
         
         /// <summary>
-        /// BootstrapTextBox3 control.
+        /// txtBranchMgr control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DevExpress.Web.Bootstrap.BootstrapTextBox BootstrapTextBox3;
+        protected global::DevExpress.Web.Bootstrap.BootstrapTextBox txtBranchMgr;
         
         /// <summary>
-        /// BootstrapTextBox4 control.
+        /// txtName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DevExpress.Web.Bootstrap.BootstrapTextBox BootstrapTextBox4;
+        protected global::DevExpress.Web.Bootstrap.BootstrapTextBox txtName;
         
         /// <summary>
-        /// BootstrapTextBox5 control.
+        /// txtAddress control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DevExpress.Web.Bootstrap.BootstrapTextBox BootstrapTextBox5;
+        protected global::DevExpress.Web.Bootstrap.BootstrapTextBox txtAddress;
         
         /// <summary>
-        /// BootstrapTextBox6 control.
+        /// txtRegion control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DevExpress.Web.Bootstrap.BootstrapTextBox BootstrapTextBox6;
+        protected global::DevExpress.Web.Bootstrap.BootstrapTextBox txtRegion;
         
         /// <summary>
-        /// Button1 control.
+        /// btn_Save control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button1;
+        protected global::System.Web.UI.WebControls.Button btn_Save;
         
         /// <summary>
-        /// Button2 control.
+        /// btn_Cancel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button2;
+        protected global::System.Web.UI.WebControls.Button btn_Cancel;
         
         /// <summary>
-        /// Button3 control.
+        /// btn_Delete control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button3;
+        protected global::System.Web.UI.WebControls.Button btn_Delete;
+        
+        /// <summary>
+        /// lblMessage control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblMessage;
     }
 }

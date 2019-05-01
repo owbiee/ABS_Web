@@ -10,7 +10,7 @@
 namespace ABS_Web.UI_Templates.html.ltr {
     
     
-    public partial class Flood_Rates_Setup {
+    public partial class Treaty_Proportion {
         
         /// <summary>
         /// BootstrapPageControl1 control.
@@ -28,16 +28,16 @@ namespace ABS_Web.UI_Templates.html.ltr {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DevExpress.Web.Bootstrap.BootstrapComboBox txtRecordType;
+        protected global::DevExpress.Web.Bootstrap.BootstrapTextBox txtRecordType;
         
         /// <summary>
-        /// txtUwYear control.
+        /// txtTreatyYear control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DevExpress.Web.Bootstrap.BootstrapTextBox txtUwYear;
+        protected global::DevExpress.Web.Bootstrap.BootstrapTextBox txtTreatyYear;
         
         /// <summary>
         /// txtSubRisk control.
@@ -49,22 +49,49 @@ namespace ABS_Web.UI_Templates.html.ltr {
         protected global::DevExpress.Web.Bootstrap.BootstrapTextBox txtSubRisk;
         
         /// <summary>
-        /// txtTransact control.
+        /// BootstrapUploadControl1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DevExpress.Web.Bootstrap.BootstrapTextBox txtTransact;
+        protected global::DevExpress.Web.Bootstrap.BootstrapUploadControl BootstrapUploadControl1;
         
         /// <summary>
-        /// txtTransactDesc control.
+        /// txtTreatyCoy control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::DevExpress.Web.Bootstrap.BootstrapTextBox txtTransactDesc;
+        protected global::DevExpress.Web.Bootstrap.BootstrapTextBox txtTreatyCoy;
+        
+        /// <summary>
+        /// txtBrowseCoy control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::DevExpress.Web.Bootstrap.BootstrapUploadControl txtBrowseCoy;
+        
+        /// <summary>
+        /// BootstrapTextBox5 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::DevExpress.Web.Bootstrap.BootstrapTextBox BootstrapTextBox5;
+        
+        /// <summary>
+        /// BootstrapTextBox6 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::DevExpress.Web.Bootstrap.BootstrapTextBox BootstrapTextBox6;
         
         /// <summary>
         /// btn_Save control.
@@ -85,21 +112,12 @@ namespace ABS_Web.UI_Templates.html.ltr {
         protected global::System.Web.UI.WebControls.Button btn_Cancel;
         
         /// <summary>
-        /// btn_Delete control.
+        /// lblError control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btn_Delete;
-        
-        /// <summary>
-        /// lblMessage control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblMessage;
+        protected global::System.Web.UI.WebControls.Label lblError;
     }
 }

@@ -207,7 +207,7 @@
               </li>--%>
                 <li><a href="#" data-i18n="nav.menu_levels.second_level_child.third_level_child.main" class="menu-item">Code Entry</a>
                     <ul class="menu-content">
-                      <li><a href="#" data-i18n="nav.menu_levels.second_level_child.third_level_child.fourth_level1" class="menu-item">Business Sector Setup</a>
+                      <li><a href="../../../UI_Templates/html/ltr/Division_Business_Sector.aspx" data-i18n="nav.menu_levels.second_level_child.third_level_child.fourth_level1" class="menu-item">Business Sector Setup</a>
                       </li>
                       <li><a href="#" data-i18n="nav.menu_levels.second_level_child.third_level_child.fourth_level2" class="menu-item">Location Setup</a>
                       </li>
@@ -262,7 +262,7 @@
               
               <li><a href="../../../UI_Templates/html/ltr/Underwriting_Budget_Entry.aspx" data-i18n="nav.page_layouts.2_columns" class="menu-item">Underwriting Budget</a>
               </li>
-              <li><a href="#" data-i18n="nav.page_layouts.boxed_layout" class="menu-item">Treaty Proportions Rate</a>
+              <li><a href="../../../UI_Templates/html/ltr/Treaty_Proportion.aspx" data-i18n="nav.page_layouts.boxed_layout" class="menu-item">Treaty Proportions Rate</a>
               </li>
               <li><a href="#" data-i18n="nav.page_layouts.static_layout" class="menu-item">Treaty Commision Rates</a>
               </li>
@@ -273,7 +273,7 @@
               </li>
               <li><a href="../../../UI_Templates/html/ltr/Flood_Rates_Setup.aspx" data-i18n="nav.page_layouts.semi_dark_layout" class="menu-item">Earthquake & Fire Rates</a>
               </li>
-                <li><a href="#" data-i18n="nav.page_layouts.dark_layout" class="menu-item">ABS Memo Setup</a>
+                <li><a href="../../../UI_Templates/html/ltr/NAICOM_Info.aspx" data-i18n="nav.page_layouts.dark_layout" class="menu-item">ABS Memo Setup</a>
               </li>
                 <li><a href="../../../UI_Templates/html/ltr/Risk_Profile_Setup.aspx" data-i18n="nav.page_layouts.dark_layout" class="menu-item">Policy Risk Factor</a>
               </li>

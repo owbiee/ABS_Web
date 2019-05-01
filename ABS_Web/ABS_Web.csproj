@@ -174,6 +174,7 @@
     <Content Include="alertifyjs %282%29\css\themes\semantic.min.css" />
     <Content Include="alertifyjs %282%29\css\themes\semantic.rtl.css" />
     <Content Include="alertifyjs %282%29\css\themes\semantic.rtl.min.css" />
+    <Content Include="FileUpload.aspx" />
     <Content Include="Model\Login.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Login.edmx</DependentUpon>
@@ -1713,6 +1714,7 @@
     <Content Include="UI_Templates\html\ltr\Role_Setup.aspx" />
     <Content Include="UI_Templates\html\ltr\settings.jpg" />
     <Content Include="UI_Templates\html\ltr\Setup_User_Roles.aspx" />
+    <Content Include="UI_Templates\html\ltr\Treaty_Proportion.aspx" />
     <Content Include="UI_Templates\html\ltr\Underwriting_Budget_Entry.aspx" />
     <Content Include="UI_Templates\html\ltr\User_Setup.aspx" />
     <Content Include="UI_Templates\html\ltr\WebForm2.aspx" />
@@ -3307,7 +3309,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Code\ABS_Class_Connect.cs" />
-    <Compile Include="App_Code\ABS_Class_Populate.cs" />
+    <Compile Include="App_Code\ABS_Class_Utility.cs" />
+    <Content Include="App_Code\ClsBusinessSector.cs" />
+    <Compile Include="FileUpload.aspx.cs">
+      <DependentUpon>FileUpload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FileUpload.aspx.designer.cs">
+      <DependentUpon>FileUpload.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Model\ABSPASSTAB.cs">
       <DependentUpon>Login.tt</DependentUpon>
     </Compile>
@@ -3444,6 +3454,13 @@
     </Compile>
     <Compile Include="UI_Templates\html\ltr\Setup_User_Roles.aspx.designer.cs">
       <DependentUpon>Setup_User_Roles.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI_Templates\html\ltr\Treaty_Proportion.aspx.cs">
+      <DependentUpon>Treaty_Proportion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI_Templates\html\ltr\Treaty_Proportion.aspx.designer.cs">
+      <DependentUpon>Treaty_Proportion.aspx</DependentUpon>
     </Compile>
     <Compile Include="UI_Templates\html\ltr\Underwriting_Budget_Entry.aspx.cs">
       <DependentUpon>Underwriting_Budget_Entry.aspx</DependentUpon>
@@ -3620,6 +3637,7 @@
     <Folder Include="UI\html\ltr\Underwriting\" />
     <Folder Include="UI\html\rtl\" />
     <Folder Include="UI_Templates\Policy\" />
+    <Folder Include="Upload\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
